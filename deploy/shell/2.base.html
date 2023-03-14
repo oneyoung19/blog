@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.shell基础 | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.b069ce36.css" as="style"><link rel="preload" href="/blog/assets/js/app.07443ae3.js" as="script"><link rel="preload" href="/blog/assets/js/2.c0a0c17a.js" as="script"><link rel="preload" href="/blog/assets/js/101.6dc02e94.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.b6ff8d55.js"><link rel="prefetch" href="/blog/assets/js/100.a3786392.js"><link rel="prefetch" href="/blog/assets/js/102.fbbe7e84.js"><link rel="prefetch" href="/blog/assets/js/103.f9ecf119.js"><link rel="prefetch" href="/blog/assets/js/104.8b13e354.js"><link rel="prefetch" href="/blog/assets/js/105.3f6d0e09.js"><link rel="prefetch" href="/blog/assets/js/106.15e376bd.js"><link rel="prefetch" href="/blog/assets/js/107.2cbe26e7.js"><link rel="prefetch" href="/blog/assets/js/108.1a56913e.js"><link rel="prefetch" href="/blog/assets/js/109.1d192d8d.js"><link rel="prefetch" href="/blog/assets/js/11.c3368dca.js"><link rel="prefetch" href="/blog/assets/js/110.d48d2c85.js"><link rel="prefetch" href="/blog/assets/js/111.f512297a.js"><link rel="prefetch" href="/blog/assets/js/112.f7ff6711.js"><link rel="prefetch" href="/blog/assets/js/113.ed30ac68.js"><link rel="prefetch" href="/blog/assets/js/114.723dd8d6.js"><link rel="prefetch" href="/blog/assets/js/115.e8927cf6.js"><link rel="prefetch" href="/blog/assets/js/116.7fb66cf1.js"><link rel="prefetch" href="/blog/assets/js/117.10d0e605.js"><link rel="prefetch" href="/blog/assets/js/118.98002396.js"><link rel="prefetch" href="/blog/assets/js/119.568056a5.js"><link rel="prefetch" href="/blog/assets/js/12.14c96587.js"><link rel="prefetch" href="/blog/assets/js/120.aa6c690c.js"><link rel="prefetch" href="/blog/assets/js/121.f79a292a.js"><link rel="prefetch" href="/blog/assets/js/122.733ebf4a.js"><link rel="prefetch" href="/blog/assets/js/123.97e536d2.js"><link rel="prefetch" href="/blog/assets/js/124.84a657f2.js"><link rel="prefetch" href="/blog/assets/js/125.7a70bafe.js"><link rel="prefetch" href="/blog/assets/js/126.7b67fcb8.js"><link rel="prefetch" href="/blog/assets/js/127.63906cff.js"><link rel="prefetch" href="/blog/assets/js/128.f8184d9c.js"><link rel="prefetch" href="/blog/assets/js/129.608a948e.js"><link rel="prefetch" href="/blog/assets/js/13.7871b76e.js"><link rel="prefetch" href="/blog/assets/js/130.ecbb67a9.js"><link rel="prefetch" href="/blog/assets/js/131.8763d04a.js"><link rel="prefetch" href="/blog/assets/js/132.70386e33.js"><link rel="prefetch" href="/blog/assets/js/133.c1665c3c.js"><link rel="prefetch" href="/blog/assets/js/134.b7579247.js"><link rel="prefetch" href="/blog/assets/js/135.d9a6a8e0.js"><link rel="prefetch" href="/blog/assets/js/136.266495cd.js"><link rel="prefetch" href="/blog/assets/js/137.8dcc097d.js"><link rel="prefetch" href="/blog/assets/js/138.348371af.js"><link rel="prefetch" href="/blog/assets/js/139.64465fd3.js"><link rel="prefetch" href="/blog/assets/js/14.a5b0d8fd.js"><link rel="prefetch" href="/blog/assets/js/140.0aacc576.js"><link rel="prefetch" href="/blog/assets/js/141.1b74b8ae.js"><link rel="prefetch" href="/blog/assets/js/142.cef35baa.js"><link rel="prefetch" href="/blog/assets/js/143.c462b435.js"><link rel="prefetch" href="/blog/assets/js/144.45204f32.js"><link rel="prefetch" href="/blog/assets/js/145.e28ec43e.js"><link rel="prefetch" href="/blog/assets/js/146.08850044.js"><link rel="prefetch" href="/blog/assets/js/147.776597ea.js"><link rel="prefetch" href="/blog/assets/js/148.d8e79f12.js"><link rel="prefetch" href="/blog/assets/js/149.9e3a9ff6.js"><link rel="prefetch" href="/blog/assets/js/15.6233ee83.js"><link rel="prefetch" href="/blog/assets/js/150.ec77f7d1.js"><link rel="prefetch" href="/blog/assets/js/151.156ef4d8.js"><link rel="prefetch" href="/blog/assets/js/152.2266bb56.js"><link rel="prefetch" href="/blog/assets/js/153.3c846e61.js"><link rel="prefetch" href="/blog/assets/js/154.b3df1dee.js"><link rel="prefetch" href="/blog/assets/js/155.8756fe4c.js"><link rel="prefetch" href="/blog/assets/js/156.6d142ffe.js"><link rel="prefetch" href="/blog/assets/js/157.1b5e3c11.js"><link rel="prefetch" href="/blog/assets/js/158.1c8185b1.js"><link rel="prefetch" href="/blog/assets/js/159.11f587b8.js"><link rel="prefetch" href="/blog/assets/js/16.a1bd8381.js"><link rel="prefetch" href="/blog/assets/js/160.74b79b4b.js"><link rel="prefetch" href="/blog/assets/js/161.aa2d21cc.js"><link rel="prefetch" href="/blog/assets/js/162.01b5a990.js"><link rel="prefetch" href="/blog/assets/js/163.5ba9ccfa.js"><link rel="prefetch" href="/blog/assets/js/164.0d5d134f.js"><link rel="prefetch" href="/blog/assets/js/165.77c6251f.js"><link rel="prefetch" href="/blog/assets/js/166.414db3a0.js"><link rel="prefetch" href="/blog/assets/js/167.7117787c.js"><link rel="prefetch" href="/blog/assets/js/168.1c917896.js"><link rel="prefetch" href="/blog/assets/js/169.1fa86ee0.js"><link rel="prefetch" href="/blog/assets/js/17.18e0e5fd.js"><link rel="prefetch" href="/blog/assets/js/170.9d75e58c.js"><link rel="prefetch" href="/blog/assets/js/171.0006870f.js"><link rel="prefetch" href="/blog/assets/js/172.b6facf21.js"><link rel="prefetch" href="/blog/assets/js/173.6ef93feb.js"><link rel="prefetch" href="/blog/assets/js/174.3017101f.js"><link rel="prefetch" href="/blog/assets/js/175.58828134.js"><link rel="prefetch" href="/blog/assets/js/176.5dc72f91.js"><link rel="prefetch" href="/blog/assets/js/177.be223766.js"><link rel="prefetch" href="/blog/assets/js/178.8f0321e1.js"><link rel="prefetch" href="/blog/assets/js/179.59a25d03.js"><link rel="prefetch" href="/blog/assets/js/18.7cb9b5c2.js"><link rel="prefetch" href="/blog/assets/js/180.83c03bcb.js"><link rel="prefetch" href="/blog/assets/js/181.ad28d98d.js"><link rel="prefetch" href="/blog/assets/js/19.df2785ae.js"><link rel="prefetch" href="/blog/assets/js/20.fb4bf737.js"><link rel="prefetch" href="/blog/assets/js/21.5e1360de.js"><link rel="prefetch" href="/blog/assets/js/22.c048f462.js"><link rel="prefetch" href="/blog/assets/js/23.753923ed.js"><link rel="prefetch" href="/blog/assets/js/24.007494be.js"><link rel="prefetch" href="/blog/assets/js/25.93c71192.js"><link rel="prefetch" href="/blog/assets/js/26.ce70b07e.js"><link rel="prefetch" href="/blog/assets/js/27.6164822e.js"><link rel="prefetch" href="/blog/assets/js/28.ce1a6504.js"><link rel="prefetch" href="/blog/assets/js/29.e01f50f1.js"><link rel="prefetch" href="/blog/assets/js/3.74a96b32.js"><link rel="prefetch" href="/blog/assets/js/30.7a9e5b6e.js"><link rel="prefetch" href="/blog/assets/js/31.aef16ac7.js"><link rel="prefetch" href="/blog/assets/js/32.576815f0.js"><link rel="prefetch" href="/blog/assets/js/33.8702be56.js"><link rel="prefetch" href="/blog/assets/js/34.618af1b8.js"><link rel="prefetch" href="/blog/assets/js/35.6e0a1efa.js"><link rel="prefetch" href="/blog/assets/js/36.3a889ddd.js"><link rel="prefetch" href="/blog/assets/js/37.ca7c50b4.js"><link rel="prefetch" href="/blog/assets/js/38.d77db6a1.js"><link rel="prefetch" href="/blog/assets/js/39.489d1f3e.js"><link rel="prefetch" href="/blog/assets/js/4.2b9e04d4.js"><link rel="prefetch" href="/blog/assets/js/40.3a0caf6e.js"><link rel="prefetch" href="/blog/assets/js/41.5b6af230.js"><link rel="prefetch" href="/blog/assets/js/42.6e2701e1.js"><link rel="prefetch" href="/blog/assets/js/43.b29c5770.js"><link rel="prefetch" href="/blog/assets/js/44.b0ff36a3.js"><link rel="prefetch" href="/blog/assets/js/45.24b8948a.js"><link rel="prefetch" href="/blog/assets/js/46.5d2e03f2.js"><link rel="prefetch" href="/blog/assets/js/47.e08bd6cb.js"><link rel="prefetch" href="/blog/assets/js/48.2d6e25a4.js"><link rel="prefetch" href="/blog/assets/js/49.9e68d563.js"><link rel="prefetch" href="/blog/assets/js/5.ce70e106.js"><link rel="prefetch" href="/blog/assets/js/50.cb64dc76.js"><link rel="prefetch" href="/blog/assets/js/51.4f9536c6.js"><link rel="prefetch" href="/blog/assets/js/52.52fdd036.js"><link rel="prefetch" href="/blog/assets/js/53.52eb80bc.js"><link rel="prefetch" href="/blog/assets/js/54.c7e109f3.js"><link rel="prefetch" href="/blog/assets/js/55.8474ccfd.js"><link rel="prefetch" href="/blog/assets/js/56.331395af.js"><link rel="prefetch" href="/blog/assets/js/57.2c5ef944.js"><link rel="prefetch" href="/blog/assets/js/58.822e6947.js"><link rel="prefetch" href="/blog/assets/js/59.94ac3d5d.js"><link rel="prefetch" href="/blog/assets/js/6.4452e28d.js"><link rel="prefetch" href="/blog/assets/js/60.6e0734ce.js"><link rel="prefetch" href="/blog/assets/js/61.42346198.js"><link rel="prefetch" href="/blog/assets/js/62.2f223a3e.js"><link rel="prefetch" href="/blog/assets/js/63.16146211.js"><link rel="prefetch" href="/blog/assets/js/64.bd799549.js"><link rel="prefetch" href="/blog/assets/js/65.7acabac5.js"><link rel="prefetch" href="/blog/assets/js/66.1fd5e85e.js"><link rel="prefetch" href="/blog/assets/js/67.b4fe5132.js"><link rel="prefetch" href="/blog/assets/js/68.473ad1b1.js"><link rel="prefetch" href="/blog/assets/js/69.c7b28a23.js"><link rel="prefetch" href="/blog/assets/js/7.2cf9250b.js"><link rel="prefetch" href="/blog/assets/js/70.ec170de8.js"><link rel="prefetch" href="/blog/assets/js/71.8d3f7784.js"><link rel="prefetch" href="/blog/assets/js/72.0aeeb71c.js"><link rel="prefetch" href="/blog/assets/js/73.2f35e280.js"><link rel="prefetch" href="/blog/assets/js/74.8e1adc24.js"><link rel="prefetch" href="/blog/assets/js/75.6d98ae9d.js"><link rel="prefetch" href="/blog/assets/js/76.a49b0d07.js"><link rel="prefetch" href="/blog/assets/js/77.edb55615.js"><link rel="prefetch" href="/blog/assets/js/78.866d1603.js"><link rel="prefetch" href="/blog/assets/js/79.63fcfd8e.js"><link rel="prefetch" href="/blog/assets/js/8.28dd6fd0.js"><link rel="prefetch" href="/blog/assets/js/80.0968f450.js"><link rel="prefetch" href="/blog/assets/js/81.0dfa292f.js"><link rel="prefetch" href="/blog/assets/js/82.0269a4be.js"><link rel="prefetch" href="/blog/assets/js/83.b795b753.js"><link rel="prefetch" href="/blog/assets/js/84.77ac5d1e.js"><link rel="prefetch" href="/blog/assets/js/85.f529a93a.js"><link rel="prefetch" href="/blog/assets/js/86.a52a370d.js"><link rel="prefetch" href="/blog/assets/js/87.c0e02e79.js"><link rel="prefetch" href="/blog/assets/js/88.9c97c60b.js"><link rel="prefetch" href="/blog/assets/js/89.1212818f.js"><link rel="prefetch" href="/blog/assets/js/9.f8f5097d.js"><link rel="prefetch" href="/blog/assets/js/90.3a1a0342.js"><link rel="prefetch" href="/blog/assets/js/91.35574762.js"><link rel="prefetch" href="/blog/assets/js/92.cf3c7c8e.js"><link rel="prefetch" href="/blog/assets/js/93.000904be.js"><link rel="prefetch" href="/blog/assets/js/94.291fbd4b.js"><link rel="prefetch" href="/blog/assets/js/95.b51e75c2.js"><link rel="prefetch" href="/blog/assets/js/96.24218d74.js"><link rel="prefetch" href="/blog/assets/js/97.cf141e60.js"><link rel="prefetch" href="/blog/assets/js/98.07ab00ce.js"><link rel="prefetch" href="/blog/assets/js/99.b5d0455b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b069ce36.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          Http
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/ssl.html" class="nav-link">
+  SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/postcss/" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/1.start.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/vuepress/" class="nav-link">
+  Vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Code1994" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          Http
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/ssl.html" class="nav-link">
+  SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/postcss/" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/1.start.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/vuepress/" class="nav-link">
+  Vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Code1994" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/deploy/shell/1.start.html" class="sidebar-link">1.介绍</a></li><li><a href="/blog/deploy/shell/2.base.html" aria-current="page" class="active sidebar-link">2.shell基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-1-数据类型" class="sidebar-link">2-1.数据类型</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-2-自定义变量" class="sidebar-link">2-2.自定义变量</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-3-sh-文件" class="sidebar-link">2-3..sh 文件</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-4-文件执行" class="sidebar-link">2-4.文件执行</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-5-参数变量" class="sidebar-link">2-5.参数变量</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-6-特殊符号" class="sidebar-link">2-6.特殊符号</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-7-数学运算" class="sidebar-link">2-7.数学运算</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-8-格式化输出" class="sidebar-link">2-8.格式化输出</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#选项" class="sidebar-link">选项</a></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#定制化文本" class="sidebar-link">定制化文本</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/deploy/shell/2.base.html#_2-9-用户交互" class="sidebar-link">2-9.用户交互</a></li></ul></li><li><a href="/blog/deploy/shell/3.advance.html" class="sidebar-link">3.shell进阶</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_2-1-数据类型"><a href="#_2-1-数据类型" class="header-anchor">#</a> 2-1.数据类型</h2> <p>所有编程语言，都应该从<strong>区分数据类型</strong>开始。</p> <p><code>shell</code>的数据类型有下面几种：</p> <ul><li><p>字符串</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>  <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">'jack'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>整数型
+<code>shell</code> 中的数字都是整数。不能声明变量是小数。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>  <span class="token assign-left variable">num</span><span class="token operator">=</span><span class="token number">19</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>数组
+<code>shell</code> 支持一维数组（不支持多维数组），并且没有限定数组的大小。用括号来表示数组，数组元素用空格符号分割开。</p> <p>数组的话，分为两类：<strong>普通数组</strong>与<strong>关联数组</strong>。</p> <p>普通数组是直接利用声明语句声明即可，无法自定义索引值。</p> <p>关联数组则可以自定义索引值。</p> <p>所有语法如下：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#普通数组直接声明即可。</span>
+<span class="token assign-left variable">arr</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'v1'</span> <span class="token string">'v2'</span> <span class="token string">'v3'</span><span class="token punctuation">)</span>
+
+<span class="token comment">#下述所有方法 普通数组与关联数组的使用方式是一致的。</span>
+<span class="token comment">#读取对应索引下的值 索引从0开始</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span>}</span>
+<span class="token comment">#读取全部索引下的值</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>
+<span class="token comment">#获取指定索引后的所有值 获取从索引1开始的值，如下：</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>*<span class="token punctuation">]</span><span class="token operator">:</span>1}</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span><span class="token operator">:</span>1}</span>
+<span class="token comment">#获取指定索引后的固定个数的值 获取从索引1开始的3个值，如下：</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>*<span class="token punctuation">]</span><span class="token operator">:</span>1<span class="token operator">:</span>3}</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span><span class="token operator">:</span>1<span class="token operator">:</span>3}</span>
+<span class="token comment">#获取全部索引</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">!</span>arr<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">!</span>arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>
+<span class="token comment">#获取数组长度</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">#</span>arr<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">#</span>arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>
+<span class="token comment">#列出当前环境下的所有数组</span>
+<span class="token builtin class-name">declare</span> -a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>不管是普通数组，还是关联数组，如果读取时没有指定索引，统一会取第一位索引的值。这一点与 <code>JavaScript</code> 语言有明显区别：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token assign-left variable">arr</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'v1'</span> <span class="token string">'v2'</span> <span class="token string">'v3'</span><span class="token punctuation">)</span>
+<span class="token comment">#不会打印出'v1 v2 v3' 只会打印出'v1'</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr}</span>
+<span class="token comment">#说明这一点的原因是 在使用for语句循环时 应该遍历的是${arr[*]} 而不是${arr}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>如果想要声明关联数组，需要使用 <code>declare -A</code> 语法。如下：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#1.声明单个索引</span>
+<span class="token comment">#这里如果不加这一行 declare -A的话，会报错 'assignment to invalid subscript range'.</span>
+<span class="token builtin class-name">declare</span> -A arr_1
+arr_1<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'jack'</span>
+arr_1<span class="token punctuation">[</span>gender<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'male'</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr_1<span class="token punctuation">[</span>name<span class="token punctuation">]</span>}</span>
+<span class="token comment">#2.声明整个数组</span>
+<span class="token builtin class-name">declare</span> -A <span class="token assign-left variable">arr_2</span><span class="token operator">=</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'selina'</span> <span class="token assign-left variable">gender</span><span class="token operator">=</span><span class="token string">'female'</span><span class="token punctuation">)</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${arr_2<span class="token punctuation">[</span>name<span class="token punctuation">]</span>}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>在 <code>macos</code> 上使用 <code>declare -A</code>，有可能报错：</p> <p><code>declare: -A: invalid option</code></p> <p><code>declare: usage: declare [-afFirtx] [-p] [name[=value] ...]</code></p> <p>这是因为 <code>bash</code> 的版本问题，可以升级下版本或者使用 <code>zsh</code> 等。</p> <p>可见<a href="https://stackoverflow.com/questions/27002192/bash-declare-a-does-not-work-on-macos" target="_blank" rel="noopener noreferrer">stackoverflow<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div></li></ul> <h2 id="_2-2-自定义变量"><a href="#_2-2-自定义变量" class="header-anchor">#</a> 2-2.自定义变量</h2> <p>声明自定义变量，直接使用<strong>赋值语句</strong>即可。</p> <p>使用自定义变量，需要加 <code>$</code> 进行读取。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token string">'123'</span>
+
+<span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token number">123</span>
+<span class="token comment">#打印出来的都是字符串123 shell中没有数字的概念</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$a</span>
+<span class="token comment">#更加友好的读取变量方式 推荐使用：</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${a}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>删除自定义变量的话，可以使用：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>name='jack'
+unset name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_2-3-sh-文件"><a href="#_2-3-sh-文件" class="header-anchor">#</a> 2-3.<code>.sh</code> 文件</h2> <p>一般，我们都会将 <code>shell</code> 命令放到 <code>.sh</code> 文件中。</p> <p>需要现在文件头部声明使用什么样的 <code>shell</code>，譬如：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><code>#!/bin/bash</code> 即使用 <code>bash</code>，当然也可以声明其他的 <code>shell</code>。</p> <p>如果你在 <code>.sh</code> 文件内，想要使用注释的话，使用 <code>#</code> 即可。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment">#这是一行注释</span>
+<span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_2-4-文件执行"><a href="#_2-4-文件执行" class="header-anchor">#</a> 2-4.文件执行</h2> <p><code>shell</code> 命令都会存在于以 <code>.sh</code> 为后缀的文件中。</p> <p>执行 <code>sh</code> 文件有两种方式（假设当前目录下文件名为 <code>test.sh</code>）:</p> <ul><li><p><code>./test.sh</code></p> <p>这种方式，需要 <code>sh</code> 文件具有可执行权限。查看文件所有权限可利用 <code>ls -l</code>。如果没有执行权限的话，可利用 <code>chmod +x test.sh</code> 来给文件添加可执行权限。</p></li> <li><p><code>sh test.sh</code></p> <p>这种方式，无需 <code>sh</code> 文件具有可执行权限。因为这种方式，已经表明了利用 <code>shell</code> 来执行 <code>test.sh</code>。除此命令外，也可以使用 <code>bash test.sh</code> 或者 <code>zsh test.sh</code> 等等。</p> <p>使用这种方式的话，可以不在 <code>.sh</code> 文件头部添加声明语句 <code>#!/bin/bash</code>。因为这种执行方式已经具体定义了使用哪种的 <code>shell</code>。</p></li></ul> <h2 id="_2-5-参数变量"><a href="#_2-5-参数变量" class="header-anchor">#</a> 2-5.参数变量</h2> <p>在执行 <code>sh</code> 文件时，可以在指令后面添加一些参数。</p> <p>在 <code>shell</code> 内部能够通过对应变量来读取这些参数：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment">#假设执行命令为 'sh test.sh jack'</span>
+
+<span class="token comment">#参数变量的总数量 因为参数只有一个jack 所以打印 '1'</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$#</span>
+
+<span class="token comment">#运行的脚本名称 打印 'test.sh'</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$0</span>
+
+<span class="token comment">#第一个参数变量，$2、$3...以此类推，不存在的话打印空字符串，此处打印 'jack'</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="_2-6-特殊符号"><a href="#_2-6-特殊符号" class="header-anchor">#</a> 2-6.特殊符号</h2> <ul><li><p><code>~</code> 家目录。可使用 <code>cd ~</code>，快速进入家目录。</p></li> <li><p><code>-</code> 上一次的目录。可使用 <code>cd -1</code> 或者 <code>cd -</code>，回退到上次目录。</p></li> <li><p><code>!</code> 执行历史命令。<code>!!</code> 执行上次命令。可利用 <code>history</code> 查看历史命令列表。</p></li> <li><p><code>$</code> 读取变量。</p></li> <li><p><code>*</code> 通配符，匹配所有字符。如果需要使用乘法 <code>*</code>，需要利用转义字符 <code>\</code> 将其转义。</p></li> <li><p><code>?</code> 通配符，匹配除回车外的一个字符。</p></li> <li><p><code>;</code> 命令之间用分号分割，多个命令在一行中时 可添加分号执行。</p></li> <li><p><code>|</code> 管道符，上一个命令的输出作为下一个命令的输入。<code>cat filename | grep &quot;abc&quot;</code>。</p></li> <li><p><code>\</code> 转义字符。</p></li> <li><p><code>+</code> 数学运算中的加法。</p></li> <li><p><code>-</code> 数学运算中的减法。</p></li> <li><p><code>*</code> 数学运算中的乘法。</p></li> <li><p><code>/</code> 数学运算中的除法。</p></li> <li><p><code>%</code> 数学运算中的取余。</p></li> <li><p><code>**</code> 数学运算中的乘方。</p></li> <li><p><code>shell</code> 内的引号分为 <code>3</code> 种：</p> <ul><li><p>双引号 <code>&quot;&quot;</code></p> <p>双引号，它相对宽松。会区分特殊字符：美元符号 <code>$</code>、反斜杠 <code>\</code> 和反引号 ``。</p></li> <li><p>单引号 <code>''</code></p> <p>单引号，可以认作<strong>严格模式</strong>。它不会区分特殊符号，统一作字符串处理。</p></li> <li><p>反引号 ``</p> <p>要求 <code>shell</code> 执行被它括起来的内容，例如执行 echo <code>pwd</code>，相当于直接执行 <code>pwd</code> 命令。</p></li></ul></li></ul> <h2 id="_2-7-数学运算"><a href="#_2-7-数学运算" class="header-anchor">#</a> 2-7.数学运算</h2> <p>数学运算有3中方法：</p> <ul><li><code>expr</code><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment">#注意这里需要有空格，不能写成 expr 1+2</span>
+<span class="token function">expr</span> <span class="token number">1</span> + <span class="token number">2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><code>let</code><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token builtin class-name">let</span> <span class="token string">&quot;c = <span class="token variable">${a}</span> + <span class="token variable">${b}</span>&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><code>$(())</code><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$((</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token variable">))</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ul> <p>注意，上述运算的小数运算有问题。可以安装第三方库 <code>bc</code> 进行支持。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>Macos</code> 下的包管理器是 <code>brew</code>，即 <code>HomeBrew</code>。</p> <p><code>Centos</code>、<code>Redhat</code> 下的包管理器是 <code>yum</code>。</p> <p><code>Ubuntu</code>、<code>Debian</code> 下的包管理器是 <code>apt-get</code>。</p></div> <h2 id="_2-8-格式化输出"><a href="#_2-8-格式化输出" class="header-anchor">#</a> 2-8.格式化输出</h2> <p>相对于浏览器中的 <code>console.log</code>，<code>shell</code> 中的打印输出对应的是 <code>echo</code> 命令。</p> <p>可利用 <code>man echo</code> 查看该命令对应的配置。</p> <p>基本语法如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>echo(选项)(参数)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="选项"><a href="#选项" class="header-anchor">#</a> 选项</h3> <ul><li><code>-n</code> 文本输出不换行。默认的 <code>echo</code> 在输出时末尾会自带一个换行符。</li> <li><code>-e</code> 激活转义字符。使用 <code>-e</code> 选项时，若字符串中出现以下字符，则特别加以处理，而不会将它当成一般文字输出：
+<ul><li><code>\a</code> 发出警告声;</li> <li><code>\b</code> 删除前一个字符；</li> <li><code>\c</code> 删除后面的字符，<code>\c</code> 后面的字符不会输出;</li> <li><code>\f</code> 换行但光标仍旧停留在原来的位置；</li> <li><code>\n</code> 换行且光标移至行首；</li> <li><code>\r</code> 光标移至行首，但不换行；</li> <li><code>\t</code> 插入tab；</li> <li><code>\v</code> 与 <code>\f</code> 相同；</li> <li><code>\\</code> 插入 <code>\</code> 字符;</li> <li><code>\nnn</code> 插入 <code>nnn</code>（八进制）所代表的 <code>ASCII</code> 字符。</li></ul></li></ul> <h3 id="定制化文本"><a href="#定制化文本" class="header-anchor">#</a> 定制化文本</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>echo -e &quot;\033[字背景颜色；文字颜色m字符串\033[0m&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><p>文字颜色
+数值：<code>30</code> - <code>37</code></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[30m 黑色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[31m 红色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m 绿色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[33m 黄色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[34m 蓝色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[35m 紫色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[36m 天蓝字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[37m 白色字 <span class="token entity" title="\033">\033</span>[0m&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>背景色
+数值：<code>40</code> - <code>47</code></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[40;37m 黑底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[41;37m 红底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[42;37m 绿底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[43;37m 黄底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[44;37m 蓝底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[45;37m 紫底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[46;37m 天蓝底白字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+  <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[47;30m 白底黑字 <span class="token entity" title="\033">\033</span>[0m&quot;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>文字闪动</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  \33[0m 关闭所有属性 
+  \33[1m 设置高亮度 
+  \33[4m 下划线 
+  \33[5m 闪烁 
+  \33[7m 反显 
+  \33[8m 消隐 
+  \33[30m — \33[37m 设置前景色 
+  \33[40m — \33[47m 设置背景色 
+  \33[nA 光标上移n行 
+  \33[nB 光标下移n行 
+  \33[nC 光标右移n行 
+  \33[nD 光标左移n行 
+  \33[y;xH设置光标位置 
+  \33[2J 清屏 
+  \33[K 清除从光标到行尾的内容 
+  \33[s 保存光标位置 
+  \33[u 恢复光标位置 
+  \33[?25l 隐藏光标 
+  \33[?25h 显示光标
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></li></ul> <h2 id="_2-9-用户交互"><a href="#_2-9-用户交互" class="header-anchor">#</a> 2-9.用户交互</h2> <p>在实际应用中，我们可能会与用户进行交互，需要用户输入一些值。这时就要使用 <code>read</code> 命令。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">read</span> name
+<span class="token builtin class-name">echo</span> <span class="token variable">${name}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>直接这样使用，对用户不太友好。所以我们可以使用 <code>-p</code> 选项来对用户展示提示信息。<code>prompt</code> 的简写。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">read</span> -p <span class="token string">&quot;请输入您的姓名：&quot;</span> name
+<span class="token builtin class-name">echo</span> <span class="token variable">${name}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>除此之外，还有更多的选项可供使用：</p> <ul><li><code>-n</code> 后跟一个数字，定义输入文本的长度。</li> <li><code>-s</code> 在输入时不在屏幕上显示，例如输入密码时。</li> <li><code>-t</code> 后面跟秒数，定义输入字符的等待时间。</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/15/2021, 11:41:52 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/deploy/shell/1.start.html" class="prev">
+        1.介绍
+      </a></span> <span class="next"><a href="/blog/deploy/shell/3.advance.html">
+        3.shell进阶
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/blog/assets/js/app.07443ae3.js" defer></script><script src="/blog/assets/js/2.c0a0c17a.js" defer></script><script src="/blog/assets/js/101.6dc02e94.js" defer></script>
+  </body>
+</html>

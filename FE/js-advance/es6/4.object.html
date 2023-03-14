@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>4.对象 | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.b069ce36.css" as="style"><link rel="preload" href="/blog/assets/js/app.07443ae3.js" as="script"><link rel="preload" href="/blog/assets/js/2.c0a0c17a.js" as="script"><link rel="preload" href="/blog/assets/js/59.94ac3d5d.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.b6ff8d55.js"><link rel="prefetch" href="/blog/assets/js/100.a3786392.js"><link rel="prefetch" href="/blog/assets/js/101.6dc02e94.js"><link rel="prefetch" href="/blog/assets/js/102.fbbe7e84.js"><link rel="prefetch" href="/blog/assets/js/103.f9ecf119.js"><link rel="prefetch" href="/blog/assets/js/104.8b13e354.js"><link rel="prefetch" href="/blog/assets/js/105.3f6d0e09.js"><link rel="prefetch" href="/blog/assets/js/106.15e376bd.js"><link rel="prefetch" href="/blog/assets/js/107.2cbe26e7.js"><link rel="prefetch" href="/blog/assets/js/108.1a56913e.js"><link rel="prefetch" href="/blog/assets/js/109.1d192d8d.js"><link rel="prefetch" href="/blog/assets/js/11.c3368dca.js"><link rel="prefetch" href="/blog/assets/js/110.d48d2c85.js"><link rel="prefetch" href="/blog/assets/js/111.f512297a.js"><link rel="prefetch" href="/blog/assets/js/112.f7ff6711.js"><link rel="prefetch" href="/blog/assets/js/113.ed30ac68.js"><link rel="prefetch" href="/blog/assets/js/114.723dd8d6.js"><link rel="prefetch" href="/blog/assets/js/115.e8927cf6.js"><link rel="prefetch" href="/blog/assets/js/116.7fb66cf1.js"><link rel="prefetch" href="/blog/assets/js/117.10d0e605.js"><link rel="prefetch" href="/blog/assets/js/118.98002396.js"><link rel="prefetch" href="/blog/assets/js/119.568056a5.js"><link rel="prefetch" href="/blog/assets/js/12.14c96587.js"><link rel="prefetch" href="/blog/assets/js/120.aa6c690c.js"><link rel="prefetch" href="/blog/assets/js/121.f79a292a.js"><link rel="prefetch" href="/blog/assets/js/122.733ebf4a.js"><link rel="prefetch" href="/blog/assets/js/123.97e536d2.js"><link rel="prefetch" href="/blog/assets/js/124.84a657f2.js"><link rel="prefetch" href="/blog/assets/js/125.7a70bafe.js"><link rel="prefetch" href="/blog/assets/js/126.7b67fcb8.js"><link rel="prefetch" href="/blog/assets/js/127.63906cff.js"><link rel="prefetch" href="/blog/assets/js/128.f8184d9c.js"><link rel="prefetch" href="/blog/assets/js/129.608a948e.js"><link rel="prefetch" href="/blog/assets/js/13.7871b76e.js"><link rel="prefetch" href="/blog/assets/js/130.ecbb67a9.js"><link rel="prefetch" href="/blog/assets/js/131.8763d04a.js"><link rel="prefetch" href="/blog/assets/js/132.70386e33.js"><link rel="prefetch" href="/blog/assets/js/133.c1665c3c.js"><link rel="prefetch" href="/blog/assets/js/134.b7579247.js"><link rel="prefetch" href="/blog/assets/js/135.d9a6a8e0.js"><link rel="prefetch" href="/blog/assets/js/136.266495cd.js"><link rel="prefetch" href="/blog/assets/js/137.8dcc097d.js"><link rel="prefetch" href="/blog/assets/js/138.348371af.js"><link rel="prefetch" href="/blog/assets/js/139.64465fd3.js"><link rel="prefetch" href="/blog/assets/js/14.a5b0d8fd.js"><link rel="prefetch" href="/blog/assets/js/140.0aacc576.js"><link rel="prefetch" href="/blog/assets/js/141.1b74b8ae.js"><link rel="prefetch" href="/blog/assets/js/142.cef35baa.js"><link rel="prefetch" href="/blog/assets/js/143.c462b435.js"><link rel="prefetch" href="/blog/assets/js/144.45204f32.js"><link rel="prefetch" href="/blog/assets/js/145.e28ec43e.js"><link rel="prefetch" href="/blog/assets/js/146.08850044.js"><link rel="prefetch" href="/blog/assets/js/147.776597ea.js"><link rel="prefetch" href="/blog/assets/js/148.d8e79f12.js"><link rel="prefetch" href="/blog/assets/js/149.9e3a9ff6.js"><link rel="prefetch" href="/blog/assets/js/15.6233ee83.js"><link rel="prefetch" href="/blog/assets/js/150.ec77f7d1.js"><link rel="prefetch" href="/blog/assets/js/151.156ef4d8.js"><link rel="prefetch" href="/blog/assets/js/152.2266bb56.js"><link rel="prefetch" href="/blog/assets/js/153.3c846e61.js"><link rel="prefetch" href="/blog/assets/js/154.b3df1dee.js"><link rel="prefetch" href="/blog/assets/js/155.8756fe4c.js"><link rel="prefetch" href="/blog/assets/js/156.6d142ffe.js"><link rel="prefetch" href="/blog/assets/js/157.1b5e3c11.js"><link rel="prefetch" href="/blog/assets/js/158.1c8185b1.js"><link rel="prefetch" href="/blog/assets/js/159.11f587b8.js"><link rel="prefetch" href="/blog/assets/js/16.a1bd8381.js"><link rel="prefetch" href="/blog/assets/js/160.74b79b4b.js"><link rel="prefetch" href="/blog/assets/js/161.aa2d21cc.js"><link rel="prefetch" href="/blog/assets/js/162.01b5a990.js"><link rel="prefetch" href="/blog/assets/js/163.5ba9ccfa.js"><link rel="prefetch" href="/blog/assets/js/164.0d5d134f.js"><link rel="prefetch" href="/blog/assets/js/165.77c6251f.js"><link rel="prefetch" href="/blog/assets/js/166.414db3a0.js"><link rel="prefetch" href="/blog/assets/js/167.7117787c.js"><link rel="prefetch" href="/blog/assets/js/168.1c917896.js"><link rel="prefetch" href="/blog/assets/js/169.1fa86ee0.js"><link rel="prefetch" href="/blog/assets/js/17.18e0e5fd.js"><link rel="prefetch" href="/blog/assets/js/170.9d75e58c.js"><link rel="prefetch" href="/blog/assets/js/171.0006870f.js"><link rel="prefetch" href="/blog/assets/js/172.b6facf21.js"><link rel="prefetch" href="/blog/assets/js/173.6ef93feb.js"><link rel="prefetch" href="/blog/assets/js/174.3017101f.js"><link rel="prefetch" href="/blog/assets/js/175.58828134.js"><link rel="prefetch" href="/blog/assets/js/176.5dc72f91.js"><link rel="prefetch" href="/blog/assets/js/177.be223766.js"><link rel="prefetch" href="/blog/assets/js/178.8f0321e1.js"><link rel="prefetch" href="/blog/assets/js/179.59a25d03.js"><link rel="prefetch" href="/blog/assets/js/18.7cb9b5c2.js"><link rel="prefetch" href="/blog/assets/js/180.83c03bcb.js"><link rel="prefetch" href="/blog/assets/js/181.ad28d98d.js"><link rel="prefetch" href="/blog/assets/js/19.df2785ae.js"><link rel="prefetch" href="/blog/assets/js/20.fb4bf737.js"><link rel="prefetch" href="/blog/assets/js/21.5e1360de.js"><link rel="prefetch" href="/blog/assets/js/22.c048f462.js"><link rel="prefetch" href="/blog/assets/js/23.753923ed.js"><link rel="prefetch" href="/blog/assets/js/24.007494be.js"><link rel="prefetch" href="/blog/assets/js/25.93c71192.js"><link rel="prefetch" href="/blog/assets/js/26.ce70b07e.js"><link rel="prefetch" href="/blog/assets/js/27.6164822e.js"><link rel="prefetch" href="/blog/assets/js/28.ce1a6504.js"><link rel="prefetch" href="/blog/assets/js/29.e01f50f1.js"><link rel="prefetch" href="/blog/assets/js/3.74a96b32.js"><link rel="prefetch" href="/blog/assets/js/30.7a9e5b6e.js"><link rel="prefetch" href="/blog/assets/js/31.aef16ac7.js"><link rel="prefetch" href="/blog/assets/js/32.576815f0.js"><link rel="prefetch" href="/blog/assets/js/33.8702be56.js"><link rel="prefetch" href="/blog/assets/js/34.618af1b8.js"><link rel="prefetch" href="/blog/assets/js/35.6e0a1efa.js"><link rel="prefetch" href="/blog/assets/js/36.3a889ddd.js"><link rel="prefetch" href="/blog/assets/js/37.ca7c50b4.js"><link rel="prefetch" href="/blog/assets/js/38.d77db6a1.js"><link rel="prefetch" href="/blog/assets/js/39.489d1f3e.js"><link rel="prefetch" href="/blog/assets/js/4.2b9e04d4.js"><link rel="prefetch" href="/blog/assets/js/40.3a0caf6e.js"><link rel="prefetch" href="/blog/assets/js/41.5b6af230.js"><link rel="prefetch" href="/blog/assets/js/42.6e2701e1.js"><link rel="prefetch" href="/blog/assets/js/43.b29c5770.js"><link rel="prefetch" href="/blog/assets/js/44.b0ff36a3.js"><link rel="prefetch" href="/blog/assets/js/45.24b8948a.js"><link rel="prefetch" href="/blog/assets/js/46.5d2e03f2.js"><link rel="prefetch" href="/blog/assets/js/47.e08bd6cb.js"><link rel="prefetch" href="/blog/assets/js/48.2d6e25a4.js"><link rel="prefetch" href="/blog/assets/js/49.9e68d563.js"><link rel="prefetch" href="/blog/assets/js/5.ce70e106.js"><link rel="prefetch" href="/blog/assets/js/50.cb64dc76.js"><link rel="prefetch" href="/blog/assets/js/51.4f9536c6.js"><link rel="prefetch" href="/blog/assets/js/52.52fdd036.js"><link rel="prefetch" href="/blog/assets/js/53.52eb80bc.js"><link rel="prefetch" href="/blog/assets/js/54.c7e109f3.js"><link rel="prefetch" href="/blog/assets/js/55.8474ccfd.js"><link rel="prefetch" href="/blog/assets/js/56.331395af.js"><link rel="prefetch" href="/blog/assets/js/57.2c5ef944.js"><link rel="prefetch" href="/blog/assets/js/58.822e6947.js"><link rel="prefetch" href="/blog/assets/js/6.4452e28d.js"><link rel="prefetch" href="/blog/assets/js/60.6e0734ce.js"><link rel="prefetch" href="/blog/assets/js/61.42346198.js"><link rel="prefetch" href="/blog/assets/js/62.2f223a3e.js"><link rel="prefetch" href="/blog/assets/js/63.16146211.js"><link rel="prefetch" href="/blog/assets/js/64.bd799549.js"><link rel="prefetch" href="/blog/assets/js/65.7acabac5.js"><link rel="prefetch" href="/blog/assets/js/66.1fd5e85e.js"><link rel="prefetch" href="/blog/assets/js/67.b4fe5132.js"><link rel="prefetch" href="/blog/assets/js/68.473ad1b1.js"><link rel="prefetch" href="/blog/assets/js/69.c7b28a23.js"><link rel="prefetch" href="/blog/assets/js/7.2cf9250b.js"><link rel="prefetch" href="/blog/assets/js/70.ec170de8.js"><link rel="prefetch" href="/blog/assets/js/71.8d3f7784.js"><link rel="prefetch" href="/blog/assets/js/72.0aeeb71c.js"><link rel="prefetch" href="/blog/assets/js/73.2f35e280.js"><link rel="prefetch" href="/blog/assets/js/74.8e1adc24.js"><link rel="prefetch" href="/blog/assets/js/75.6d98ae9d.js"><link rel="prefetch" href="/blog/assets/js/76.a49b0d07.js"><link rel="prefetch" href="/blog/assets/js/77.edb55615.js"><link rel="prefetch" href="/blog/assets/js/78.866d1603.js"><link rel="prefetch" href="/blog/assets/js/79.63fcfd8e.js"><link rel="prefetch" href="/blog/assets/js/8.28dd6fd0.js"><link rel="prefetch" href="/blog/assets/js/80.0968f450.js"><link rel="prefetch" href="/blog/assets/js/81.0dfa292f.js"><link rel="prefetch" href="/blog/assets/js/82.0269a4be.js"><link rel="prefetch" href="/blog/assets/js/83.b795b753.js"><link rel="prefetch" href="/blog/assets/js/84.77ac5d1e.js"><link rel="prefetch" href="/blog/assets/js/85.f529a93a.js"><link rel="prefetch" href="/blog/assets/js/86.a52a370d.js"><link rel="prefetch" href="/blog/assets/js/87.c0e02e79.js"><link rel="prefetch" href="/blog/assets/js/88.9c97c60b.js"><link rel="prefetch" href="/blog/assets/js/89.1212818f.js"><link rel="prefetch" href="/blog/assets/js/9.f8f5097d.js"><link rel="prefetch" href="/blog/assets/js/90.3a1a0342.js"><link rel="prefetch" href="/blog/assets/js/91.35574762.js"><link rel="prefetch" href="/blog/assets/js/92.cf3c7c8e.js"><link rel="prefetch" href="/blog/assets/js/93.000904be.js"><link rel="prefetch" href="/blog/assets/js/94.291fbd4b.js"><link rel="prefetch" href="/blog/assets/js/95.b51e75c2.js"><link rel="prefetch" href="/blog/assets/js/96.24218d74.js"><link rel="prefetch" href="/blog/assets/js/97.cf141e60.js"><link rel="prefetch" href="/blog/assets/js/98.07ab00ce.js"><link rel="prefetch" href="/blog/assets/js/99.b5d0455b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b069ce36.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          Http
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/ssl.html" class="nav-link">
+  SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/postcss/" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/1.start.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/vuepress/" class="nav-link">
+  Vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Code1994" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          Http
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/ssl.html" class="nav-link">
+  SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/postcss/" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/1.start.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/vuepress/" class="nav-link">
+  Vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Code1994" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/FE/js-advance/es6/" aria-current="page" class="sidebar-link">ES6</a></li><li><a href="/blog/FE/js-advance/es6/1.declare.html" class="sidebar-link">1.声明</a></li><li><a href="/blog/FE/js-advance/es6/2.string.html" class="sidebar-link">2.字符串</a></li><li><a href="/blog/FE/js-advance/es6/3.function.html" class="sidebar-link">3.函数</a></li><li><a href="/blog/FE/js-advance/es6/4.object.html" aria-current="page" class="active sidebar-link">4.对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-1-对象的分类" class="sidebar-link">4-1.对象的分类</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-2-对象字面量语法扩展" class="sidebar-link">4-2.对象字面量语法扩展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-2-1-对象属性简写" class="sidebar-link">4-2-1.对象属性简写</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-2-2-对象方法简写" class="sidebar-link">4-2-2.对象方法简写</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-2-3-可计算属性名" class="sidebar-link">4-2-3.可计算属性名</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-3-重复的对象字面量属性" class="sidebar-link">4-3.重复的对象字面量属性</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-4-自有属性枚举顺序" class="sidebar-link">4-4.自有属性枚举顺序</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-5-简化原型访问的-super-引用" class="sidebar-link">4-5.简化原型访问的 Super 引用</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-6-homeobject" class="sidebar-link">4-6.HomeObject</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-7-新增方法" class="sidebar-link">4-7.新增方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-7-1-object-is" class="sidebar-link">4-7-1.Object.is</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-7-2-object-assign" class="sidebar-link">4-7-2.Object.assign</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/4.object.html#_4-7-3-object-setprototypeof" class="sidebar-link">4-7-3.Object.setPrototypeOf</a></li></ul></li></ul></li><li><a href="/blog/FE/js-advance/es6/5.destruction.html" class="sidebar-link">5.解构</a></li><li><a href="/blog/FE/js-advance/es6/6.symbol.html" class="sidebar-link">6.Symbol</a></li><li><a href="/blog/FE/js-advance/es6/7.setAndMap.html" class="sidebar-link">7.Set和Map</a></li><li><a href="/blog/FE/js-advance/es6/8.iterator.html" class="sidebar-link">8.迭代器与生成器</a></li><li><a href="/blog/FE/js-advance/es6/9.class.html" class="sidebar-link">9.类</a></li><li><a href="/blog/FE/js-advance/es6/10.array.html" class="sidebar-link">10.数组</a></li><li><a href="/blog/FE/js-advance/es6/11.promise.html" class="sidebar-link">11.Promise</a></li><li><a href="/blog/FE/js-advance/es6/12.proxy.html" class="sidebar-link">12.Proxy</a></li><li><a href="/blog/FE/js-advance/es6/13.module.html" class="sidebar-link">13.EsModule</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_4-1-对象的分类"><a href="#_4-1-对象的分类" class="header-anchor">#</a> 4-1.对象的分类</h2> <p>Es6中的对象分类：</p> <ol><li>普通对象：具有 <code>JavaScript</code> 对象所有的默认内部行为。</li> <li>特异对象：具有某些与默认行为不符的内部行为。</li> <li>标准对象：<code>ECMAScript6</code> 规范中定义的对象，例如，<code>Array</code>、<code>Date</code> 等。标准对象既可以是普通对象，也可以是特异对象。</li> <li>内建对象：脚本开始执行时存在于 <code>JavaScript</code> 执行环境中的对象，所有标准对象都是内建对象。</li></ol> <h2 id="_4-2-对象字面量语法扩展"><a href="#_4-2-对象字面量语法扩展" class="header-anchor">#</a> 4-2.对象字面量语法扩展</h2> <h3 id="_4-2-1-对象属性简写"><a href="#_4-2-1-对象属性简写" class="header-anchor">#</a> 4-2-1.对象属性简写</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'yxp'</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_4-2-2-对象方法简写"><a href="#_4-2-2-对象方法简写" class="header-anchor">#</a> 4-2-2.对象方法简写</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'yxp'</span><span class="token punctuation">,</span>
+  <span class="token function">getName</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_4-2-3-可计算属性名"><a href="#_4-2-3-可计算属性名" class="header-anchor">#</a> 4-2-3.可计算属性名</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> property <span class="token operator">=</span> <span class="token string">'name'</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>property<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'yxp'</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_4-3-重复的对象字面量属性"><a href="#_4-3-重复的对象字面量属性" class="header-anchor">#</a> 4-3.重复的对象字面量属性</h2> <p>在 <code>Es5</code> 的严格模式中，对象字面量当中重复的同名属性，会抛出错误。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token string">&quot;use strict&quot;</span>
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'Jerry'</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>而在 <code>Es6</code> 当中，重复的对象字面量，会取值最后一位属性。</p> <p>上例代码中， <code>name</code> 属性会取值 <code>Jerry</code>。</p> <h2 id="_4-4-自有属性枚举顺序"><a href="#_4-4-自有属性枚举顺序" class="header-anchor">#</a> 4-4.自有属性枚举顺序</h2> <p>基本规则是：</p> <ol><li>所有数字键按照升序排序。</li> <li>所有字符串键按照它们被加入对象的顺序排序。</li> <li>所有 <code>symbol</code> 键按照它们被加入对象的顺序排序。</li></ol> <p>该规则主要影响 <code>Object.getOwnPropertyNames()</code> 方法及 <code>Reflect.ownKeys</code> 返回属性的方式。</p> <p><code>Object.assign()</code> 方法处理属性的顺序也将随之改变。</p> <p>而 <code>for...in</code>、<code>Object.keys()</code> 和 <code>JSON.stringify()</code> 方法的枚举顺序则不确定，跟各大浏览器厂商的指定标准相关。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token number">2</span><span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span>
+  <span class="token number">1</span><span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+  c<span class="token operator">:</span> <span class="token string">'c'</span><span class="token punctuation">,</span>
+  b<span class="token operator">:</span> <span class="token string">'b'</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Object.getOwnPropertyNames</span>
+<span class="token keyword">var</span> propertyNames <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>propertyNames<span class="token punctuation">)</span> <span class="token comment">// ['1', '2', 'a', 'c', 'b']</span>
+<span class="token comment">// for...in</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Object.keys</span>
+<span class="token keyword">var</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>keys<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="_4-5-简化原型访问的-super-引用"><a href="#_4-5-简化原型访问的-super-引用" class="header-anchor">#</a> 4-5.简化原型访问的 <code>Super</code> 引用</h2> <ol><li><code>Super</code> 引用相当于指向对象原型的指针。</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'hello'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'woof'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Object.getPrototypeOf(this).getGreeting.call(this) 等于 super.getGreeting()</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', friend'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// friend的原型指向person</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span>
+friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// friend的原型指向dog</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> dog<span class="token punctuation">)</span>
+friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ol start="2"><li>必须要在使用简写方法的对象中使用 <code>Super</code> 引用。</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'hello'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">getGreeting</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', hi'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span>
+friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Uncaught SyntaxError: 'super' keyword unexpected here</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ol start="3"><li><code>Super</code> 处理多重继承，非常有用。因为 <code>Super</code> 引用不是动态化的，它总是指向正确的对象。</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'hello'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Object.getPrototypeOf(this).getGreeting.call(this) 出错，而 super.getGreeting() 会成功。</span>
+    <span class="token comment">// return Object.getPrototypeOf(this).getGreeting.call(this) + ', friend'</span>
+    <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', friend'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// friend的原型指向person</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span>
+friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// 再创建一个对象 其原型指向friend</span>
+<span class="token keyword">var</span> relativer <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span>
+relativer<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// 由于this的指向问题，使用 Object.getPrototypeOf(this).getGreeting.call(this) 会报错：Uncaught RangeError: Maximum call stack size exceeded</span>
+<span class="token comment">// 使用 super.getGreeting() 会正常打印 'hello friend'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_4-6-homeobject"><a href="#_4-6-homeobject" class="header-anchor">#</a> 4-6.HomeObject</h2> <p><code>JavaScript</code> 所有的函数都有一个名为 <code>[[HomeObject]]</code> 的属性。<strong>但并不是所有函数的该属性都有值。</strong></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// obj.getGreeting.[[HomeObject]] = obj</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Obj.prototype.getGreeting.[[HomeObject]] = Obj.prototype</span>
+<span class="token keyword">class</span> <span class="token class-name">Obj</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// fn.[[HomeObject]] = undefined</span>
+<span class="token keyword">function</span> <span class="token function">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>该属性在使用 <code>super</code> 的情况下特别有用。</p> <p>当在函数内部调用 <code>super</code> 时，会先根据该函数的 <code>[[HomeObject]]</code> 定位到该函数的实际拥有者。</p> <p>然后再利用 <code>Object.getPrototypeOf()</code> 定位到原型引用。</p> <p><a href="https://forum.kirupa.com/t/js-tip-of-the-day-a-functions-home-object/643187" target="_blank" rel="noopener noreferrer">更多资料<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_4-7-新增方法"><a href="#_4-7-新增方法" class="header-anchor">#</a> 4-7.新增方法</h2> <h3 id="_4-7-1-object-is"><a href="#_4-7-1-object-is" class="header-anchor">#</a> 4-7-1.Object.is</h3> <p><a href="/blog/FE/javascript/ECMAScript/5.Object.html#_2-object-is" target="_blank">看这里吧</a></p> <h3 id="_4-7-2-object-assign"><a href="#_4-7-2-object-assign" class="header-anchor">#</a> 4-7-2.Object.assign</h3> <p><a href="/blog/FE/javascript/ECMAScript/5.Object.html#_1-object-assign" target="_blank">看这里吧</a></p> <h3 id="_4-7-3-object-setprototypeof"><a href="#_4-7-3-object-setprototypeof" class="header-anchor">#</a> 4-7-3.Object.setPrototypeOf</h3> <p><a href="/blog/FE/javascript/ECMAScript/5.Object.html#_4-object-setprototypeof" target="_blank">看这里吧</a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/1/2022, 9:11:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/FE/js-advance/es6/3.function.html" class="prev">
+        3.函数
+      </a></span> <span class="next"><a href="/blog/FE/js-advance/es6/5.destruction.html">
+        5.解构
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/blog/assets/js/app.07443ae3.js" defer></script><script src="/blog/assets/js/2.c0a0c17a.js" defer></script><script src="/blog/assets/js/59.94ac3d5d.js" defer></script>
+  </body>
+</html>
