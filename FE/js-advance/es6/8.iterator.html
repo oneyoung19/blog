@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>8.迭代器与生成器 | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.97f8634c.css" as="style"><link rel="preload" href="/blog/assets/js/app.e6073e7d.js" as="script"><link rel="preload" href="/blog/assets/js/2.1c842b3b.js" as="script"><link rel="preload" href="/blog/assets/js/94.5f51ce80.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4393515d.js"><link rel="prefetch" href="/blog/assets/js/100.196101c1.js"><link rel="prefetch" href="/blog/assets/js/101.841d3f19.js"><link rel="prefetch" href="/blog/assets/js/102.b70129b9.js"><link rel="prefetch" href="/blog/assets/js/103.a865183f.js"><link rel="prefetch" href="/blog/assets/js/104.3818f480.js"><link rel="prefetch" href="/blog/assets/js/105.cd20a0b7.js"><link rel="prefetch" href="/blog/assets/js/106.f9d10fe8.js"><link rel="prefetch" href="/blog/assets/js/107.6790dcab.js"><link rel="prefetch" href="/blog/assets/js/108.962de3c6.js"><link rel="prefetch" href="/blog/assets/js/109.436856e2.js"><link rel="prefetch" href="/blog/assets/js/11.7ffa1678.js"><link rel="prefetch" href="/blog/assets/js/110.3945e6c4.js"><link rel="prefetch" href="/blog/assets/js/111.f367a5c8.js"><link rel="prefetch" href="/blog/assets/js/112.33bab20a.js"><link rel="prefetch" href="/blog/assets/js/113.631117f5.js"><link rel="prefetch" href="/blog/assets/js/114.d39f6cc6.js"><link rel="prefetch" href="/blog/assets/js/115.69a5056b.js"><link rel="prefetch" href="/blog/assets/js/116.f651819a.js"><link rel="prefetch" href="/blog/assets/js/117.26a5955f.js"><link rel="prefetch" href="/blog/assets/js/118.75522e37.js"><link rel="prefetch" href="/blog/assets/js/119.4b01eedb.js"><link rel="prefetch" href="/blog/assets/js/12.a1970dd8.js"><link rel="prefetch" href="/blog/assets/js/120.0150e034.js"><link rel="prefetch" href="/blog/assets/js/121.f93c362f.js"><link rel="prefetch" href="/blog/assets/js/122.4f2974fb.js"><link rel="prefetch" href="/blog/assets/js/123.db5d6905.js"><link rel="prefetch" href="/blog/assets/js/124.409dfe20.js"><link rel="prefetch" href="/blog/assets/js/125.ca6461e0.js"><link rel="prefetch" href="/blog/assets/js/126.2668c7b2.js"><link rel="prefetch" href="/blog/assets/js/127.f64bb189.js"><link rel="prefetch" href="/blog/assets/js/128.0f238c46.js"><link rel="prefetch" href="/blog/assets/js/129.0ec2b78e.js"><link rel="prefetch" href="/blog/assets/js/13.25daa062.js"><link rel="prefetch" href="/blog/assets/js/130.70295297.js"><link rel="prefetch" href="/blog/assets/js/131.60cd8331.js"><link rel="prefetch" href="/blog/assets/js/132.aba5eb39.js"><link rel="prefetch" href="/blog/assets/js/133.f6b185e3.js"><link rel="prefetch" href="/blog/assets/js/134.1719a75c.js"><link rel="prefetch" href="/blog/assets/js/135.a786655f.js"><link rel="prefetch" href="/blog/assets/js/136.a6d7dc7a.js"><link rel="prefetch" href="/blog/assets/js/137.4bd22af7.js"><link rel="prefetch" href="/blog/assets/js/138.890689f5.js"><link rel="prefetch" href="/blog/assets/js/139.d9a13671.js"><link rel="prefetch" href="/blog/assets/js/14.042c03cc.js"><link rel="prefetch" href="/blog/assets/js/140.2fe35f46.js"><link rel="prefetch" href="/blog/assets/js/141.836f3934.js"><link rel="prefetch" href="/blog/assets/js/142.57463f85.js"><link rel="prefetch" href="/blog/assets/js/143.cb6fb984.js"><link rel="prefetch" href="/blog/assets/js/144.aaaf0cea.js"><link rel="prefetch" href="/blog/assets/js/145.ead4d08c.js"><link rel="prefetch" href="/blog/assets/js/146.a30148cd.js"><link rel="prefetch" href="/blog/assets/js/147.0c079a1c.js"><link rel="prefetch" href="/blog/assets/js/148.9fc1a1c6.js"><link rel="prefetch" href="/blog/assets/js/149.e344c67e.js"><link rel="prefetch" href="/blog/assets/js/15.e8dda411.js"><link rel="prefetch" href="/blog/assets/js/150.23449f2b.js"><link rel="prefetch" href="/blog/assets/js/151.dd1edba7.js"><link rel="prefetch" href="/blog/assets/js/152.7385ca8e.js"><link rel="prefetch" href="/blog/assets/js/153.9233a136.js"><link rel="prefetch" href="/blog/assets/js/154.ec84bbe6.js"><link rel="prefetch" href="/blog/assets/js/155.ce7203ac.js"><link rel="prefetch" href="/blog/assets/js/156.b9c430bc.js"><link rel="prefetch" href="/blog/assets/js/157.c1ba7df1.js"><link rel="prefetch" href="/blog/assets/js/158.d97c89d8.js"><link rel="prefetch" href="/blog/assets/js/159.09f95281.js"><link rel="prefetch" href="/blog/assets/js/16.5f6ddd71.js"><link rel="prefetch" href="/blog/assets/js/160.ba4dadf4.js"><link rel="prefetch" href="/blog/assets/js/161.e50e1c9e.js"><link rel="prefetch" href="/blog/assets/js/162.41eee0c3.js"><link rel="prefetch" href="/blog/assets/js/163.be7af447.js"><link rel="prefetch" href="/blog/assets/js/164.eeaeb33f.js"><link rel="prefetch" href="/blog/assets/js/165.187abb48.js"><link rel="prefetch" href="/blog/assets/js/166.0c158a9b.js"><link rel="prefetch" href="/blog/assets/js/167.4772a9ca.js"><link rel="prefetch" href="/blog/assets/js/168.4fb5409d.js"><link rel="prefetch" href="/blog/assets/js/169.f8b63ccf.js"><link rel="prefetch" href="/blog/assets/js/17.ceb41cbd.js"><link rel="prefetch" href="/blog/assets/js/170.40e41212.js"><link rel="prefetch" href="/blog/assets/js/171.092185b6.js"><link rel="prefetch" href="/blog/assets/js/172.394a0ad8.js"><link rel="prefetch" href="/blog/assets/js/173.25ab55be.js"><link rel="prefetch" href="/blog/assets/js/174.f833a4e9.js"><link rel="prefetch" href="/blog/assets/js/175.7087dcd7.js"><link rel="prefetch" href="/blog/assets/js/176.6e77c657.js"><link rel="prefetch" href="/blog/assets/js/177.51da0f75.js"><link rel="prefetch" href="/blog/assets/js/178.fd975af0.js"><link rel="prefetch" href="/blog/assets/js/179.8a046b34.js"><link rel="prefetch" href="/blog/assets/js/18.8b57e78d.js"><link rel="prefetch" href="/blog/assets/js/180.afc0c7ab.js"><link rel="prefetch" href="/blog/assets/js/181.d3e9066e.js"><link rel="prefetch" href="/blog/assets/js/182.9b88dc5e.js"><link rel="prefetch" href="/blog/assets/js/183.21edabed.js"><link rel="prefetch" href="/blog/assets/js/184.4c659310.js"><link rel="prefetch" href="/blog/assets/js/185.b3b0f21a.js"><link rel="prefetch" href="/blog/assets/js/186.7e308ebf.js"><link rel="prefetch" href="/blog/assets/js/187.20b246a9.js"><link rel="prefetch" href="/blog/assets/js/188.82a55522.js"><link rel="prefetch" href="/blog/assets/js/189.13d388d7.js"><link rel="prefetch" href="/blog/assets/js/19.237ae9bc.js"><link rel="prefetch" href="/blog/assets/js/190.84882196.js"><link rel="prefetch" href="/blog/assets/js/191.19deb555.js"><link rel="prefetch" href="/blog/assets/js/192.2dd432be.js"><link rel="prefetch" href="/blog/assets/js/193.fe9b9f38.js"><link rel="prefetch" href="/blog/assets/js/194.39f236c2.js"><link rel="prefetch" href="/blog/assets/js/195.151f212b.js"><link rel="prefetch" href="/blog/assets/js/196.03e61870.js"><link rel="prefetch" href="/blog/assets/js/197.ccf4e46b.js"><link rel="prefetch" href="/blog/assets/js/198.466413ea.js"><link rel="prefetch" href="/blog/assets/js/199.ed34eeb2.js"><link rel="prefetch" href="/blog/assets/js/20.c0ed6b1b.js"><link rel="prefetch" href="/blog/assets/js/200.17cb5814.js"><link rel="prefetch" href="/blog/assets/js/201.93e4f22f.js"><link rel="prefetch" href="/blog/assets/js/202.6ea09249.js"><link rel="prefetch" href="/blog/assets/js/203.f264ee30.js"><link rel="prefetch" href="/blog/assets/js/204.73fede76.js"><link rel="prefetch" href="/blog/assets/js/205.720481ac.js"><link rel="prefetch" href="/blog/assets/js/206.0bc19bd2.js"><link rel="prefetch" href="/blog/assets/js/207.9949ee1a.js"><link rel="prefetch" href="/blog/assets/js/208.7a0ea3e9.js"><link rel="prefetch" href="/blog/assets/js/209.9f47b2a3.js"><link rel="prefetch" href="/blog/assets/js/21.19ba041c.js"><link rel="prefetch" href="/blog/assets/js/210.36bdeb7c.js"><link rel="prefetch" href="/blog/assets/js/211.988e3947.js"><link rel="prefetch" href="/blog/assets/js/212.4cbf46cb.js"><link rel="prefetch" href="/blog/assets/js/213.f8e854c7.js"><link rel="prefetch" href="/blog/assets/js/214.ce177d83.js"><link rel="prefetch" href="/blog/assets/js/215.6bbc704d.js"><link rel="prefetch" href="/blog/assets/js/216.4d7ece25.js"><link rel="prefetch" href="/blog/assets/js/217.2c1be51c.js"><link rel="prefetch" href="/blog/assets/js/218.b78fdd11.js"><link rel="prefetch" href="/blog/assets/js/219.59ce2d19.js"><link rel="prefetch" href="/blog/assets/js/22.b23d132e.js"><link rel="prefetch" href="/blog/assets/js/220.3ca01c0d.js"><link rel="prefetch" href="/blog/assets/js/221.332dc5ef.js"><link rel="prefetch" href="/blog/assets/js/222.7517f68a.js"><link rel="prefetch" href="/blog/assets/js/223.9c512ade.js"><link rel="prefetch" href="/blog/assets/js/224.14e70580.js"><link rel="prefetch" href="/blog/assets/js/225.4be2a022.js"><link rel="prefetch" href="/blog/assets/js/226.ff5d6a72.js"><link rel="prefetch" href="/blog/assets/js/227.8b165aae.js"><link rel="prefetch" href="/blog/assets/js/228.38c776c0.js"><link rel="prefetch" href="/blog/assets/js/229.6c672c60.js"><link rel="prefetch" href="/blog/assets/js/23.a07f4049.js"><link rel="prefetch" href="/blog/assets/js/230.07d6cb5f.js"><link rel="prefetch" href="/blog/assets/js/231.532c62cb.js"><link rel="prefetch" href="/blog/assets/js/232.d3564fe0.js"><link rel="prefetch" href="/blog/assets/js/233.bac43019.js"><link rel="prefetch" href="/blog/assets/js/234.10fcaf38.js"><link rel="prefetch" href="/blog/assets/js/235.ed418fdf.js"><link rel="prefetch" href="/blog/assets/js/236.2f98fcb3.js"><link rel="prefetch" href="/blog/assets/js/237.cd469ceb.js"><link rel="prefetch" href="/blog/assets/js/238.44c9d2df.js"><link rel="prefetch" href="/blog/assets/js/239.ebb97777.js"><link rel="prefetch" href="/blog/assets/js/24.ba92fc27.js"><link rel="prefetch" href="/blog/assets/js/240.c9ef9301.js"><link rel="prefetch" href="/blog/assets/js/241.9267aa73.js"><link rel="prefetch" href="/blog/assets/js/242.574918ef.js"><link rel="prefetch" href="/blog/assets/js/243.ab4603e7.js"><link rel="prefetch" href="/blog/assets/js/244.251b24dd.js"><link rel="prefetch" href="/blog/assets/js/245.3dd2765f.js"><link rel="prefetch" href="/blog/assets/js/246.a1e561ae.js"><link rel="prefetch" href="/blog/assets/js/247.e3298fb7.js"><link rel="prefetch" href="/blog/assets/js/248.79256fad.js"><link rel="prefetch" href="/blog/assets/js/249.47b242b7.js"><link rel="prefetch" href="/blog/assets/js/25.779feaea.js"><link rel="prefetch" href="/blog/assets/js/250.530242ac.js"><link rel="prefetch" href="/blog/assets/js/251.47e52290.js"><link rel="prefetch" href="/blog/assets/js/252.9718dfb3.js"><link rel="prefetch" href="/blog/assets/js/253.3a1cef7f.js"><link rel="prefetch" href="/blog/assets/js/254.02bed552.js"><link rel="prefetch" href="/blog/assets/js/255.1b52e934.js"><link rel="prefetch" href="/blog/assets/js/256.9a134446.js"><link rel="prefetch" href="/blog/assets/js/257.17738f17.js"><link rel="prefetch" href="/blog/assets/js/258.221f7d77.js"><link rel="prefetch" href="/blog/assets/js/259.aad542a6.js"><link rel="prefetch" href="/blog/assets/js/26.7244be77.js"><link rel="prefetch" href="/blog/assets/js/260.e657d1dc.js"><link rel="prefetch" href="/blog/assets/js/261.7b017f48.js"><link rel="prefetch" href="/blog/assets/js/262.7596c07f.js"><link rel="prefetch" href="/blog/assets/js/263.6c1b39ad.js"><link rel="prefetch" href="/blog/assets/js/264.106a3dc0.js"><link rel="prefetch" href="/blog/assets/js/265.901e7c90.js"><link rel="prefetch" href="/blog/assets/js/266.97e9eb58.js"><link rel="prefetch" href="/blog/assets/js/27.5e97c970.js"><link rel="prefetch" href="/blog/assets/js/28.d77f9171.js"><link rel="prefetch" href="/blog/assets/js/29.eba2ab51.js"><link rel="prefetch" href="/blog/assets/js/3.7acaf7e0.js"><link rel="prefetch" href="/blog/assets/js/30.fae512af.js"><link rel="prefetch" href="/blog/assets/js/31.68e402db.js"><link rel="prefetch" href="/blog/assets/js/32.f2b1ea3c.js"><link rel="prefetch" href="/blog/assets/js/33.735e374b.js"><link rel="prefetch" href="/blog/assets/js/34.2e8b453e.js"><link rel="prefetch" href="/blog/assets/js/35.3d72db4c.js"><link rel="prefetch" href="/blog/assets/js/36.d1862dc5.js"><link rel="prefetch" href="/blog/assets/js/37.cc4edaa8.js"><link rel="prefetch" href="/blog/assets/js/38.a45ab69d.js"><link rel="prefetch" href="/blog/assets/js/39.e2b35aea.js"><link rel="prefetch" href="/blog/assets/js/4.a772687a.js"><link rel="prefetch" href="/blog/assets/js/40.dbc6640e.js"><link rel="prefetch" href="/blog/assets/js/41.85b75216.js"><link rel="prefetch" href="/blog/assets/js/42.a3ed8d83.js"><link rel="prefetch" href="/blog/assets/js/43.e128dceb.js"><link rel="prefetch" href="/blog/assets/js/44.c69f3e50.js"><link rel="prefetch" href="/blog/assets/js/45.15e8ec65.js"><link rel="prefetch" href="/blog/assets/js/46.ea170f40.js"><link rel="prefetch" href="/blog/assets/js/47.fbdeef93.js"><link rel="prefetch" href="/blog/assets/js/48.34e62d4b.js"><link rel="prefetch" href="/blog/assets/js/49.23c53c7b.js"><link rel="prefetch" href="/blog/assets/js/5.77065e94.js"><link rel="prefetch" href="/blog/assets/js/50.ea8842cc.js"><link rel="prefetch" href="/blog/assets/js/51.c35381e1.js"><link rel="prefetch" href="/blog/assets/js/52.abd61e14.js"><link rel="prefetch" href="/blog/assets/js/53.2c183145.js"><link rel="prefetch" href="/blog/assets/js/54.18083a0b.js"><link rel="prefetch" href="/blog/assets/js/55.b88439b6.js"><link rel="prefetch" href="/blog/assets/js/56.7042aadb.js"><link rel="prefetch" href="/blog/assets/js/57.f7c75321.js"><link rel="prefetch" href="/blog/assets/js/58.f0690ed8.js"><link rel="prefetch" href="/blog/assets/js/59.efe74c9d.js"><link rel="prefetch" href="/blog/assets/js/6.aff36e9f.js"><link rel="prefetch" href="/blog/assets/js/60.d8fd0e26.js"><link rel="prefetch" href="/blog/assets/js/61.635d67d5.js"><link rel="prefetch" href="/blog/assets/js/62.141553b4.js"><link rel="prefetch" href="/blog/assets/js/63.c536492e.js"><link rel="prefetch" href="/blog/assets/js/64.ef8de8ed.js"><link rel="prefetch" href="/blog/assets/js/65.51a7cf00.js"><link rel="prefetch" href="/blog/assets/js/66.6818f2d3.js"><link rel="prefetch" href="/blog/assets/js/67.2f0c815e.js"><link rel="prefetch" href="/blog/assets/js/68.381cee44.js"><link rel="prefetch" href="/blog/assets/js/69.a4c31a1a.js"><link rel="prefetch" href="/blog/assets/js/7.2b0b0e2a.js"><link rel="prefetch" href="/blog/assets/js/70.d02faafb.js"><link rel="prefetch" href="/blog/assets/js/71.ba810c69.js"><link rel="prefetch" href="/blog/assets/js/72.b089a71c.js"><link rel="prefetch" href="/blog/assets/js/73.ed57d6e8.js"><link rel="prefetch" href="/blog/assets/js/74.197311c2.js"><link rel="prefetch" href="/blog/assets/js/75.c9f2e283.js"><link rel="prefetch" href="/blog/assets/js/76.7d71b6d5.js"><link rel="prefetch" href="/blog/assets/js/77.07f347d4.js"><link rel="prefetch" href="/blog/assets/js/78.706ac954.js"><link rel="prefetch" href="/blog/assets/js/79.22052b78.js"><link rel="prefetch" href="/blog/assets/js/8.bd4c0244.js"><link rel="prefetch" href="/blog/assets/js/80.5b0faa9e.js"><link rel="prefetch" href="/blog/assets/js/81.ec959d1f.js"><link rel="prefetch" href="/blog/assets/js/82.0e1966ef.js"><link rel="prefetch" href="/blog/assets/js/83.e610e0bb.js"><link rel="prefetch" href="/blog/assets/js/84.086ec945.js"><link rel="prefetch" href="/blog/assets/js/85.dccb8228.js"><link rel="prefetch" href="/blog/assets/js/86.9597e691.js"><link rel="prefetch" href="/blog/assets/js/87.3c3daed8.js"><link rel="prefetch" href="/blog/assets/js/88.2091296f.js"><link rel="prefetch" href="/blog/assets/js/89.92d3ecd0.js"><link rel="prefetch" href="/blog/assets/js/9.bf24b38a.js"><link rel="prefetch" href="/blog/assets/js/90.d4c84dd9.js"><link rel="prefetch" href="/blog/assets/js/91.cff62d4e.js"><link rel="prefetch" href="/blog/assets/js/92.da475d98.js"><link rel="prefetch" href="/blog/assets/js/93.9df33e27.js"><link rel="prefetch" href="/blog/assets/js/95.bca37a6d.js"><link rel="prefetch" href="/blog/assets/js/96.9e7fa5b6.js"><link rel="prefetch" href="/blog/assets/js/97.2c229488.js"><link rel="prefetch" href="/blog/assets/js/98.1272664f.js"><link rel="prefetch" href="/blog/assets/js/99.6a439123.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.97f8634c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/2FA.html" class="nav-link">
+  2FA
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/1.start.html" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><!----> <a href="/blog/BE/node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/vuepress/" class="nav-link">
+  Vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/2FA.html" class="nav-link">
+  2FA
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/1.start.html" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><!----> <a href="/blog/BE/node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/vuepress/" class="nav-link">
+  Vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/FE/js-advance/es6/" aria-current="page" class="sidebar-link">ES6</a></li><li><a href="/blog/FE/js-advance/es6/1.declare.html" class="sidebar-link">1.声明</a></li><li><a href="/blog/FE/js-advance/es6/2.string.html" class="sidebar-link">2.字符串</a></li><li><a href="/blog/FE/js-advance/es6/3.function.html" class="sidebar-link">3.函数</a></li><li><a href="/blog/FE/js-advance/es6/4.object.html" class="sidebar-link">4.对象</a></li><li><a href="/blog/FE/js-advance/es6/5.destruction.html" class="sidebar-link">5.解构</a></li><li><a href="/blog/FE/js-advance/es6/6.symbol.html" class="sidebar-link">6.Symbol</a></li><li><a href="/blog/FE/js-advance/es6/7.setAndMap.html" class="sidebar-link">7.Set和Map</a></li><li><a href="/blog/FE/js-advance/es6/8.iterator.html" aria-current="page" class="active sidebar-link">8.迭代器与生成器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-1-为什么需要迭代器" class="sidebar-link">8-1.为什么需要迭代器</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-2-何为迭代器" class="sidebar-link">8-2.何为迭代器</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-3-默认迭代器" class="sidebar-link">8-3.默认迭代器</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-4-内置迭代器" class="sidebar-link">8-4.内置迭代器</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-5-展开运算符" class="sidebar-link">8-5.展开运算符</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-6-生成器" class="sidebar-link">8-6.生成器</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-7-高级迭代器功能" class="sidebar-link">8-7.高级迭代器功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-7-1-迭代器传参" class="sidebar-link">8-7-1.迭代器传参</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-7-2-迭代器抛错" class="sidebar-link">8-7-2.迭代器抛错</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-7-3-生成器的return" class="sidebar-link">8-7-3.生成器的return</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-7-4-委托生成器" class="sidebar-link">8-7-4.委托生成器</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-8-任务执行" class="sidebar-link">8-8.任务执行</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-8-1-简单任务执行" class="sidebar-link">8-8-1.简单任务执行</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-8-2-任务执行传参" class="sidebar-link">8-8-2.任务执行传参</a></li><li class="sidebar-sub-header"><a href="/blog/FE/js-advance/es6/8.iterator.html#_8-8-3-异步任务执行" class="sidebar-link">8-8-3.异步任务执行</a></li></ul></li></ul></li><li><a href="/blog/FE/js-advance/es6/9.class.html" class="sidebar-link">9.类</a></li><li><a href="/blog/FE/js-advance/es6/10.array.html" class="sidebar-link">10.数组</a></li><li><a href="/blog/FE/js-advance/es6/11.promise.html" class="sidebar-link">11.Promise</a></li><li><a href="/blog/FE/js-advance/es6/12.proxy.html" class="sidebar-link">12.Proxy</a></li><li><a href="/blog/FE/js-advance/es6/13.module.html" class="sidebar-link">13.EsModule</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_8-1-为什么需要迭代器"><a href="#_8-1-为什么需要迭代器" class="header-anchor">#</a> 8-1.为什么需要迭代器</h2> <p>我们之前需要遍历数据的时候，通常使用 <code>for</code> 循环。</p> <p>但 <code>for</code> 循环其实是利用索引及其递增访问对应的数据。</p> <p>如果我们只是想要对应的 <code>value</code>，而不想关心 <code>key</code> 的时候，就可以利用迭代器。</p> <p>目前，<strong>数组、<code>Set</code> 集合、<code>Map</code> 集合、字符串都可以使用迭代器</strong>。</p> <h2 id="_8-2-何为迭代器"><a href="#_8-2-何为迭代器" class="header-anchor">#</a> 8-2.何为迭代器</h2> <p>迭代器其实是一个对象。</p> <ol><li>本身有 <code>next</code> 方法。</li> <li>调用 <code>next</code> 方法后，返回值是一个对象。对象有两个属性，<code>value</code> 和 <code>done</code>。</li> <li>其中 <code>value</code> 对应迭代数据的每一项。<code>done</code> 表示是否迭代完毕。迭代完毕时，<code>value</code> 为 <code>undefined</code>，此时 <code>done</code> 为 <code>true</code>。</li></ol> <p>我们可以模拟实现一个迭代器：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getIterator</span> <span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function">next</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> done <span class="token operator">=</span> index <span class="token operator">&gt;=</span> list<span class="token punctuation">.</span>length
+      <span class="token keyword">var</span> value <span class="token operator">=</span> done <span class="token operator">?</span> <span class="token keyword">undefined</span> <span class="token operator">:</span> list<span class="token punctuation">[</span>index<span class="token operator">++</span><span class="token punctuation">]</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        value<span class="token punctuation">,</span>
+        done
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Jerry'</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">getIterator</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span>
+iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'Tom', done: false}</span>
+iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'Jerry', done: false}</span>
+iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// {value: undefined, done: true}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="_8-3-默认迭代器"><a href="#_8-3-默认迭代器" class="header-anchor">#</a> 8-3.默认迭代器</h2> <p>在 <code>Es6</code> 中，所有的集合对象（数组、 <code>Set</code> 集合、 <code>Map</code> 集合）和字符串都是可迭代对象。</p> <p>这是因为 <code>Es6</code> 为这些集合对象和字符串都提供了一个方法 <code>Symbol.iterator</code>。</p> <p><strong><code>Symbol.iterator</code> 本身是 <code>Symbol</code>，它对应的值是一个函数，返回值是迭代器。</strong></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1.数组</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'am'</span><span class="token punctuation">,</span> <span class="token string">'an'</span><span class="token punctuation">,</span> <span class="token string">'array'</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> getArrayIterator <span class="token operator">=</span> arr<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>getArrayIterator<span class="token punctuation">)</span> <span class="token comment">// ƒ values() { [native code] }</span>
+<span class="token comment">// 这里不能使用 getArrayIterator(arr)</span>
+<span class="token keyword">var</span> arrayIterator <span class="token operator">=</span> arr<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+arrayIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+arrayIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+arrayIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+arrayIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2.Set 集合</span>
+<span class="token keyword">var</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'am'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'set'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> getSetIterator <span class="token operator">=</span> <span class="token keyword">set</span><span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>getSetIterator<span class="token punctuation">)</span> <span class="token comment">// ƒ values() { [native code] }</span>
+<span class="token keyword">var</span> setIterator <span class="token operator">=</span> <span class="token keyword">set</span><span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+setIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+setIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+setIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+setIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 3.Map 集合</span>
+<span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'yxp'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> getMapIterator <span class="token operator">=</span> map<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>getMapIterator<span class="token punctuation">)</span> <span class="token comment">// ƒ entries() { [native code] }</span>
+<span class="token keyword">var</span> mapIterator <span class="token operator">=</span> map<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+mapIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+mapIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 4.字符串</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'i am the king of the world'</span>
+<span class="token keyword">var</span> getStrIterator <span class="token operator">=</span> str<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>getStrIterator<span class="token punctuation">)</span> <span class="token comment">// ƒ [Symbol.iterator]() { [native code] }</span>
+<span class="token keyword">var</span> strIterator <span class="token operator">=</span> str<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+strIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+strIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p>在 <code>Es6</code> 中提供了 <code>for...of</code> 这个利用迭代器的新的遍历方式。该方式能遍历所有具有 <code>Symbol.iterator</code> 属性的数据。</p> <p>利用 <code>Symbol.iterator</code>，我们可以<strong>将不可迭代数据转化为可迭代数据</strong>。比如对象：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">19</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'yxp'</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 对象本身是不可迭代数据 Uncaught TypeError: obj is not iterable</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value <span class="token keyword">of</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 利用 Symbol.iterator</span>
+<span class="token keyword">var</span> iterateObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">19</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'yxp'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">in</span> <span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 由于 Symbol.iterator 是 Symbol。所以Object.prototype.hasOwnProperty()并不会获取该属性</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        list<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token function">next</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> done <span class="token operator">=</span> index <span class="token operator">&gt;=</span> list<span class="token punctuation">.</span>length
+        <span class="token keyword">const</span> value <span class="token operator">=</span> done <span class="token operator">?</span> <span class="token keyword">undefined</span> <span class="token operator">:</span> list<span class="token punctuation">[</span>index<span class="token operator">++</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          value<span class="token punctuation">,</span>
+          done
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value <span class="token keyword">of</span> iterateObj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><h2 id="_8-4-内置迭代器"><a href="#_8-4-内置迭代器" class="header-anchor">#</a> 8-4.内置迭代器</h2> <p>在 <code>Es6</code> 中，这3种类型的集合对象：数组、 <code>Map</code> 集合与 <code>Set</code> 集合，都内建了以下三种迭代器：</p> <ol><li><code>entries()</code> 返回一个迭代器，其值为多个键值对。</li> <li><code>values()</code> 返回一个迭代器，其值为集合的值。</li> <li><code>keys()</code> 返回一个迭代器，其值为集合中的所有键名。</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 以数组为例</span>
+<span class="token keyword">var</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'am'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'list'</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: Array(2), done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'i', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 0, done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>另外值得一提的是，字符串、 伪数组（<code>NodeList</code>、 <code>arguments</code>）也都能使用 <code>for...of</code> 方法，因为它们支持 <code>Symbol.iterator</code> 属性。但并不支持上述迭代器：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value <span class="token keyword">of</span> arguments<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token comment">// 逐次打印 1 2 3</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// ƒ values() { [native code] }</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">.</span>entries<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">.</span>values<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">.</span>keys<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="_8-5-展开运算符"><a href="#_8-5-展开运算符" class="header-anchor">#</a> 8-5.展开运算符</h2> <p><strong>展开运算符可用于任意可迭代对象</strong>。</p> <p>展开运算符可以操作可迭代对象，并根据默认迭代器来选取要引用的值，从迭代器读取所有值，然后按照返回顺序将它们依次返回。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1.数组</span>
+<span class="token keyword">var</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>list<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// [1, 2, 3]</span>
+<span class="token comment">// 2.Set</span>
+<span class="token keyword">var</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'set'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">set</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// ['a', 'set']</span>
+<span class="token comment">// 3.Map</span>
+<span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'yxp'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>map<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// [['id', 19], ['name', 'yxp']]</span>
+<span class="token comment">// 4.字符串</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'i am string'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// ['i', ' ', 'a', 'm', ' ', 's', 't', 'r', 'i', 'n', 'g']</span>
+<span class="token comment">// 5.伪数组（NodeList arguments）</span>
+<span class="token keyword">function</span> <span class="token function">fn</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// [1, 2, 3]</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="_8-6-生成器"><a href="#_8-6-生成器" class="header-anchor">#</a> 8-6.生成器</h2> <p>我们在前几章中有模拟实现迭代器，在 <code>ES6</code> 中提供了专门的生成器来生成迭代器。</p> <p>生成器是一种返回迭代器的函数，通过 <code>function</code> 关键字后的 <code>*</code> 符号来表示。函数中会用到新的关键字 <code>yield</code>(意为<strong>生成</strong>)。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token string">'Hello world!'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'console'</span><span class="token punctuation">,</span> <span class="token keyword">yield</span> <span class="token string">'alibaba'</span><span class="token punctuation">)</span>
+  <span class="token keyword">yield</span> <span class="token string">'I love '</span> <span class="token operator">+</span> <span class="token string">'my life'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">)</span> <span class="token comment">// generator {&lt;suspended&gt;}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'Hello world!', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'alibaba', done: false}</span>
+<span class="token comment">// console undefined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'I love my life', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: undefined, done: true}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>可以发现：</p> <ul><li><p><code>generator</code> 生成器函数执行之后，会返回迭代器 <code>iterator</code>。</p></li> <li><p><code>yield</code> 后的值会对应 <code>next</code> 方法执行后的 <code>value</code> 属性。</p></li> <li><p><code>yield</code> 关键字后面可以接任何值或表达式。<strong>但在函数内的执行结果是 <code>undefined</code>，并不会有返回值。</strong></p></li> <li><p>执行完 <code>yield</code> 后，该 <code>yield</code> 后的语句不会继续执行，直到再次调用迭代器的 <code>next()</code> 方法才会继续执行。该特性在下一章的<strong>高级迭代器功能</strong>中有更加广泛的应用。</p></li></ul> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>yield</code> 只能在生成器的函数作用域内使用，不能在其他函数作用域下使用。</p></div> <p>我们使用 <code>for</code> 循环和 <code>forEach</code> 来作比较：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1.for循环</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">firstGenerator</span><span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> list<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">yield</span> list<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> firstIterator <span class="token operator">=</span> <span class="token function">firstGenerator</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Hello'</span><span class="token punctuation">,</span> <span class="token string">'World'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'Hello', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'World', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: undefined, done: true}</span>
+
+<span class="token comment">// 2.forEach</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">secondGenerator</span><span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 由于 yield 在箭头的作用域内，所以执行时会报错</span>
+  list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">yield</span> item
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> secondIterator <span class="token operator">=</span> <span class="token function">secondGenerator</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Hello'</span><span class="token punctuation">,</span> <span class="token string">'World'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// Uncaught SyntaxError: Unexpected identifier</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>此外，由于生成器函数本身也是函数，所以也可以使用函数表达式或者作为对象方法使用：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1.函数表达式</span>
+<span class="token keyword">var</span> <span class="token function-variable function">generator</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token string">'Hello world'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'Hello world', done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 2.作为对象方法使用</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">*</span><span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">yield</span> <span class="token string">'Hello world'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'Hello world', done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_8-7-高级迭代器功能"><a href="#_8-7-高级迭代器功能" class="header-anchor">#</a> 8-7.高级迭代器功能</h2> <p>在之前，我们已经阐述了<strong>迭代器</strong>和<strong>生成器</strong>的基本使用。</p> <p>两者结合，我们来看下高级迭代器功能。</p> <h3 id="_8-7-1-迭代器传参"><a href="#_8-7-1-迭代器传参" class="header-anchor">#</a> 8-7-1.迭代器传参</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 1.正常执行</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> result
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: NaN, done: false} 因为value是undefined，undefined进行加法运算时，结果是NaN</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: undefined, done: false}</span>
+
+<span class="token comment">// 2，传参</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> result
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 102, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 100, done: false}</span>
+
+<span class="token comment">// 3.next传参其实影响的是上一次的yield语句的返回值</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> result
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 102, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 2, done: false} 可以从这里看出来，next的传参影响到了var result这里的语句。</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 200, done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p>总结：</p> <ol><li><strong>当 <code>yield</code> 后接变量与表达式时，可进行 <code>next</code> 函数传参操作</strong>。</li> <li><strong>每一次的 <code>next</code> 函数被调用，只会执行对应 <code>yield</code> 右侧语句，左侧语句并不会执行</strong>。</li> <li><strong><code>next</code> 传参其实影响的是上一次的 <code>yield</code> 语句的返回值。</strong></li></ol> <h3 id="_8-7-2-迭代器抛错"><a href="#_8-7-2-迭代器抛错" class="header-anchor">#</a> 8-7-2.迭代器抛错</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 利用try...catch捕获throw抛出的错误</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token number">2</span>
+    console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> result
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// ① </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+<span class="token comment">// ② </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">throw</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 4, done: false}</span>
+<span class="token comment">// ③</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 100, done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>逐步分析(<code>console</code> 语句)：</p> <ul><li>执行 <code>①</code> 时，代码执行 <code>var value; yield 1</code>。</li> <li>执行 <code>②</code> 时，在执行 <code>yield value + 2</code>，会先执行 <code>try...catch</code> 块。由于 <code>throw</code> 抛出错误，这时 <code>try...catch</code> 块捕获，代码执行 <code>catch</code> 块代码，<code>value</code> 被赋值为 <code>2</code>。同时打印 <code>Error</code>。另外 <code>throw</code> 可以看做额外的一次的 <code>next</code> 调用，执行 <code>yield value + 2</code>。</li> <li>执行 <code>③</code> 时，由于 <code>next</code> 传入的参数是 <code>100</code>，所以 <code>value</code> 会是 <code>100</code>。</li></ul> <p>现在我们修改下 <code>throw</code> 的调用时机：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// throw抛出的错误必须在执行yield之前 才能捕获到</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token number">2</span>
+    console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> result
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// ① </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">throw</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// Uncaught Error: error</span>
+<span class="token comment">// ② </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// not work</span>
+<span class="token comment">// ③</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// not work</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>执行之后，我们会发现 <code>①</code> 直接报错，原因就是<strong>错误未捕获</strong>，<code>Uncaught Error: error</code>。后面的 <code>②</code> 和 <code>③</code> 不会再执行。</p> <p>其实这个例子的执行结果，我们在上例中是可以推断出来的：</p> <p>在执行 <code>①</code> 时，执行的会是 <code>var value; yield 1</code> 这两步，由于这两步没有 <code>try...catch</code> 进行捕获，在 <code>throw</code> 语句触发的时候，就直接报错阻断代码执行了。</p> <p><strong>总结</strong>：</p> <ol><li><code>throw</code> 可用于抛出错误。</li> <li><code>throw</code> 可以看做会额外执行一次 <code>next</code> 方法。</li> <li>在与 <code>throw</code> <strong>对应</strong>的 <code>yield</code> 代码执行过程中，我们可以用 <code>try...catch</code> 捕获错误。</li></ol> <h3 id="_8-7-3-生成器的return"><a href="#_8-7-3-生成器的return" class="header-anchor">#</a> 8-7-3.生成器的return</h3> <p>由于生成器也是函数，因此也可以通过 <code>return</code> 语句提前退出函数执行。</p> <p>当使用 <code>return</code> 时，属性 <code>done</code> 会被设置为 <code>true</code>。</p> <p>如果 <code>return</code> 语句后面有值，属性 <code>value</code> 会被设置成对应的值。</p> <p>如下例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">return</span> <span class="token string">'hello world'</span>
+  <span class="token keyword">yield</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'hello world', done: true}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: undefined, done: true}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_8-7-4-委托生成器"><a href="#_8-7-4-委托生成器" class="header-anchor">#</a> 8-7-4.委托生成器</h3> <p>在某些情况下，我们可能需要将多个迭代器合而为一。这时我们就可以使用<strong>委托生成器</strong>。</p> <p>要额外注意的一点是，<strong>在定义委托生成器时，需要在 <code>yield</code> 后面添加 <code>*</code>。</strong></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">numberGenerator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">yield</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">colorGenerator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token string">'red'</span>
+  <span class="token keyword">yield</span> <span class="token string">'green'</span>
+  <span class="token keyword">yield</span> <span class="token string">'blue'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">combinedGenerator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 这里的yield必须添加* 否则next方法不能正确迭代</span>
+  <span class="token keyword">yield</span><span class="token operator">*</span> <span class="token function">numberGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">yield</span><span class="token operator">*</span> <span class="token function">colorGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> combinedIterator <span class="token operator">=</span> <span class="token function">combinedGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>combinedIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>combinedIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 2, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>combinedIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'red', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>combinedIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'green', done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>combinedIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 'blue', done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>另外还可以结合 <code>return</code> 使用：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">subGenerator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">return</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span><span class="token operator">*</span> <span class="token function">subGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> result<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">yield</span> i
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+<span class="token comment">// 3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 1, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 2, done: false}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// {value: 3, done: false}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>我们可以发现，子生成器中的 <code>return</code> 语句的值，并没有打印 <code>{value: 3, done: true}</code>，而是将值传递给了 <code>result</code> 变量。</p> <p>我们记住这个特点就可以。</p> <h2 id="_8-8-任务执行"><a href="#_8-8-任务执行" class="header-anchor">#</a> 8-8.任务执行</h2> <p>我们已经知道，生成器中的 <code>yield</code> 语句是在迭代器的 <code>next</code> 函数调用后才会执行的。</p> <p>但在实际的业务中，我们并不会根据时机或条件逐步调用 <code>next</code> 函数。</p> <p>对应 <code>async await</code> 更加高级的处理任务的功能，我们来用<strong>迭代器</strong>与<strong>生成器</strong>来实现相同的功能。</p> <p>首先分析下，我们要实现的功能：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// ajax</span>
+<span class="token keyword">var</span> <span class="token function-variable function">getUserNameById</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> success<span class="token punctuation">,</span> error</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    method<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">,</span>
+    success<span class="token punctuation">,</span>
+    error
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 生成器 我们的业务功能会写在这里</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1.同步任务</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token comment">// 我们根据前几节 会知道这里是undefined 但我们现在在上下文环境 希望它打印的是1</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+  <span class="token comment">// 2.异步任务</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> res <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">getUserNameById</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">19</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 对应success的处理逻辑</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 对应error的处理逻辑</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 我们要写一套代码 自动执行上面生成器 并实现下列功能：</span>
+<span class="token comment">/*
+1.yield 语句自动依次执行。
+2.yield 左侧语句的变量，对应上一步yield执行后的value
+3.异步任务按照上面的书写方式执行
+4.处理异步任务的成功逻辑与失败逻辑
+*/</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p>我们循序渐进的来实现这套函数。</p> <h3 id="_8-8-1-简单任务执行"><a href="#_8-8-1-简单任务执行" class="header-anchor">#</a> 8-8-1.简单任务执行</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">yield</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token keyword">yield</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 不封装函数的话 想要打印的话 需要调用3次next函数</span>
+<span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>现在我们封装一套函数，使得上面的 <code>generator</code> 内的代码能够自动执行，而无需我们再手动的调用 <code>next</code> 函数。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 生成器</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">yield</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token keyword">yield</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 辅助函数</span>
+<span class="token keyword">function</span> <span class="token function">exec</span> <span class="token punctuation">(</span><span class="token parameter">generatorFn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generatorFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">function</span> <span class="token function">step</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">exec</span><span class="token punctuation">(</span>generator<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="_8-8-2-任务执行传参"><a href="#_8-8-2-任务执行传参" class="header-anchor">#</a> 8-8-2.任务执行传参</h3> <p>上节已经实现了同步任务的自动执行，但是如果我们想要实现下面的生成器功能，就需要对辅助函数加以改造、添加传参功能。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 生成器</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token comment">// !!! 如果想要result为3，那么则需要把上一步yield中的得到的value传入next方法</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token keyword">yield</span> result
+<span class="token punctuation">}</span>
+<span class="token comment">// 1.辅助函数</span>
+<span class="token keyword">function</span> <span class="token function">exec</span> <span class="token punctuation">(</span><span class="token parameter">generatorFn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generatorFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">function</span> <span class="token function">step</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">exec</span><span class="token punctuation">(</span>generator<span class="token punctuation">)</span>
+<span class="token comment">/*
+根据前几节的学习，我们会知道，这里依次打印：
+{value: 1, done: false}
+{value: NaN, done: false}
+{value: undefined, done: false}
+{value: undefined, done: true}
+*/</span> 
+
+<span class="token comment">// 2.可传参的辅助函数</span>
+<span class="token keyword">function</span> <span class="token function">exexWithParams</span> <span class="token punctuation">(</span><span class="token parameter">generatorFn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generatorFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">function</span> <span class="token function">step</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 这里把yield得到的value 传入下一步的next方法中</span>
+      result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+      <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">exexWithParams</span><span class="token punctuation">(</span>generator<span class="token punctuation">)</span>
+<span class="token comment">/*
+依次打印：
+{value: 1, done: false}
+{value: 3, done: false}
+{value: 3, done: false}
+{value: undefined, done: true}
+*/</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div><h3 id="_8-8-3-异步任务执行"><a href="#_8-8-3-异步任务执行" class="header-anchor">#</a> 8-8-3.异步任务执行</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">getImage</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">success<span class="token punctuation">,</span> error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      url<span class="token operator">:</span> <span class="token string">'https://img3.doubanio.com/img/files/file-1633834533-0.jpg'</span><span class="token punctuation">,</span>
+      method<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">,</span>
+      success<span class="token punctuation">,</span>
+      error<span class="token punctuation">,</span>
+      xhrFields<span class="token operator">:</span> <span class="token punctuation">{</span>
+        responseType<span class="token operator">:</span> <span class="token string">'blob'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">generator</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1.同步任务</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token number">1</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">yield</span> value <span class="token operator">+</span> <span class="token number">2</span>
+  <span class="token comment">// 2.异步任务</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> res <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">getImage</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 对应success的处理逻辑</span>
+    <span class="token keyword">const</span> objectURL <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Blob</span><span class="token punctuation">(</span><span class="token punctuation">[</span>res<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'image/jpeg'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objectURL<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 对应error的处理逻辑</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">exec</span> <span class="token punctuation">(</span><span class="token parameter">generatorFn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> iterator <span class="token operator">=</span> <span class="token function">generatorFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">function</span> <span class="token function">step</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 判断value的类型 异步任务这里会是function</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> result<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> <span class="token function-variable function">success</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+          <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> <span class="token function-variable function">error</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 注意这里的iterator.throw 其实是在 yield getImage() 的下一个yield执行时抛错</span>
+          result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">throw</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+          <span class="token comment">// 这里是否调用step的区别在于 异步任务抛错后 后续代码是否还要执行</span>
+          <span class="token comment">// step()</span>
+        <span class="token punctuation">}</span>
+        result<span class="token punctuation">.</span><span class="token function">value</span><span class="token punctuation">(</span>success<span class="token punctuation">,</span> error<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+        <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 因为上面的error本身是异步的 所以step函数本身不能写在这里</span>
+      <span class="token comment">// step()</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">step</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">exec</span><span class="token punctuation">(</span>generator<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2/17/2022, 10:47:27 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/FE/js-advance/es6/7.setAndMap.html" class="prev">
+        7.Set和Map
+      </a></span> <span class="next"><a href="/blog/FE/js-advance/es6/9.class.html">
+        9.类
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.e6073e7d.js" defer></script><script src="/blog/assets/js/2.1c842b3b.js" defer></script><script src="/blog/assets/js/94.5f51ce80.js" defer></script>
+  </body>
+</html>
