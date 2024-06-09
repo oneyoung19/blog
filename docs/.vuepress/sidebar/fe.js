@@ -59,7 +59,7 @@ module.exports = {
     '/FE/rendering/6.HR.md',
     '/FE/rendering/7.ESR.md',
     '/FE/rendering/8.SWSR.md'
-  ]
+  ],
   // Js
   '/FE/javascript/BOM/': [
     '/FE/javascript/BOM/1.start.md',
