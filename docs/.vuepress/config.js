@@ -9,6 +9,7 @@ module.exports = {
     ['meta', { name: 'google', content: 'notranslate' }],
     // 增加一个自定义的 favicon(网页标签的图标)
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     // [百度统计](https://tongji.baidu.com/) jsgoshu
     ['script', {},
       `var _hmt = _hmt || [];

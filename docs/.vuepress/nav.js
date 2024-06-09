@@ -30,6 +30,10 @@ module.exports = [
           {
             text: 'PWA',
             link: '/FE/PWA/'
+          },
+          {
+            text: 'Rendering',
+            link: '/FE/rendering/'
           }
         ]
       },

@@ -50,6 +50,16 @@ module.exports = {
     '/FE/PWA/5.prompt-install.md',
     '/FE/PWA/6.Sentry.md'
   ],
+  '/FE/rendering/': [
+    '/FE/rendering/1.start.md',
+    '/FE/rendering/2.CSR.md',
+    '/FE/rendering/3.SSG.md',
+    '/FE/rendering/4.SSR.md',
+    '/FE/rendering/5.ISR.md',
+    '/FE/rendering/6.HR.md',
+    '/FE/rendering/7.ESR.md',
+    '/FE/rendering/8.SWSR.md'
+  ]
   // Js
   '/FE/javascript/BOM/': [
     '/FE/javascript/BOM/1.start.md',
