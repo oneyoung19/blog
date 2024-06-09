@@ -1,0 +1,23 @@
+// 全局样式初始化配置 另外还可以在同目录下新建index.styl样式文件来覆盖css规则
+// 你应该只在这个文件中写入颜色变量。因为 palette.styl 将在根的 stylus 配置文件的末尾引入，作为配置，它将被多个文件使用，所以一旦你在这里写了样式，你的样式就会被多次复制
+
+// 颜色
+$accentColor = #3eaf7c
+$textColor = #2c3e50
+$borderColor = #eaecef
+$codeBgColor = #282c34
+$arrowBgColor = #ccc
+$badgeTipColor = #42b983
+$badgeWarningColor = darken(#ffe564, 35%)
+$badgeErrorColor = #DA5961
+
+// 布局
+$navbarHeight = 3.6rem
+$sidebarWidth = 20rem
+$contentWidth = 880px
+$homePageWidth = 960px
+
+// 响应式变化点
+$MQNarrow = 959px
+$MQMobile = 719px
+$MQMobileNarrow = 419px

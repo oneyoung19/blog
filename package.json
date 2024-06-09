@@ -1,0 +1,23 @@
+{
+  "name": "oneyoung-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
+    "deploy": "sh deploy.sh",
+    "deploy:pages": "sh deploy-to-gh-pages.sh"
+  },
+  "devDependencies": {
+    "@waline/client": "1.6.0",
+    "shelljs": "^0.8.5",
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-comment-plus": "^1.1.0"
+  },
+  "dependencies": {
+  }
+}
