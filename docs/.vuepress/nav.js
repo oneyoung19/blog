@@ -33,7 +33,7 @@ module.exports = [
           },
           {
             text: 'Rendering',
-            link: '/FE/rendering/'
+            link: '/FE/rendering/1.start.md'
           }
         ]
       },
