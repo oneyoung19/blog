@@ -338,11 +338,19 @@ module.exports = [
         ]
       },
       {
-        text: '技术栈',
+        text: 'Node',
         items: [
           {
-            text: 'Node',
-            link: '/BE/stack/node/'
+            text: 'Learn',
+            link: '/BE/node/learn/'
+          },
+          {
+            text: 'Docs',
+            link: '/BE/node/docs/'
+          },
+          {
+            text: 'Awesome',
+            link: '/BE/node/awesome/'
           }
         ]
       }

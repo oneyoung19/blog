@@ -14,7 +14,13 @@ module.exports = {
   '/BE/authentication/2fa/': [
     '/BE/authentication/2fa/'
   ],
-  '/BE/stack/node/': [
-    '/BE/stack/node/'
+  '/BE/node/learn/': [
+    '/BE/node/learn/',
+  ],
+  '/BE/node/docs/': [
+    '/BE/node/docs/',
+  ],
+  '/BE/node/awesome/': [
+    '/BE/node/awesome/',
   ]
 }
