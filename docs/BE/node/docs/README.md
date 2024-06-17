@@ -15,3 +15,5 @@ title: Docs
 - `Stability: 3` 过时 **`Legacy`**。该类功能可能不会被删除，但已经不再维护。
 
 完整 `API` 兼容性列表见 [Stability Overview](https://nodejs.org/docs/latest/api/documentation.html#stability-overview)。
+
+关于 `Node.js` 各版本支持语法，可参考[node.green](https://node.green/)。
