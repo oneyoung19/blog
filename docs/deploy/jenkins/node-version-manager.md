@@ -19,8 +19,6 @@ title: Node管理
 
 全局安装 `n`，执行切换指令
 
-## []()
-
 ## [Jenkins中集成GitLab](https://gitlab.cn/blog/2021/09/03/jenkins-jihu/)
 
 1. 集成
