@@ -28,6 +28,7 @@ module.exports = {
     '/deploy/CI-CD/1.start.md'
   ],
   '/deploy/jenkins/': [
-    '/deploy/jenkins/1.start.md'
+    '/deploy/jenkins/1.start.md',
+    '/deploy/jenkins/node-version-manager.md'
   ]
 }
