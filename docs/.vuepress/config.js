@@ -27,6 +27,15 @@ module.exports = {
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "o1h2x0tjoo");`
+    ],
+    // Google tag (gtag.js)
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-6MCGJRJCR5' }],
+    ['script', {}, 
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6MCGJRJCR5');`
     ]
   ],
   base: '/blog/', // 这是部署到github相关的配置。 静态资源配置的时候直接用绝对路径。如果不是根目录'/'访问的话，需要设置前缀。
