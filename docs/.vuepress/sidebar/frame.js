@@ -35,7 +35,7 @@ module.exports = {
     '/frame/express/base/1.start.md'
   ],
   '/frame/express/source-code': [
-    '/frame/express/source-code/1.start.md'
+    '/frame/express/source-code/1.start.md',
     '/frame/express/source-code/2.middleware.md'
   ],
   '/frame/koa/base': [

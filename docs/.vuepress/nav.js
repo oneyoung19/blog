@@ -358,16 +358,12 @@ module.exports = [
         text: 'Node',
         items: [
           {
-            text: 'Learn',
-            link: '/BE/node/learn/'
+            text: 'Awesome',
+            link: '/BE/node/awesome/'
           },
           {
             text: 'Docs',
             link: '/BE/node/docs/'
-          },
-          {
-            text: 'Awesome',
-            link: '/BE/node/awesome/'
           }
         ]
       }
