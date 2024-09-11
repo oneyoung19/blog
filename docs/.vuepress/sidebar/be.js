@@ -14,6 +14,12 @@ module.exports = {
   '/BE/authentication/2fa/': [
     '/BE/authentication/2fa/'
   ],
+  '/BE/ssr/ssr-vue2/': [
+    '/BE/ssr/ssr-vue2/'
+  ],
+  '/BE/ssr/ssg-vue2/': [
+    '/BE/ssr/ssg-vue2/'
+  ],
   '/BE/node/awesome/': [
     '/BE/node/awesome/',
   ],

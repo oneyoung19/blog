@@ -355,6 +355,19 @@ module.exports = [
         ]
       },
       {
+        text: 'SSR',
+        items: [
+          {
+            text: 'SSR Vue2',
+            link: '/BE/ssr/ssr-vue2/'
+          },
+          {
+            text: 'SSG Vue2',
+            link: '/BE/ssr/ssg-vue2/'
+          }
+        ]
+      },
+      {
         text: 'Node',
         items: [
           {

@@ -1,0 +1,3 @@
+---
+title: SSG Vue2
+---

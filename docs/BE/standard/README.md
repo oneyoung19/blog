@@ -22,10 +22,6 @@ title: 前后端联调对接规范
 
 4. `FILE` 文件上传 `Content-Type` 使用 `multipart/form-data`。
 
-![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20230628185023.png)
-
-[Click me](http://sit1.pay-aml-gateway.sitcbi.com/pay-aml-boss/swagger#/default/%E5%90%8D%E5%8D%95%E7%AD%9B%E6%9F%A5-%E5%9B%9E%E6%BA%AF%E7%AD%9B%E6%9F%A5-%E9%A2%84%E8%AD%A6/getCstAlertDetailUsingGET)
-
 ## 2.接口定义
 
 1. 接口定义必须提供 `swagger` 等文档。
@@ -33,32 +29,23 @@ title: 前后端联调对接规范
 
 ```js
 // Good ✅
-http://sit8.cbi-ls-gateway.sitcbi.com/cbi-ls-customer/swagger#/
+http://sit1.xxx-gateway.sitcbi.com/xxx-customer/swagger#/
 
 // Bad ❌
-http://dev1.pay-aml-boss.devcbi.com/swagger#/
+http://dev1.xxx-boss.devcbi.com/swagger#/
 ```
 
-这样的话，就能直接使用 `/cbi-ls-customer` 代理到 `http://sit8.cbi-ls-gateway.sitcbi.com`。
+这样的话，就能直接使用 `/xxx-customer` 代理到 `http://sit1.xxx-gateway.sitcbi.com`。
 
 :::tip
 跨域处理，联调阶段采用 `webpack-dev-server` 作本地代理，部署阶段均采用 `nginx` 反向代理。
 :::
 
-3. 接口需要清楚定义**入参**和**出参**，且划分详细。**没有多余字段**。
+1. 接口需要清楚定义**入参**和**出参**，且划分详细。**没有多余字段**。
 
-![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20230628202347.png)
+2. 接口文档针对入参和出参的每个字段，都要有对应的中文说明。**且中文说明应与原型字段名称保持一致**。
 
-[Click me](http://dev1.pay-aml-boss.devcbi.com/swagger#/default/%E4%B8%AA%E4%BA%BA%E4%BA%A4%E6%98%93%E4%BF%A1%E6%81%AF/pageUsingPOST_3)
-
-4. 接口文档针对入参和出参的每个字段，都要有对应的中文说明。**且中文说明应与原型字段名称保持一致**。
-
-![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20230629114347.png)
-
-[Click me](http://dev1.pay-aml-boss.devcbi.com/swagger#/default/%E4%BA%8B%E4%B8%AD-%E5%86%B3%E7%AD%96%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/queryDecisionUsingPOST)
-
-
-5. 出参需要明确定义**默认值**。对象类型的返回空对象 `{}`, 数组类型的返回空数组 `[]`，字符串类型的返回空字符串 `""`， `Number` 和`Boolean` 类型的返回 `null`。
+3. 出参需要明确定义**默认值**。对象类型的返回空对象 `{}`, 数组类型的返回空数组 `[]`，字符串类型的返回空字符串 `""`， `Number` 和`Boolean` 类型的返回 `null`。
 
 ```js
 // Good ✅
