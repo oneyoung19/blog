@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>表操作 | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.75b42115.css" as="style"><link rel="preload" href="/blog/assets/js/app.9c7d186a.js" as="script"><link rel="preload" href="/blog/assets/js/2.0c9875ae.js" as="script"><link rel="preload" href="/blog/assets/js/49.608af470.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.516ce0b3.js"><link rel="prefetch" href="/blog/assets/js/100.8f73bede.js"><link rel="prefetch" href="/blog/assets/js/101.8d1f2a9b.js"><link rel="prefetch" href="/blog/assets/js/102.84cbfca6.js"><link rel="prefetch" href="/blog/assets/js/103.14dcedbd.js"><link rel="prefetch" href="/blog/assets/js/104.ad75f27e.js"><link rel="prefetch" href="/blog/assets/js/105.8a7597c0.js"><link rel="prefetch" href="/blog/assets/js/106.c32be2f5.js"><link rel="prefetch" href="/blog/assets/js/107.9d84e4a1.js"><link rel="prefetch" href="/blog/assets/js/108.56d78ede.js"><link rel="prefetch" href="/blog/assets/js/109.dcc2a9c4.js"><link rel="prefetch" href="/blog/assets/js/11.74b7ce1a.js"><link rel="prefetch" href="/blog/assets/js/110.917dd34a.js"><link rel="prefetch" href="/blog/assets/js/111.ab734c92.js"><link rel="prefetch" href="/blog/assets/js/112.21c2193a.js"><link rel="prefetch" href="/blog/assets/js/113.d6d38032.js"><link rel="prefetch" href="/blog/assets/js/114.57798b16.js"><link rel="prefetch" href="/blog/assets/js/115.a47eb159.js"><link rel="prefetch" href="/blog/assets/js/116.a4768a93.js"><link rel="prefetch" href="/blog/assets/js/117.c205aa71.js"><link rel="prefetch" href="/blog/assets/js/118.661ee0f8.js"><link rel="prefetch" href="/blog/assets/js/119.34dae23c.js"><link rel="prefetch" href="/blog/assets/js/12.7d25b0d9.js"><link rel="prefetch" href="/blog/assets/js/120.aef64085.js"><link rel="prefetch" href="/blog/assets/js/121.423d6548.js"><link rel="prefetch" href="/blog/assets/js/122.98031fcd.js"><link rel="prefetch" href="/blog/assets/js/123.435e67e7.js"><link rel="prefetch" href="/blog/assets/js/124.70cadec8.js"><link rel="prefetch" href="/blog/assets/js/125.376facd7.js"><link rel="prefetch" href="/blog/assets/js/126.896a4531.js"><link rel="prefetch" href="/blog/assets/js/127.382496b8.js"><link rel="prefetch" href="/blog/assets/js/128.d86aa8c3.js"><link rel="prefetch" href="/blog/assets/js/129.17c0fa57.js"><link rel="prefetch" href="/blog/assets/js/13.0a46490e.js"><link rel="prefetch" href="/blog/assets/js/130.571b1eb6.js"><link rel="prefetch" href="/blog/assets/js/131.86e1c77f.js"><link rel="prefetch" href="/blog/assets/js/132.480be839.js"><link rel="prefetch" href="/blog/assets/js/133.639b176a.js"><link rel="prefetch" href="/blog/assets/js/134.ff7196dc.js"><link rel="prefetch" href="/blog/assets/js/135.3d751673.js"><link rel="prefetch" href="/blog/assets/js/136.d2731b71.js"><link rel="prefetch" href="/blog/assets/js/137.7c922ccd.js"><link rel="prefetch" href="/blog/assets/js/138.5862a391.js"><link rel="prefetch" href="/blog/assets/js/139.56911d69.js"><link rel="prefetch" href="/blog/assets/js/14.0c56408e.js"><link rel="prefetch" href="/blog/assets/js/140.6ed2da97.js"><link rel="prefetch" href="/blog/assets/js/141.19a00b18.js"><link rel="prefetch" href="/blog/assets/js/142.311f30e9.js"><link rel="prefetch" href="/blog/assets/js/143.8cca036d.js"><link rel="prefetch" href="/blog/assets/js/144.b189e59e.js"><link rel="prefetch" href="/blog/assets/js/145.4ab0418e.js"><link rel="prefetch" href="/blog/assets/js/146.e77e2d6b.js"><link rel="prefetch" href="/blog/assets/js/147.54118b01.js"><link rel="prefetch" href="/blog/assets/js/148.2b93c8d6.js"><link rel="prefetch" href="/blog/assets/js/149.f4b010f4.js"><link rel="prefetch" href="/blog/assets/js/15.bfdd9890.js"><link rel="prefetch" href="/blog/assets/js/150.aa778e1f.js"><link rel="prefetch" href="/blog/assets/js/151.2c11a15d.js"><link rel="prefetch" href="/blog/assets/js/152.94331ae1.js"><link rel="prefetch" href="/blog/assets/js/153.43df40c9.js"><link rel="prefetch" href="/blog/assets/js/154.5db0250b.js"><link rel="prefetch" href="/blog/assets/js/155.ef027238.js"><link rel="prefetch" href="/blog/assets/js/156.b212221d.js"><link rel="prefetch" href="/blog/assets/js/157.02048d2d.js"><link rel="prefetch" href="/blog/assets/js/158.92a847cc.js"><link rel="prefetch" href="/blog/assets/js/159.3df20a90.js"><link rel="prefetch" href="/blog/assets/js/16.94dd4a41.js"><link rel="prefetch" href="/blog/assets/js/160.4bda2a2c.js"><link rel="prefetch" href="/blog/assets/js/161.158602fc.js"><link rel="prefetch" href="/blog/assets/js/162.5c3344b4.js"><link rel="prefetch" href="/blog/assets/js/163.143b9a27.js"><link rel="prefetch" href="/blog/assets/js/164.292e258e.js"><link rel="prefetch" href="/blog/assets/js/165.c5b544fb.js"><link rel="prefetch" href="/blog/assets/js/166.6cf7af9b.js"><link rel="prefetch" href="/blog/assets/js/167.97cb1bce.js"><link rel="prefetch" href="/blog/assets/js/168.845c2160.js"><link rel="prefetch" href="/blog/assets/js/169.027048e6.js"><link rel="prefetch" href="/blog/assets/js/17.f2ff0705.js"><link rel="prefetch" href="/blog/assets/js/170.d60018fa.js"><link rel="prefetch" href="/blog/assets/js/171.897390ab.js"><link rel="prefetch" href="/blog/assets/js/172.f1801091.js"><link rel="prefetch" href="/blog/assets/js/173.5a14fc7f.js"><link rel="prefetch" href="/blog/assets/js/174.b98f6ec5.js"><link rel="prefetch" href="/blog/assets/js/175.703ed39f.js"><link rel="prefetch" href="/blog/assets/js/176.21cf7b31.js"><link rel="prefetch" href="/blog/assets/js/177.8e69ec2b.js"><link rel="prefetch" href="/blog/assets/js/178.68e757b8.js"><link rel="prefetch" href="/blog/assets/js/179.82a6a7da.js"><link rel="prefetch" href="/blog/assets/js/18.6980ca89.js"><link rel="prefetch" href="/blog/assets/js/180.1ca3d222.js"><link rel="prefetch" href="/blog/assets/js/181.5dc57112.js"><link rel="prefetch" href="/blog/assets/js/182.8292ed65.js"><link rel="prefetch" href="/blog/assets/js/183.86157b51.js"><link rel="prefetch" href="/blog/assets/js/184.20d42cc5.js"><link rel="prefetch" href="/blog/assets/js/185.7f698f69.js"><link rel="prefetch" href="/blog/assets/js/186.353dcf9a.js"><link rel="prefetch" href="/blog/assets/js/187.52381097.js"><link rel="prefetch" href="/blog/assets/js/188.6fc482e3.js"><link rel="prefetch" href="/blog/assets/js/189.e45c9160.js"><link rel="prefetch" href="/blog/assets/js/19.0d0a3c13.js"><link rel="prefetch" href="/blog/assets/js/190.f0179726.js"><link rel="prefetch" href="/blog/assets/js/191.0ff67737.js"><link rel="prefetch" href="/blog/assets/js/192.ed11531c.js"><link rel="prefetch" href="/blog/assets/js/193.dea8d275.js"><link rel="prefetch" href="/blog/assets/js/194.39724d94.js"><link rel="prefetch" href="/blog/assets/js/195.3450d4a9.js"><link rel="prefetch" href="/blog/assets/js/196.e396b4d8.js"><link rel="prefetch" href="/blog/assets/js/197.a0501286.js"><link rel="prefetch" href="/blog/assets/js/198.00b191bd.js"><link rel="prefetch" href="/blog/assets/js/199.f1cd2ca2.js"><link rel="prefetch" href="/blog/assets/js/20.3bdcc06f.js"><link rel="prefetch" href="/blog/assets/js/200.0622f8f8.js"><link rel="prefetch" href="/blog/assets/js/201.8ee6e607.js"><link rel="prefetch" href="/blog/assets/js/202.e1324917.js"><link rel="prefetch" href="/blog/assets/js/203.53aefec9.js"><link rel="prefetch" href="/blog/assets/js/204.f306d39e.js"><link rel="prefetch" href="/blog/assets/js/205.19cd87e7.js"><link rel="prefetch" href="/blog/assets/js/206.ea3be421.js"><link rel="prefetch" href="/blog/assets/js/207.c55f6ca9.js"><link rel="prefetch" href="/blog/assets/js/208.b6909861.js"><link rel="prefetch" href="/blog/assets/js/209.82b9d0ab.js"><link rel="prefetch" href="/blog/assets/js/21.1148430e.js"><link rel="prefetch" href="/blog/assets/js/210.fa9d821f.js"><link rel="prefetch" href="/blog/assets/js/211.524d36f8.js"><link rel="prefetch" href="/blog/assets/js/212.7b1e1465.js"><link rel="prefetch" href="/blog/assets/js/213.e093c7c3.js"><link rel="prefetch" href="/blog/assets/js/214.def4e857.js"><link rel="prefetch" href="/blog/assets/js/215.0dfaa45a.js"><link rel="prefetch" href="/blog/assets/js/216.e5fc57fc.js"><link rel="prefetch" href="/blog/assets/js/217.0a7ef049.js"><link rel="prefetch" href="/blog/assets/js/218.fdd17fa0.js"><link rel="prefetch" href="/blog/assets/js/219.02bb95f6.js"><link rel="prefetch" href="/blog/assets/js/22.18d12b3e.js"><link rel="prefetch" href="/blog/assets/js/220.b1c808a9.js"><link rel="prefetch" href="/blog/assets/js/221.f2555add.js"><link rel="prefetch" href="/blog/assets/js/222.abd28d8b.js"><link rel="prefetch" href="/blog/assets/js/223.6af1ad07.js"><link rel="prefetch" href="/blog/assets/js/224.5926e39f.js"><link rel="prefetch" href="/blog/assets/js/225.224cea22.js"><link rel="prefetch" href="/blog/assets/js/226.28f565bb.js"><link rel="prefetch" href="/blog/assets/js/227.773c8da7.js"><link rel="prefetch" href="/blog/assets/js/228.cad4807c.js"><link rel="prefetch" href="/blog/assets/js/229.2db5cddb.js"><link rel="prefetch" href="/blog/assets/js/23.68a17302.js"><link rel="prefetch" href="/blog/assets/js/230.3d0a5422.js"><link rel="prefetch" href="/blog/assets/js/231.8909e197.js"><link rel="prefetch" href="/blog/assets/js/232.1a96a2fe.js"><link rel="prefetch" href="/blog/assets/js/233.8e5ba31e.js"><link rel="prefetch" href="/blog/assets/js/234.f0a07ee4.js"><link rel="prefetch" href="/blog/assets/js/235.8e7c5d7f.js"><link rel="prefetch" href="/blog/assets/js/236.0c919343.js"><link rel="prefetch" href="/blog/assets/js/237.56b20671.js"><link rel="prefetch" href="/blog/assets/js/238.c2538ff9.js"><link rel="prefetch" href="/blog/assets/js/239.da3e9fe9.js"><link rel="prefetch" href="/blog/assets/js/24.30a1e566.js"><link rel="prefetch" href="/blog/assets/js/240.e0cfa156.js"><link rel="prefetch" href="/blog/assets/js/241.5fe5e8e4.js"><link rel="prefetch" href="/blog/assets/js/242.743eeb53.js"><link rel="prefetch" href="/blog/assets/js/243.49d90203.js"><link rel="prefetch" href="/blog/assets/js/244.b7a7aebb.js"><link rel="prefetch" href="/blog/assets/js/245.87fdba7c.js"><link rel="prefetch" href="/blog/assets/js/246.3468c23e.js"><link rel="prefetch" href="/blog/assets/js/247.38c303a2.js"><link rel="prefetch" href="/blog/assets/js/248.35d8ea90.js"><link rel="prefetch" href="/blog/assets/js/249.03bef612.js"><link rel="prefetch" href="/blog/assets/js/25.2692b378.js"><link rel="prefetch" href="/blog/assets/js/250.20540eaf.js"><link rel="prefetch" href="/blog/assets/js/251.bee78d96.js"><link rel="prefetch" href="/blog/assets/js/252.08fcfb81.js"><link rel="prefetch" href="/blog/assets/js/253.e9172e7d.js"><link rel="prefetch" href="/blog/assets/js/254.2ccf6971.js"><link rel="prefetch" href="/blog/assets/js/255.35c90213.js"><link rel="prefetch" href="/blog/assets/js/256.6e78b485.js"><link rel="prefetch" href="/blog/assets/js/257.82fddafc.js"><link rel="prefetch" href="/blog/assets/js/258.86f87f3c.js"><link rel="prefetch" href="/blog/assets/js/259.ac2adea4.js"><link rel="prefetch" href="/blog/assets/js/26.e70825fc.js"><link rel="prefetch" href="/blog/assets/js/260.cb1056ec.js"><link rel="prefetch" href="/blog/assets/js/261.9d8336d7.js"><link rel="prefetch" href="/blog/assets/js/262.fb255bf8.js"><link rel="prefetch" href="/blog/assets/js/263.3664976d.js"><link rel="prefetch" href="/blog/assets/js/264.4e1ecb6b.js"><link rel="prefetch" href="/blog/assets/js/265.c9ca5ab3.js"><link rel="prefetch" href="/blog/assets/js/266.0babdee8.js"><link rel="prefetch" href="/blog/assets/js/267.bfda9f1c.js"><link rel="prefetch" href="/blog/assets/js/268.e6ff8634.js"><link rel="prefetch" href="/blog/assets/js/269.bc909ac1.js"><link rel="prefetch" href="/blog/assets/js/27.f4ee2a9f.js"><link rel="prefetch" href="/blog/assets/js/270.649dcf77.js"><link rel="prefetch" href="/blog/assets/js/271.e905af34.js"><link rel="prefetch" href="/blog/assets/js/272.3e5a7bbe.js"><link rel="prefetch" href="/blog/assets/js/273.e82f5bb7.js"><link rel="prefetch" href="/blog/assets/js/274.180d710c.js"><link rel="prefetch" href="/blog/assets/js/275.8770f2ce.js"><link rel="prefetch" href="/blog/assets/js/276.dd726aef.js"><link rel="prefetch" href="/blog/assets/js/277.da8690a3.js"><link rel="prefetch" href="/blog/assets/js/278.69adca10.js"><link rel="prefetch" href="/blog/assets/js/279.8c6090b5.js"><link rel="prefetch" href="/blog/assets/js/28.ba712ed3.js"><link rel="prefetch" href="/blog/assets/js/280.9d02db0b.js"><link rel="prefetch" href="/blog/assets/js/281.8a93dd44.js"><link rel="prefetch" href="/blog/assets/js/282.6bc1ca2d.js"><link rel="prefetch" href="/blog/assets/js/283.95999540.js"><link rel="prefetch" href="/blog/assets/js/284.2f0779ce.js"><link rel="prefetch" href="/blog/assets/js/285.465e19fc.js"><link rel="prefetch" href="/blog/assets/js/286.be2abf81.js"><link rel="prefetch" href="/blog/assets/js/287.ceafd2a0.js"><link rel="prefetch" href="/blog/assets/js/288.91d352e5.js"><link rel="prefetch" href="/blog/assets/js/289.5424f05b.js"><link rel="prefetch" href="/blog/assets/js/29.a10236e3.js"><link rel="prefetch" href="/blog/assets/js/290.b45293a5.js"><link rel="prefetch" href="/blog/assets/js/291.1a8a8fb8.js"><link rel="prefetch" href="/blog/assets/js/292.91f046f3.js"><link rel="prefetch" href="/blog/assets/js/293.1c48de52.js"><link rel="prefetch" href="/blog/assets/js/294.7550edaa.js"><link rel="prefetch" href="/blog/assets/js/295.c91f39bf.js"><link rel="prefetch" href="/blog/assets/js/296.3075b6a8.js"><link rel="prefetch" href="/blog/assets/js/297.911b8d8b.js"><link rel="prefetch" href="/blog/assets/js/298.8a6347e3.js"><link rel="prefetch" href="/blog/assets/js/299.0ed5bda8.js"><link rel="prefetch" href="/blog/assets/js/3.be505a1e.js"><link rel="prefetch" href="/blog/assets/js/30.285db3ae.js"><link rel="prefetch" href="/blog/assets/js/300.6508b552.js"><link rel="prefetch" href="/blog/assets/js/301.d4dc659d.js"><link rel="prefetch" href="/blog/assets/js/302.49b46100.js"><link rel="prefetch" href="/blog/assets/js/303.fdfdf9c3.js"><link rel="prefetch" href="/blog/assets/js/304.0e95e750.js"><link rel="prefetch" href="/blog/assets/js/305.89fc9f7e.js"><link rel="prefetch" href="/blog/assets/js/306.630ca740.js"><link rel="prefetch" href="/blog/assets/js/307.a97fe0cc.js"><link rel="prefetch" href="/blog/assets/js/308.cd8dbcb2.js"><link rel="prefetch" href="/blog/assets/js/309.f2b44740.js"><link rel="prefetch" href="/blog/assets/js/31.396473e5.js"><link rel="prefetch" href="/blog/assets/js/310.317b6195.js"><link rel="prefetch" href="/blog/assets/js/311.8eb8b0c0.js"><link rel="prefetch" href="/blog/assets/js/312.2e6ad3e6.js"><link rel="prefetch" href="/blog/assets/js/313.545cf94c.js"><link rel="prefetch" href="/blog/assets/js/314.09a1059e.js"><link rel="prefetch" href="/blog/assets/js/315.22eef3e7.js"><link rel="prefetch" href="/blog/assets/js/316.ef98ece9.js"><link rel="prefetch" href="/blog/assets/js/317.e442efde.js"><link rel="prefetch" href="/blog/assets/js/318.e341e35f.js"><link rel="prefetch" href="/blog/assets/js/319.95580ea0.js"><link rel="prefetch" href="/blog/assets/js/32.cb400629.js"><link rel="prefetch" href="/blog/assets/js/320.3b456cea.js"><link rel="prefetch" href="/blog/assets/js/321.dbf362e9.js"><link rel="prefetch" href="/blog/assets/js/322.52a78d01.js"><link rel="prefetch" href="/blog/assets/js/323.86d67afe.js"><link rel="prefetch" href="/blog/assets/js/324.b665a7ae.js"><link rel="prefetch" href="/blog/assets/js/325.9c1f0d0b.js"><link rel="prefetch" href="/blog/assets/js/326.29e08959.js"><link rel="prefetch" href="/blog/assets/js/327.b4e0e928.js"><link rel="prefetch" href="/blog/assets/js/328.54deeb5e.js"><link rel="prefetch" href="/blog/assets/js/329.528301a5.js"><link rel="prefetch" href="/blog/assets/js/33.245259c6.js"><link rel="prefetch" href="/blog/assets/js/330.d9258ebe.js"><link rel="prefetch" href="/blog/assets/js/331.976906e8.js"><link rel="prefetch" href="/blog/assets/js/332.2c21b977.js"><link rel="prefetch" href="/blog/assets/js/34.685e248b.js"><link rel="prefetch" href="/blog/assets/js/35.7c81c272.js"><link rel="prefetch" href="/blog/assets/js/36.ac4cd00b.js"><link rel="prefetch" href="/blog/assets/js/37.15dadfa8.js"><link rel="prefetch" href="/blog/assets/js/38.dae74f93.js"><link rel="prefetch" href="/blog/assets/js/39.8cfa4403.js"><link rel="prefetch" href="/blog/assets/js/4.2e5dfdbc.js"><link rel="prefetch" href="/blog/assets/js/40.4ef2f507.js"><link rel="prefetch" href="/blog/assets/js/41.4c49f768.js"><link rel="prefetch" href="/blog/assets/js/42.174683b1.js"><link rel="prefetch" href="/blog/assets/js/43.8bc67827.js"><link rel="prefetch" href="/blog/assets/js/44.99825a94.js"><link rel="prefetch" href="/blog/assets/js/45.c83b1832.js"><link rel="prefetch" href="/blog/assets/js/46.5dcf4479.js"><link rel="prefetch" href="/blog/assets/js/47.69b6ccd5.js"><link rel="prefetch" href="/blog/assets/js/48.b848e59b.js"><link rel="prefetch" href="/blog/assets/js/5.742ef085.js"><link rel="prefetch" href="/blog/assets/js/50.053b637a.js"><link rel="prefetch" href="/blog/assets/js/51.c20a7c5a.js"><link rel="prefetch" href="/blog/assets/js/52.3130f3cf.js"><link rel="prefetch" href="/blog/assets/js/53.d00d851b.js"><link rel="prefetch" href="/blog/assets/js/54.d591ee8c.js"><link rel="prefetch" href="/blog/assets/js/55.8db0699e.js"><link rel="prefetch" href="/blog/assets/js/56.a21657f5.js"><link rel="prefetch" href="/blog/assets/js/57.9b00cb81.js"><link rel="prefetch" href="/blog/assets/js/58.92ebc144.js"><link rel="prefetch" href="/blog/assets/js/59.f1cef46b.js"><link rel="prefetch" href="/blog/assets/js/6.f1e48f63.js"><link rel="prefetch" href="/blog/assets/js/60.10e85898.js"><link rel="prefetch" href="/blog/assets/js/61.001a850d.js"><link rel="prefetch" href="/blog/assets/js/62.021da072.js"><link rel="prefetch" href="/blog/assets/js/63.d35f0be9.js"><link rel="prefetch" href="/blog/assets/js/64.aa6da315.js"><link rel="prefetch" href="/blog/assets/js/65.da799665.js"><link rel="prefetch" href="/blog/assets/js/66.1e5e0304.js"><link rel="prefetch" href="/blog/assets/js/67.40875f13.js"><link rel="prefetch" href="/blog/assets/js/68.9a7f6eba.js"><link rel="prefetch" href="/blog/assets/js/69.9ab7a0c4.js"><link rel="prefetch" href="/blog/assets/js/7.8c9db17d.js"><link rel="prefetch" href="/blog/assets/js/70.b3d295ee.js"><link rel="prefetch" href="/blog/assets/js/71.116ac865.js"><link rel="prefetch" href="/blog/assets/js/72.f89be6de.js"><link rel="prefetch" href="/blog/assets/js/73.8bbc4932.js"><link rel="prefetch" href="/blog/assets/js/74.3828f95a.js"><link rel="prefetch" href="/blog/assets/js/75.8f6e2a03.js"><link rel="prefetch" href="/blog/assets/js/76.ee88841a.js"><link rel="prefetch" href="/blog/assets/js/77.80acf4c5.js"><link rel="prefetch" href="/blog/assets/js/78.d40ba866.js"><link rel="prefetch" href="/blog/assets/js/79.4a360288.js"><link rel="prefetch" href="/blog/assets/js/8.8e2af1af.js"><link rel="prefetch" href="/blog/assets/js/80.6d72d3eb.js"><link rel="prefetch" href="/blog/assets/js/81.ae691da3.js"><link rel="prefetch" href="/blog/assets/js/82.54d8ebbe.js"><link rel="prefetch" href="/blog/assets/js/83.6b37c807.js"><link rel="prefetch" href="/blog/assets/js/84.5719b39c.js"><link rel="prefetch" href="/blog/assets/js/85.26f5b055.js"><link rel="prefetch" href="/blog/assets/js/86.637909d8.js"><link rel="prefetch" href="/blog/assets/js/87.bc5b4b66.js"><link rel="prefetch" href="/blog/assets/js/88.926a251d.js"><link rel="prefetch" href="/blog/assets/js/89.8f0ef90d.js"><link rel="prefetch" href="/blog/assets/js/9.93b818e1.js"><link rel="prefetch" href="/blog/assets/js/90.43d358d5.js"><link rel="prefetch" href="/blog/assets/js/91.47c81fdd.js"><link rel="prefetch" href="/blog/assets/js/92.413deb7c.js"><link rel="prefetch" href="/blog/assets/js/93.66685674.js"><link rel="prefetch" href="/blog/assets/js/94.b9b5b70c.js"><link rel="prefetch" href="/blog/assets/js/95.626f27ee.js"><link rel="prefetch" href="/blog/assets/js/96.4137e850.js"><link rel="prefetch" href="/blog/assets/js/97.401c39a6.js"><link rel="prefetch" href="/blog/assets/js/98.32cba376.js"><link rel="prefetch" href="/blog/assets/js/99.70f0581f.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.75b42115.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/learn/" class="nav-link">
+  Learn
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link router-link-active">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" class="nav-link">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/learn/" class="nav-link">
+  Learn
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link router-link-active">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" class="nav-link">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/DB/sql/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/blog/DB/sql/1.database.html" class="sidebar-link">数据库操作</a></li><li><a href="/blog/DB/sql/2.table.html" aria-current="page" class="active sidebar-link">表操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#显示所有表" class="sidebar-link">显示所有表</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#创建表" class="sidebar-link">创建表</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#修改表" class="sidebar-link">修改表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#添加列" class="sidebar-link">添加列</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#修改列" class="sidebar-link">修改列</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#删除列" class="sidebar-link">删除列</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#删除表" class="sidebar-link">删除表</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#删除表中的数据" class="sidebar-link">删除表中的数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#delete" class="sidebar-link">DELETE</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#truncate-table" class="sidebar-link">TRUNCATE TABLE</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#重命名表" class="sidebar-link">重命名表</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#复制表" class="sidebar-link">复制表</a></li><li class="sidebar-sub-header"><a href="/blog/DB/sql/2.table.html#临时表" class="sidebar-link">临时表</a></li></ul></li><li><a href="/blog/DB/sql/3.base.html" class="sidebar-link">数据类型与运算符</a></li><li><a href="/blog/DB/sql/4.constraint.html" class="sidebar-link">约束</a></li><li><a href="/blog/DB/sql/5.aggregate.html" class="sidebar-link">聚合函数</a></li><li><a href="/blog/DB/sql/6.insert.html" class="sidebar-link">INSERT</a></li><li><a href="/blog/DB/sql/7.select.html" class="sidebar-link">SELECT</a></li><li><a href="/blog/DB/sql/8.update.html" class="sidebar-link">UPDATE</a></li><li><a href="/blog/DB/sql/9.delete.html" class="sidebar-link">DELETE</a></li><li><a href="/blog/DB/sql/10.advance.html" class="sidebar-link">子查询及高级运算符</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="显示所有表"><a href="#显示所有表" class="header-anchor">#</a> 显示所有表</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">show</span> <span class="token keyword">tables</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SHOW</span> <span class="token keyword">TABLES</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="创建表"><a href="#创建表" class="header-anchor">#</a> 创建表</h2> <p><strong>创建表，使用 <code>CREATE TABLE</code> 语法</strong>。</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> table_name <span class="token punctuation">(</span>
+  column_name_1 data_type column_constraint <span class="token keyword">DEFAULT</span> default_value<span class="token punctuation">,</span>
+  column_name_2 data_type column_constraint <span class="token keyword">DEFAULT</span> default_value<span class="token punctuation">,</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+  table_constraint
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong><code>DEFAULT default_value</code></strong> 是指在表格中创建一列时，可以为该列指定一个默认值。如果在插入数据时未指定该列的值，则会自动使用该默认值。</p> <p>例如，如果创建一个名为 <code>employees</code> 的表格，其中包含一个名为 <code>salary</code> 的列，可以为该列设置默认值为 <code>50000</code>，如下所示：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> employees <span class="token punctuation">(</span>
+  id <span class="token keyword">INT</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+  name <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  salary <span class="token keyword">DECIMAL</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token number">50000</span><span class="token punctuation">,</span>
+  hire_date <span class="token keyword">DATE</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>在上面的例子中，如果插入一行数据时未指定 <code>salary</code> 列的值，系统将会自动为其赋值为 <code>50000</code>。但是，如果插入一行数据时显式指定了 <code>salary</code> 的值，则系统将使用该值，而不是默认值。</p> <p><strong><code>DEFAULT default_value</code></strong> 可以省略。如果在创建表格时不为某一列指定默认值，则该列将不会有默认值，这意味着在插入数据时必须为该列显式指定值或提供 <code>NULL</code> 值。</p> <p>例如，下面的示例创建一个名为 <code>employees</code> 的表格，其中 <code>salary</code> 列没有指定默认值：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> employees <span class="token punctuation">(</span>
+  id <span class="token keyword">INT</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+  name <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  salary <span class="token keyword">DECIMAL</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  hire_date <span class="token keyword">DATE</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>在这种情况下，如果在插入数据时不为 <code>salary</code> 列指定值，则该列的值将为 <code>NULL</code>。如果在插入数据时为 <code>salary</code> 列指定了值，则将使用该值，而不是默认值。</p> <p><strong><code>table_constraint</code></strong> 是在创建表格时，用于定义表格级别约束的语法元素。表格约束用于保证表格数据的完整性和一致性，例如限制某些列的取值范围、要求某些列不重复、定义外键关系等。</p> <p>在创建表格时，可以为表格指定以下类型的约束：</p> <p><code>PRIMARY KEY</code>：定义表格的主键。
+<code>UNIQUE</code>：定义一个或多个列的唯一性约束，要求列中的每个值都是唯一的。
+<code>CHECK</code>：定义一个或多个列的取值范围约束，要求列中的值必须符合指定的条件。
+<code>FOREIGN KEY</code>：定义外键约束，用于保证关联表格中的数据完整性。</p> <p>以下是一个包含多种约束的表格创建语句示例：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> orders <span class="token punctuation">(</span>
+  order_id <span class="token keyword">INT</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+  customer_id <span class="token keyword">INT</span><span class="token punctuation">,</span>
+  order_date <span class="token keyword">DATE</span><span class="token punctuation">,</span>
+  amount <span class="token keyword">DECIMAL</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">CONSTRAINT</span> fk_customer <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>customer_id<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> customers<span class="token punctuation">(</span>customer_id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">CONSTRAINT</span> check_amount <span class="token keyword">CHECK</span> <span class="token punctuation">(</span>amount <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">CONSTRAINT</span> unique_order_date_customer <span class="token keyword">UNIQUE</span> <span class="token punctuation">(</span>order_date<span class="token punctuation">,</span> customer_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>在上面的示例中，<code>orders</code> 表格定义了主键约束、外键约束、<code>CHECK</code> 约束和唯一性约束。</p> <p>其中 <code>fk_customer</code> 是外键约束的名称，<code>check_amount</code> 是 <code>CHECK</code> 约束的名称，<code>unique_order_date_customer</code> 是唯一性约束的名称。</p> <h2 id="修改表"><a href="#修改表" class="header-anchor">#</a> 修改表</h2> <p><strong>修改表，使用 <code>ALTER TABLE</code> 语法</strong>。</p> <p>修改表，其实是修改表的列。因此，主要有以下三方面：</p> <ol><li>添加列 <code>ADD</code></li> <li>修改列 <code>MODIFY</code></li> <li>删除列 <code>DROP</code></li></ol> <h3 id="添加列"><a href="#添加列" class="header-anchor">#</a> 添加列</h3> <p>添加列，使用 <code>ADD</code> 语法：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> table_name
+<span class="token keyword">ADD</span> new_colum data_type column_constraint <span class="token keyword">DEFAULT</span> default_value <span class="token punctuation">[</span><span class="token keyword">AFTER</span> existing_column<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><code>AFTER</code> 表示在哪一列后面添加新列，如果省略的话，会默认添加在最后一列后。</p> <h3 id="修改列"><a href="#修改列" class="header-anchor">#</a> 修改列</h3> <p>修改列，使用 <code>MODIFY</code> 语法：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> table_name 
+<span class="token keyword">MODIFY</span> column_name column_definition<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>譬如：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> courses 
+<span class="token keyword">MODIFY</span> fee <span class="token keyword">NUMERIC</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="删除列"><a href="#删除列" class="header-anchor">#</a> 删除列</h3> <p>删除列，使用 <code>DROP COLUMN</code> 语法：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> table_name
+<span class="token keyword">DROP</span> <span class="token keyword">COLUMN</span> column_name<span class="token punctuation">,</span>
+<span class="token keyword">DROP</span> <span class="token keyword">COLUMN</span> colum_name<span class="token punctuation">,</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="删除表"><a href="#删除表" class="header-anchor">#</a> 删除表</h2> <p><strong>删除表，使用 <code>DROP TABLE</code> 语法</strong>。</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> table_name<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>另外有一些联用选项：</p> <ul><li><code>IF EXISTS</code>：如果删除一个不存在的表，数据库系统将不会抛出任何错误。</li> <li><code>CASCADE</code>：删除表的同时也删除与该表相关联的其他对象，例如触发器、索引、外键约束等。</li></ul> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 如果存在表employees，则删除该表</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> employees<span class="token punctuation">;</span>
+
+<span class="token comment">-- 删除表departments和与之关联的触发器和索引</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> departments <span class="token keyword">CASCADE</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><code>DROP TABLE</code> 语句永久删除表的数据和结构，某些数据库系统要求表中的记录必须为空时才能从数据库中删除。这有助于防止意外删除仍在使用的表。</p> <p><strong>要删除表中的所有数据</strong>，（也就是说保留表的定义但删除表中的所有数据）可以使用 <code>DELETE</code> 或 <code>TRUNCATE TABLE</code> 语句。</p> <p><strong>要删除由另一个表的外键约束引用的表，必须在删除表之前禁用或删除外部约束</strong>。</p> <p>也可以同时删除多个表：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> table_name<span class="token punctuation">,</span> table_name<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="删除表中的数据"><a href="#删除表中的数据" class="header-anchor">#</a> 删除表中的数据</h2> <p>删除表，可以使用 <code>DROP TABLE</code>。</p> <p>删除表中的数据，可以使用 <code>DELETE</code> 语句，或者 <code>TRUNCATE TABLE</code> 语句。</p> <h3 id="delete"><a href="#delete" class="header-anchor">#</a> DELETE</h3> <p>删除表中的所有数据：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> table_name<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>删除表中的某些数据：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> table_name
+<span class="token keyword">WHERE</span> conditions<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="truncate-table"><a href="#truncate-table" class="header-anchor">#</a> TRUNCATE TABLE</h3> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">TRUNCATE</span> <span class="token keyword">TABLE</span> table_name<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><code>TRUNCATE TABLE</code> 用于从数据库表中删除所有数据行，并释放表所占用的存储空间。</p> <p>它类似于 <code>DELETE</code> 命令，但有一些不同之处：</p> <ol><li><p><code>TRUNCATE TABLE</code> 比 <code>DELETE</code> 更快，因为它不会逐行删除，而是直接删除整个表。</p></li> <li><p><code>TRUNCATE TABLE</code> 不能带 <code>WHERE</code> 子句，因为它将删除表中的所有行。</p></li> <li><p><code>TRUNCATE TABLE</code> 操作不能回滚，这意味着一旦你执行了 <code>TRUNCATE TABLE</code> 命令，数据就永久丢失了。因此，在执行 <code>TRUNCATE TABLE</code> 操作之前，请确保你真正需要删除所有行。</p></li></ol> <h2 id="重命名表"><a href="#重命名表" class="header-anchor">#</a> 重命名表</h2> <p>可以使用 <code>ALTER TABLE</code> 语法：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> table_name   
+<span class="token keyword">RENAME</span> <span class="token keyword">TO</span> new_table_name<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>也可以直接使用 <code>RENAME</code> 语法：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">RENAME</span> old_table _name <span class="token keyword">To</span> new_table_name<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="复制表"><a href="#复制表" class="header-anchor">#</a> 复制表</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">INTO</span> destination_table <span class="token keyword">FROM</span> source_table
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="临时表"><a href="#临时表" class="header-anchor">#</a> 临时表</h2> <p><code>SQL</code> 临时表是在使用中创建的一种临时表格，只存在于当前的会话中，并在会话结束时自动销毁。</p> <p>临时表通常被用来存储和处理一些临时性的数据，以便在 <code>SQL</code> 查询中使用。</p> <p>临时表还有一些限制和特点：</p> <ul><li>临时表只存在于当前会话中，对其他会话是不可见的。</li> <li>临时表的数据只在当前会话中有效，当会话结束后，临时表的数据会自动清空。</li> <li>临时表不能在事务中使用，因为它们的生命周期是和会话绑定的，而不是和事务绑定的。</li> <li>临时表的命名规则和普通表一样，但是需要注意避免与其他会话中的临时表重名。</li></ul> <p>临时表的语法与普通表非常相似，可以使用 <code>CREATE TABLE</code> 语句来创建临时表，例如：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TEMPORARY</span> <span class="token keyword">TABLE</span> temp_table <span class="token punctuation">(</span>
+  id <span class="token keyword">INT</span><span class="token punctuation">,</span>
+  name <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  age <span class="token keyword">INT</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>在使用完毕后，可以使用 <code>DROP TABLE</code> 语句来删除临时表，例如：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">TEMPORARY</span> <span class="token keyword">TABLE</span> temp_table<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><code>TEMPORARY</code> 和 <code>LOCAL TEMPORARY</code> 都是用于创建临时表的关键字，它们之间的区别在于临时表的可见性和作用域范围。</p> <p><code>TEMPORARY</code> 关键字创建的临时表是全局可见的，它们可以被其他的会话或模块使用，但是它们只存在于创建它们的会话中。</p> <p>如果在另一个会话中使用相同的表名创建了一个新的全局临时表，则原始的全局临时表将被覆盖。</p> <p><code>LOCAL TEMPORARY</code> 关键字创建的临时表只能在当前会话中可见，其他的会话或模块无法使用它们。它们只存在于创建它们的会话中，并且在该会话结束时自动删除。如果在同一会话中使用相同的表名创建多个本地临时表，则每个本地临时表都是唯一的，并且它们之间不会相互干扰。</p> <p>在大多数关系型数据库管理系统中，默认的临时表都是本地临时表。如果需要创建全局可见的临时表，则需要显式地指定 <code>TEMPORARY</code> 关键字。</p> <p>但是，某些数据库管理系统可能不支持全局临时表，或者需要特定的许可证才能使用全局临时表。</p> <p>因此，建议在使用临时表时，先查阅相关文档，了解目标数据库管理系统的支持情况。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/9/2024, 2:33:24 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/DB/sql/1.database.html" class="prev">
+        数据库操作
+      </a></span> <span class="next"><a href="/blog/DB/sql/3.base.html">
+        数据类型与运算符
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.9c7d186a.js" defer></script><script src="/blog/assets/js/2.0c9875ae.js" defer></script><script src="/blog/assets/js/49.608af470.js" defer></script>
+  </body>
+</html>

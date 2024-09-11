@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Verdaccio | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.75b42115.css" as="style"><link rel="preload" href="/blog/assets/js/app.9c7d186a.js" as="script"><link rel="preload" href="/blog/assets/js/2.0c9875ae.js" as="script"><link rel="preload" href="/blog/assets/js/332.2c21b977.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.516ce0b3.js"><link rel="prefetch" href="/blog/assets/js/100.8f73bede.js"><link rel="prefetch" href="/blog/assets/js/101.8d1f2a9b.js"><link rel="prefetch" href="/blog/assets/js/102.84cbfca6.js"><link rel="prefetch" href="/blog/assets/js/103.14dcedbd.js"><link rel="prefetch" href="/blog/assets/js/104.ad75f27e.js"><link rel="prefetch" href="/blog/assets/js/105.8a7597c0.js"><link rel="prefetch" href="/blog/assets/js/106.c32be2f5.js"><link rel="prefetch" href="/blog/assets/js/107.9d84e4a1.js"><link rel="prefetch" href="/blog/assets/js/108.56d78ede.js"><link rel="prefetch" href="/blog/assets/js/109.dcc2a9c4.js"><link rel="prefetch" href="/blog/assets/js/11.74b7ce1a.js"><link rel="prefetch" href="/blog/assets/js/110.917dd34a.js"><link rel="prefetch" href="/blog/assets/js/111.ab734c92.js"><link rel="prefetch" href="/blog/assets/js/112.21c2193a.js"><link rel="prefetch" href="/blog/assets/js/113.d6d38032.js"><link rel="prefetch" href="/blog/assets/js/114.57798b16.js"><link rel="prefetch" href="/blog/assets/js/115.a47eb159.js"><link rel="prefetch" href="/blog/assets/js/116.a4768a93.js"><link rel="prefetch" href="/blog/assets/js/117.c205aa71.js"><link rel="prefetch" href="/blog/assets/js/118.661ee0f8.js"><link rel="prefetch" href="/blog/assets/js/119.34dae23c.js"><link rel="prefetch" href="/blog/assets/js/12.7d25b0d9.js"><link rel="prefetch" href="/blog/assets/js/120.aef64085.js"><link rel="prefetch" href="/blog/assets/js/121.423d6548.js"><link rel="prefetch" href="/blog/assets/js/122.98031fcd.js"><link rel="prefetch" href="/blog/assets/js/123.435e67e7.js"><link rel="prefetch" href="/blog/assets/js/124.70cadec8.js"><link rel="prefetch" href="/blog/assets/js/125.376facd7.js"><link rel="prefetch" href="/blog/assets/js/126.896a4531.js"><link rel="prefetch" href="/blog/assets/js/127.382496b8.js"><link rel="prefetch" href="/blog/assets/js/128.d86aa8c3.js"><link rel="prefetch" href="/blog/assets/js/129.17c0fa57.js"><link rel="prefetch" href="/blog/assets/js/13.0a46490e.js"><link rel="prefetch" href="/blog/assets/js/130.571b1eb6.js"><link rel="prefetch" href="/blog/assets/js/131.86e1c77f.js"><link rel="prefetch" href="/blog/assets/js/132.480be839.js"><link rel="prefetch" href="/blog/assets/js/133.639b176a.js"><link rel="prefetch" href="/blog/assets/js/134.ff7196dc.js"><link rel="prefetch" href="/blog/assets/js/135.3d751673.js"><link rel="prefetch" href="/blog/assets/js/136.d2731b71.js"><link rel="prefetch" href="/blog/assets/js/137.7c922ccd.js"><link rel="prefetch" href="/blog/assets/js/138.5862a391.js"><link rel="prefetch" href="/blog/assets/js/139.56911d69.js"><link rel="prefetch" href="/blog/assets/js/14.0c56408e.js"><link rel="prefetch" href="/blog/assets/js/140.6ed2da97.js"><link rel="prefetch" href="/blog/assets/js/141.19a00b18.js"><link rel="prefetch" href="/blog/assets/js/142.311f30e9.js"><link rel="prefetch" href="/blog/assets/js/143.8cca036d.js"><link rel="prefetch" href="/blog/assets/js/144.b189e59e.js"><link rel="prefetch" href="/blog/assets/js/145.4ab0418e.js"><link rel="prefetch" href="/blog/assets/js/146.e77e2d6b.js"><link rel="prefetch" href="/blog/assets/js/147.54118b01.js"><link rel="prefetch" href="/blog/assets/js/148.2b93c8d6.js"><link rel="prefetch" href="/blog/assets/js/149.f4b010f4.js"><link rel="prefetch" href="/blog/assets/js/15.bfdd9890.js"><link rel="prefetch" href="/blog/assets/js/150.aa778e1f.js"><link rel="prefetch" href="/blog/assets/js/151.2c11a15d.js"><link rel="prefetch" href="/blog/assets/js/152.94331ae1.js"><link rel="prefetch" href="/blog/assets/js/153.43df40c9.js"><link rel="prefetch" href="/blog/assets/js/154.5db0250b.js"><link rel="prefetch" href="/blog/assets/js/155.ef027238.js"><link rel="prefetch" href="/blog/assets/js/156.b212221d.js"><link rel="prefetch" href="/blog/assets/js/157.02048d2d.js"><link rel="prefetch" href="/blog/assets/js/158.92a847cc.js"><link rel="prefetch" href="/blog/assets/js/159.3df20a90.js"><link rel="prefetch" href="/blog/assets/js/16.94dd4a41.js"><link rel="prefetch" href="/blog/assets/js/160.4bda2a2c.js"><link rel="prefetch" href="/blog/assets/js/161.158602fc.js"><link rel="prefetch" href="/blog/assets/js/162.5c3344b4.js"><link rel="prefetch" href="/blog/assets/js/163.143b9a27.js"><link rel="prefetch" href="/blog/assets/js/164.292e258e.js"><link rel="prefetch" href="/blog/assets/js/165.c5b544fb.js"><link rel="prefetch" href="/blog/assets/js/166.6cf7af9b.js"><link rel="prefetch" href="/blog/assets/js/167.97cb1bce.js"><link rel="prefetch" href="/blog/assets/js/168.845c2160.js"><link rel="prefetch" href="/blog/assets/js/169.027048e6.js"><link rel="prefetch" href="/blog/assets/js/17.f2ff0705.js"><link rel="prefetch" href="/blog/assets/js/170.d60018fa.js"><link rel="prefetch" href="/blog/assets/js/171.897390ab.js"><link rel="prefetch" href="/blog/assets/js/172.f1801091.js"><link rel="prefetch" href="/blog/assets/js/173.5a14fc7f.js"><link rel="prefetch" href="/blog/assets/js/174.b98f6ec5.js"><link rel="prefetch" href="/blog/assets/js/175.703ed39f.js"><link rel="prefetch" href="/blog/assets/js/176.21cf7b31.js"><link rel="prefetch" href="/blog/assets/js/177.8e69ec2b.js"><link rel="prefetch" href="/blog/assets/js/178.68e757b8.js"><link rel="prefetch" href="/blog/assets/js/179.82a6a7da.js"><link rel="prefetch" href="/blog/assets/js/18.6980ca89.js"><link rel="prefetch" href="/blog/assets/js/180.1ca3d222.js"><link rel="prefetch" href="/blog/assets/js/181.5dc57112.js"><link rel="prefetch" href="/blog/assets/js/182.8292ed65.js"><link rel="prefetch" href="/blog/assets/js/183.86157b51.js"><link rel="prefetch" href="/blog/assets/js/184.20d42cc5.js"><link rel="prefetch" href="/blog/assets/js/185.7f698f69.js"><link rel="prefetch" href="/blog/assets/js/186.353dcf9a.js"><link rel="prefetch" href="/blog/assets/js/187.52381097.js"><link rel="prefetch" href="/blog/assets/js/188.6fc482e3.js"><link rel="prefetch" href="/blog/assets/js/189.e45c9160.js"><link rel="prefetch" href="/blog/assets/js/19.0d0a3c13.js"><link rel="prefetch" href="/blog/assets/js/190.f0179726.js"><link rel="prefetch" href="/blog/assets/js/191.0ff67737.js"><link rel="prefetch" href="/blog/assets/js/192.ed11531c.js"><link rel="prefetch" href="/blog/assets/js/193.dea8d275.js"><link rel="prefetch" href="/blog/assets/js/194.39724d94.js"><link rel="prefetch" href="/blog/assets/js/195.3450d4a9.js"><link rel="prefetch" href="/blog/assets/js/196.e396b4d8.js"><link rel="prefetch" href="/blog/assets/js/197.a0501286.js"><link rel="prefetch" href="/blog/assets/js/198.00b191bd.js"><link rel="prefetch" href="/blog/assets/js/199.f1cd2ca2.js"><link rel="prefetch" href="/blog/assets/js/20.3bdcc06f.js"><link rel="prefetch" href="/blog/assets/js/200.0622f8f8.js"><link rel="prefetch" href="/blog/assets/js/201.8ee6e607.js"><link rel="prefetch" href="/blog/assets/js/202.e1324917.js"><link rel="prefetch" href="/blog/assets/js/203.53aefec9.js"><link rel="prefetch" href="/blog/assets/js/204.f306d39e.js"><link rel="prefetch" href="/blog/assets/js/205.19cd87e7.js"><link rel="prefetch" href="/blog/assets/js/206.ea3be421.js"><link rel="prefetch" href="/blog/assets/js/207.c55f6ca9.js"><link rel="prefetch" href="/blog/assets/js/208.b6909861.js"><link rel="prefetch" href="/blog/assets/js/209.82b9d0ab.js"><link rel="prefetch" href="/blog/assets/js/21.1148430e.js"><link rel="prefetch" href="/blog/assets/js/210.fa9d821f.js"><link rel="prefetch" href="/blog/assets/js/211.524d36f8.js"><link rel="prefetch" href="/blog/assets/js/212.7b1e1465.js"><link rel="prefetch" href="/blog/assets/js/213.e093c7c3.js"><link rel="prefetch" href="/blog/assets/js/214.def4e857.js"><link rel="prefetch" href="/blog/assets/js/215.0dfaa45a.js"><link rel="prefetch" href="/blog/assets/js/216.e5fc57fc.js"><link rel="prefetch" href="/blog/assets/js/217.0a7ef049.js"><link rel="prefetch" href="/blog/assets/js/218.fdd17fa0.js"><link rel="prefetch" href="/blog/assets/js/219.02bb95f6.js"><link rel="prefetch" href="/blog/assets/js/22.18d12b3e.js"><link rel="prefetch" href="/blog/assets/js/220.b1c808a9.js"><link rel="prefetch" href="/blog/assets/js/221.f2555add.js"><link rel="prefetch" href="/blog/assets/js/222.abd28d8b.js"><link rel="prefetch" href="/blog/assets/js/223.6af1ad07.js"><link rel="prefetch" href="/blog/assets/js/224.5926e39f.js"><link rel="prefetch" href="/blog/assets/js/225.224cea22.js"><link rel="prefetch" href="/blog/assets/js/226.28f565bb.js"><link rel="prefetch" href="/blog/assets/js/227.773c8da7.js"><link rel="prefetch" href="/blog/assets/js/228.cad4807c.js"><link rel="prefetch" href="/blog/assets/js/229.2db5cddb.js"><link rel="prefetch" href="/blog/assets/js/23.68a17302.js"><link rel="prefetch" href="/blog/assets/js/230.3d0a5422.js"><link rel="prefetch" href="/blog/assets/js/231.8909e197.js"><link rel="prefetch" href="/blog/assets/js/232.1a96a2fe.js"><link rel="prefetch" href="/blog/assets/js/233.8e5ba31e.js"><link rel="prefetch" href="/blog/assets/js/234.f0a07ee4.js"><link rel="prefetch" href="/blog/assets/js/235.8e7c5d7f.js"><link rel="prefetch" href="/blog/assets/js/236.0c919343.js"><link rel="prefetch" href="/blog/assets/js/237.56b20671.js"><link rel="prefetch" href="/blog/assets/js/238.c2538ff9.js"><link rel="prefetch" href="/blog/assets/js/239.da3e9fe9.js"><link rel="prefetch" href="/blog/assets/js/24.30a1e566.js"><link rel="prefetch" href="/blog/assets/js/240.e0cfa156.js"><link rel="prefetch" href="/blog/assets/js/241.5fe5e8e4.js"><link rel="prefetch" href="/blog/assets/js/242.743eeb53.js"><link rel="prefetch" href="/blog/assets/js/243.49d90203.js"><link rel="prefetch" href="/blog/assets/js/244.b7a7aebb.js"><link rel="prefetch" href="/blog/assets/js/245.87fdba7c.js"><link rel="prefetch" href="/blog/assets/js/246.3468c23e.js"><link rel="prefetch" href="/blog/assets/js/247.38c303a2.js"><link rel="prefetch" href="/blog/assets/js/248.35d8ea90.js"><link rel="prefetch" href="/blog/assets/js/249.03bef612.js"><link rel="prefetch" href="/blog/assets/js/25.2692b378.js"><link rel="prefetch" href="/blog/assets/js/250.20540eaf.js"><link rel="prefetch" href="/blog/assets/js/251.bee78d96.js"><link rel="prefetch" href="/blog/assets/js/252.08fcfb81.js"><link rel="prefetch" href="/blog/assets/js/253.e9172e7d.js"><link rel="prefetch" href="/blog/assets/js/254.2ccf6971.js"><link rel="prefetch" href="/blog/assets/js/255.35c90213.js"><link rel="prefetch" href="/blog/assets/js/256.6e78b485.js"><link rel="prefetch" href="/blog/assets/js/257.82fddafc.js"><link rel="prefetch" href="/blog/assets/js/258.86f87f3c.js"><link rel="prefetch" href="/blog/assets/js/259.ac2adea4.js"><link rel="prefetch" href="/blog/assets/js/26.e70825fc.js"><link rel="prefetch" href="/blog/assets/js/260.cb1056ec.js"><link rel="prefetch" href="/blog/assets/js/261.9d8336d7.js"><link rel="prefetch" href="/blog/assets/js/262.fb255bf8.js"><link rel="prefetch" href="/blog/assets/js/263.3664976d.js"><link rel="prefetch" href="/blog/assets/js/264.4e1ecb6b.js"><link rel="prefetch" href="/blog/assets/js/265.c9ca5ab3.js"><link rel="prefetch" href="/blog/assets/js/266.0babdee8.js"><link rel="prefetch" href="/blog/assets/js/267.bfda9f1c.js"><link rel="prefetch" href="/blog/assets/js/268.e6ff8634.js"><link rel="prefetch" href="/blog/assets/js/269.bc909ac1.js"><link rel="prefetch" href="/blog/assets/js/27.f4ee2a9f.js"><link rel="prefetch" href="/blog/assets/js/270.649dcf77.js"><link rel="prefetch" href="/blog/assets/js/271.e905af34.js"><link rel="prefetch" href="/blog/assets/js/272.3e5a7bbe.js"><link rel="prefetch" href="/blog/assets/js/273.e82f5bb7.js"><link rel="prefetch" href="/blog/assets/js/274.180d710c.js"><link rel="prefetch" href="/blog/assets/js/275.8770f2ce.js"><link rel="prefetch" href="/blog/assets/js/276.dd726aef.js"><link rel="prefetch" href="/blog/assets/js/277.da8690a3.js"><link rel="prefetch" href="/blog/assets/js/278.69adca10.js"><link rel="prefetch" href="/blog/assets/js/279.8c6090b5.js"><link rel="prefetch" href="/blog/assets/js/28.ba712ed3.js"><link rel="prefetch" href="/blog/assets/js/280.9d02db0b.js"><link rel="prefetch" href="/blog/assets/js/281.8a93dd44.js"><link rel="prefetch" href="/blog/assets/js/282.6bc1ca2d.js"><link rel="prefetch" href="/blog/assets/js/283.95999540.js"><link rel="prefetch" href="/blog/assets/js/284.2f0779ce.js"><link rel="prefetch" href="/blog/assets/js/285.465e19fc.js"><link rel="prefetch" href="/blog/assets/js/286.be2abf81.js"><link rel="prefetch" href="/blog/assets/js/287.ceafd2a0.js"><link rel="prefetch" href="/blog/assets/js/288.91d352e5.js"><link rel="prefetch" href="/blog/assets/js/289.5424f05b.js"><link rel="prefetch" href="/blog/assets/js/29.a10236e3.js"><link rel="prefetch" href="/blog/assets/js/290.b45293a5.js"><link rel="prefetch" href="/blog/assets/js/291.1a8a8fb8.js"><link rel="prefetch" href="/blog/assets/js/292.91f046f3.js"><link rel="prefetch" href="/blog/assets/js/293.1c48de52.js"><link rel="prefetch" href="/blog/assets/js/294.7550edaa.js"><link rel="prefetch" href="/blog/assets/js/295.c91f39bf.js"><link rel="prefetch" href="/blog/assets/js/296.3075b6a8.js"><link rel="prefetch" href="/blog/assets/js/297.911b8d8b.js"><link rel="prefetch" href="/blog/assets/js/298.8a6347e3.js"><link rel="prefetch" href="/blog/assets/js/299.0ed5bda8.js"><link rel="prefetch" href="/blog/assets/js/3.be505a1e.js"><link rel="prefetch" href="/blog/assets/js/30.285db3ae.js"><link rel="prefetch" href="/blog/assets/js/300.6508b552.js"><link rel="prefetch" href="/blog/assets/js/301.d4dc659d.js"><link rel="prefetch" href="/blog/assets/js/302.49b46100.js"><link rel="prefetch" href="/blog/assets/js/303.fdfdf9c3.js"><link rel="prefetch" href="/blog/assets/js/304.0e95e750.js"><link rel="prefetch" href="/blog/assets/js/305.89fc9f7e.js"><link rel="prefetch" href="/blog/assets/js/306.630ca740.js"><link rel="prefetch" href="/blog/assets/js/307.a97fe0cc.js"><link rel="prefetch" href="/blog/assets/js/308.cd8dbcb2.js"><link rel="prefetch" href="/blog/assets/js/309.f2b44740.js"><link rel="prefetch" href="/blog/assets/js/31.396473e5.js"><link rel="prefetch" href="/blog/assets/js/310.317b6195.js"><link rel="prefetch" href="/blog/assets/js/311.8eb8b0c0.js"><link rel="prefetch" href="/blog/assets/js/312.2e6ad3e6.js"><link rel="prefetch" href="/blog/assets/js/313.545cf94c.js"><link rel="prefetch" href="/blog/assets/js/314.09a1059e.js"><link rel="prefetch" href="/blog/assets/js/315.22eef3e7.js"><link rel="prefetch" href="/blog/assets/js/316.ef98ece9.js"><link rel="prefetch" href="/blog/assets/js/317.e442efde.js"><link rel="prefetch" href="/blog/assets/js/318.e341e35f.js"><link rel="prefetch" href="/blog/assets/js/319.95580ea0.js"><link rel="prefetch" href="/blog/assets/js/32.cb400629.js"><link rel="prefetch" href="/blog/assets/js/320.3b456cea.js"><link rel="prefetch" href="/blog/assets/js/321.dbf362e9.js"><link rel="prefetch" href="/blog/assets/js/322.52a78d01.js"><link rel="prefetch" href="/blog/assets/js/323.86d67afe.js"><link rel="prefetch" href="/blog/assets/js/324.b665a7ae.js"><link rel="prefetch" href="/blog/assets/js/325.9c1f0d0b.js"><link rel="prefetch" href="/blog/assets/js/326.29e08959.js"><link rel="prefetch" href="/blog/assets/js/327.b4e0e928.js"><link rel="prefetch" href="/blog/assets/js/328.54deeb5e.js"><link rel="prefetch" href="/blog/assets/js/329.528301a5.js"><link rel="prefetch" href="/blog/assets/js/33.245259c6.js"><link rel="prefetch" href="/blog/assets/js/330.d9258ebe.js"><link rel="prefetch" href="/blog/assets/js/331.976906e8.js"><link rel="prefetch" href="/blog/assets/js/34.685e248b.js"><link rel="prefetch" href="/blog/assets/js/35.7c81c272.js"><link rel="prefetch" href="/blog/assets/js/36.ac4cd00b.js"><link rel="prefetch" href="/blog/assets/js/37.15dadfa8.js"><link rel="prefetch" href="/blog/assets/js/38.dae74f93.js"><link rel="prefetch" href="/blog/assets/js/39.8cfa4403.js"><link rel="prefetch" href="/blog/assets/js/4.2e5dfdbc.js"><link rel="prefetch" href="/blog/assets/js/40.4ef2f507.js"><link rel="prefetch" href="/blog/assets/js/41.4c49f768.js"><link rel="prefetch" href="/blog/assets/js/42.174683b1.js"><link rel="prefetch" href="/blog/assets/js/43.8bc67827.js"><link rel="prefetch" href="/blog/assets/js/44.99825a94.js"><link rel="prefetch" href="/blog/assets/js/45.c83b1832.js"><link rel="prefetch" href="/blog/assets/js/46.5dcf4479.js"><link rel="prefetch" href="/blog/assets/js/47.69b6ccd5.js"><link rel="prefetch" href="/blog/assets/js/48.b848e59b.js"><link rel="prefetch" href="/blog/assets/js/49.608af470.js"><link rel="prefetch" href="/blog/assets/js/5.742ef085.js"><link rel="prefetch" href="/blog/assets/js/50.053b637a.js"><link rel="prefetch" href="/blog/assets/js/51.c20a7c5a.js"><link rel="prefetch" href="/blog/assets/js/52.3130f3cf.js"><link rel="prefetch" href="/blog/assets/js/53.d00d851b.js"><link rel="prefetch" href="/blog/assets/js/54.d591ee8c.js"><link rel="prefetch" href="/blog/assets/js/55.8db0699e.js"><link rel="prefetch" href="/blog/assets/js/56.a21657f5.js"><link rel="prefetch" href="/blog/assets/js/57.9b00cb81.js"><link rel="prefetch" href="/blog/assets/js/58.92ebc144.js"><link rel="prefetch" href="/blog/assets/js/59.f1cef46b.js"><link rel="prefetch" href="/blog/assets/js/6.f1e48f63.js"><link rel="prefetch" href="/blog/assets/js/60.10e85898.js"><link rel="prefetch" href="/blog/assets/js/61.001a850d.js"><link rel="prefetch" href="/blog/assets/js/62.021da072.js"><link rel="prefetch" href="/blog/assets/js/63.d35f0be9.js"><link rel="prefetch" href="/blog/assets/js/64.aa6da315.js"><link rel="prefetch" href="/blog/assets/js/65.da799665.js"><link rel="prefetch" href="/blog/assets/js/66.1e5e0304.js"><link rel="prefetch" href="/blog/assets/js/67.40875f13.js"><link rel="prefetch" href="/blog/assets/js/68.9a7f6eba.js"><link rel="prefetch" href="/blog/assets/js/69.9ab7a0c4.js"><link rel="prefetch" href="/blog/assets/js/7.8c9db17d.js"><link rel="prefetch" href="/blog/assets/js/70.b3d295ee.js"><link rel="prefetch" href="/blog/assets/js/71.116ac865.js"><link rel="prefetch" href="/blog/assets/js/72.f89be6de.js"><link rel="prefetch" href="/blog/assets/js/73.8bbc4932.js"><link rel="prefetch" href="/blog/assets/js/74.3828f95a.js"><link rel="prefetch" href="/blog/assets/js/75.8f6e2a03.js"><link rel="prefetch" href="/blog/assets/js/76.ee88841a.js"><link rel="prefetch" href="/blog/assets/js/77.80acf4c5.js"><link rel="prefetch" href="/blog/assets/js/78.d40ba866.js"><link rel="prefetch" href="/blog/assets/js/79.4a360288.js"><link rel="prefetch" href="/blog/assets/js/8.8e2af1af.js"><link rel="prefetch" href="/blog/assets/js/80.6d72d3eb.js"><link rel="prefetch" href="/blog/assets/js/81.ae691da3.js"><link rel="prefetch" href="/blog/assets/js/82.54d8ebbe.js"><link rel="prefetch" href="/blog/assets/js/83.6b37c807.js"><link rel="prefetch" href="/blog/assets/js/84.5719b39c.js"><link rel="prefetch" href="/blog/assets/js/85.26f5b055.js"><link rel="prefetch" href="/blog/assets/js/86.637909d8.js"><link rel="prefetch" href="/blog/assets/js/87.bc5b4b66.js"><link rel="prefetch" href="/blog/assets/js/88.926a251d.js"><link rel="prefetch" href="/blog/assets/js/89.8f0ef90d.js"><link rel="prefetch" href="/blog/assets/js/9.93b818e1.js"><link rel="prefetch" href="/blog/assets/js/90.43d358d5.js"><link rel="prefetch" href="/blog/assets/js/91.47c81fdd.js"><link rel="prefetch" href="/blog/assets/js/92.413deb7c.js"><link rel="prefetch" href="/blog/assets/js/93.66685674.js"><link rel="prefetch" href="/blog/assets/js/94.b9b5b70c.js"><link rel="prefetch" href="/blog/assets/js/95.626f27ee.js"><link rel="prefetch" href="/blog/assets/js/96.4137e850.js"><link rel="prefetch" href="/blog/assets/js/97.401c39a6.js"><link rel="prefetch" href="/blog/assets/js/98.32cba376.js"><link rel="prefetch" href="/blog/assets/js/99.70f0581f.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.75b42115.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/learn/" class="nav-link">
+  Learn
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/learn/" class="nav-link">
+  Learn
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/tool/verdaccio/" aria-current="page" class="active sidebar-link">Verdaccio</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_1-原理" class="sidebar-link">1.原理</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_2-安装" class="sidebar-link">2.安装</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_3-运行" class="sidebar-link">3.运行</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_4-设置-registry" class="sidebar-link">4.设置 registry</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_5-配置文件" class="sidebar-link">5.配置文件</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_6-权限控制" class="sidebar-link">6.权限控制</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_7-持久化" class="sidebar-link">7.持久化</a></li><li class="sidebar-sub-header"><a href="/blog/tool/verdaccio/#_8-参考文章" class="sidebar-link">8.参考文章</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>目前的 <code>NPM</code> 私有库有以下 <code>3</code> 种方案：</p> <ol><li><p><code>NPM</code> 官方私有库，服务齐全、操作简便。唯一缺点是<strong>付费较贵</strong>。</p></li> <li><p><code>CNPM</code> 私有库，淘宝出品。缺点是<strong>热度较低，维护不频繁，而且配置繁琐</strong>。</p></li> <li><p><code>verdaccio</code> 私有库，轻量级、配置简单、托管服务器、安装启动即可。缺点是<strong>权限设计简陋</strong>。</p></li></ol> <p>从以上三者对比来看，小团队选择 <code>verdaccio</code> 即可。</p> <p>官网：<a href="https://verdaccio.org/" target="_blank" rel="noopener noreferrer">verdaccio<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_1-原理"><a href="#_1-原理" class="header-anchor">#</a> 1.原理</h2> <p><img src="https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20231025115044.png" alt=""></p> <h2 id="_2-安装"><a href="#_2-安装" class="header-anchor">#</a> 2.安装</h2> <p>根据本地工具 <code>npm</code>、<code>yarn</code>、<code>pnpm</code> 的不同，可以分别采用以下几种形式：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> --location<span class="token operator">=</span>global verdaccio
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">yarn</span> global <span class="token function">add</span> verdaccio
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">pnpm</span> <span class="token function">install</span> -g verdaccio
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><code>docker</code> 安装：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker run -it --rm --name verdaccio -p <span class="token number">4873</span>:4873 verdaccio/verdaccio
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_3-运行"><a href="#_3-运行" class="header-anchor">#</a> 3.运行</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>verdaccio
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><code>verdaccio</code> 的用户机制和 <code>npm</code> 官方并不共享，也就是说 <code>npm</code> 的原有账号，并不能登录 <code>verdaccio</code>。</p> <p>新用户需要重新创建。</p> <h2 id="_4-设置-registry"><a href="#_4-设置-registry" class="header-anchor">#</a> 4.设置 <code>registry</code></h2> <ol><li><p><code>npm set registry http://localhost:4873/</code> or <code>yarn config set registry http://localhost:4873</code></p></li> <li><p><code>npm install --registry http://localhost:4873</code> or <code>yarn add --registry http://localhost:4873</code></p></li> <li><p><code>.npmrc</code> 或者 <code>.yarnrc</code></p></li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#.npmrc</span>
+<span class="token assign-left variable">registry</span><span class="token operator">=</span>http://localhost:4873
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#.yarnrc</span>
+registry <span class="token string">&quot;http://localhost:4873&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="4"><li>a <code>publishConfig</code> in your <code>package.json</code></li></ol> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;publishConfig&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;registry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://localhost:4873&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>npm update</code> 更新依赖？</p> <ul><li><code>npm update</code> 会按照 <code>semver</code> 来更新依赖包。但并不会更改 <code>package.json</code> 中声明的包版本。</li></ul></div> <h2 id="_5-配置文件"><a href="#_5-配置文件" class="header-anchor">#</a> 5.配置文件</h2> <p><code>verdaccio</code> 启动后，会默认生成 <code>~/.config/verdaccio/config.yaml</code> （<code>macos</code>）配置文件。</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment"># path to a directory with all packages</span>
+<span class="token key atrule">storage</span><span class="token punctuation">:</span> /Users/user<span class="token punctuation">-</span>name/.local/share/verdaccio/storage
+<span class="token comment"># path to a directory with plugins to include</span>
+<span class="token key atrule">plugins</span><span class="token punctuation">:</span> ./plugins
+
+<span class="token comment"># https://verdaccio.org/docs/webui</span>
+<span class="token key atrule">web</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> Verdaccio
+  <span class="token comment"># comment out to disable gravatar support</span>
+  <span class="token comment"># gravatar: false</span>
+  <span class="token comment"># by default packages are ordercer ascendant (asc|desc)</span>
+  <span class="token comment"># sort_packages: asc</span>
+  <span class="token comment"># convert your UI to the dark side</span>
+  <span class="token comment"># darkMode: true</span>
+  <span class="token comment"># html_cache: true</span>
+  <span class="token comment"># by default all features are displayed</span>
+  <span class="token comment"># login: true</span>
+  <span class="token comment"># showInfo: true</span>
+  <span class="token comment"># showSettings: true</span>
+  <span class="token comment"># In combination with darkMode you can force specific theme</span>
+  <span class="token comment"># showThemeSwitch: true</span>
+  <span class="token comment"># showFooter: true</span>
+  <span class="token comment"># showSearch: true</span>
+  <span class="token comment"># showRaw: true</span>
+  <span class="token comment"># showDownloadTarball: true</span>
+  <span class="token comment">#  HTML tags injected after manifest &lt;scripts/&gt;</span>
+  <span class="token comment"># scriptsBodyAfter:</span>
+  <span class="token comment">#    - '&lt;script type=&quot;text/javascript&quot; src=&quot;https://my.company.com/customJS.min.js&quot;&gt;&lt;/script&gt;'</span>
+  <span class="token comment">#  HTML tags injected before ends &lt;/head&gt;</span>
+  <span class="token comment">#  metaScripts:</span>
+  <span class="token comment">#    - '&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;'</span>
+  <span class="token comment">#    - '&lt;script type=&quot;text/javascript&quot; src=&quot;https://browser.sentry-cdn.com/5.15.5/bundle.min.js&quot;&gt;&lt;/script&gt;'</span>
+  <span class="token comment">#    - '&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot; /&gt;'</span>
+  <span class="token comment">#  HTML tags injected first child at &lt;body/&gt;</span>
+  <span class="token comment">#  bodyBefore:</span>
+  <span class="token comment">#    - '&lt;div id=&quot;myId&quot;&gt;html before webpack scripts&lt;/div&gt;'</span>
+  <span class="token comment">#  Public path for template manifest scripts (only manifest)</span>
+  <span class="token comment">#  publicPath: http://somedomain.org/</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#authentication</span>
+<span class="token key atrule">auth</span><span class="token punctuation">:</span>
+  <span class="token key atrule">htpasswd</span><span class="token punctuation">:</span>
+    <span class="token key atrule">file</span><span class="token punctuation">:</span> ./htpasswd
+    <span class="token comment"># Maximum amount of users allowed to register, defaults to &quot;+inf&quot;.</span>
+    <span class="token comment"># You can set this to -1 to disable registration.</span>
+    <span class="token key atrule">max_users</span><span class="token punctuation">:</span> <span class="token number">1000</span>
+    <span class="token comment"># Hash algorithm, possible options are: &quot;bcrypt&quot;, &quot;md5&quot;, &quot;sha1&quot;, &quot;crypt&quot;.</span>
+    <span class="token comment"># algorithm: bcrypt # by default is crypt, but is recommended use bcrypt for new installations</span>
+    <span class="token comment"># Rounds number for &quot;bcrypt&quot;, will be ignored for other algorithms.</span>
+    <span class="token comment"># rounds: 10</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#uplinks</span>
+<span class="token comment"># a list of other known repositories we can talk to</span>
+<span class="token key atrule">uplinks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">npmjs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//registry.npmjs.org/
+
+<span class="token comment"># Learn how to protect your packages</span>
+<span class="token comment"># https://verdaccio.org/docs/protect-your-dependencies/</span>
+<span class="token comment"># https://verdaccio.org/docs/configuration#packages</span>
+<span class="token key atrule">packages</span><span class="token punctuation">:</span>
+  <span class="token key atrule">'@my-company/*'</span><span class="token punctuation">:</span>
+    <span class="token key atrule">access</span><span class="token punctuation">:</span> $authenticated
+    <span class="token key atrule">publish</span><span class="token punctuation">:</span> $authenticated
+    <span class="token key atrule">unpublish</span><span class="token punctuation">:</span> $authenticated
+  <span class="token key atrule">'@*/*'</span><span class="token punctuation">:</span>
+    <span class="token comment"># scoped packages</span>
+    <span class="token key atrule">access</span><span class="token punctuation">:</span> $all
+    <span class="token key atrule">publish</span><span class="token punctuation">:</span> $authenticated
+    <span class="token key atrule">unpublish</span><span class="token punctuation">:</span> $authenticated
+    <span class="token key atrule">proxy</span><span class="token punctuation">:</span> npmjs
+  <span class="token key atrule">'**'</span><span class="token punctuation">:</span>
+    <span class="token comment"># allow all users (including non-authenticated users) to read and</span>
+    <span class="token comment"># publish all packages</span>
+    <span class="token comment">#</span>
+    <span class="token comment"># you can specify usernames/groupnames (depending on your auth plugin)</span>
+    <span class="token comment"># and three keywords: &quot;$all&quot;, &quot;$anonymous&quot;, &quot;$authenticated&quot;</span>
+    <span class="token key atrule">access</span><span class="token punctuation">:</span> $all
+
+    <span class="token comment"># allow all known users to publish/publish packages</span>
+    <span class="token comment"># (anyone can register by default, remember?)</span>
+    <span class="token key atrule">publish</span><span class="token punctuation">:</span> $authenticated
+    <span class="token key atrule">unpublish</span><span class="token punctuation">:</span> $authenticated
+
+    <span class="token comment"># if package is not available locally, proxy requests to 'npmjs' registry</span>
+    <span class="token key atrule">proxy</span><span class="token punctuation">:</span> npmjs
+
+<span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">keepAliveTimeout</span><span class="token punctuation">:</span> <span class="token number">60</span>
+  <span class="token comment"># Allow `req.ip` to resolve properly when Verdaccio is behind a proxy or load-balancer</span>
+  <span class="token comment"># See: https://expressjs.com/en/guide/behind-proxies.html</span>
+  <span class="token comment"># trustProxy: '127.0.0.1'</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#offline-publish</span>
+<span class="token comment"># publish:</span>
+<span class="token comment">#   allow_offline: false</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#url-prefix</span>
+<span class="token comment"># url_prefix: /verdaccio/</span>
+<span class="token comment"># VERDACCIO_PUBLIC_URL='https://somedomain.org';</span>
+<span class="token comment"># url_prefix: '/my_prefix'</span>
+<span class="token comment"># // url -&gt; https://somedomain.org/my_prefix/</span>
+<span class="token comment"># VERDACCIO_PUBLIC_URL='https://somedomain.org';</span>
+<span class="token comment"># url_prefix: '/'</span>
+<span class="token comment"># // url -&gt; https://somedomain.org/</span>
+<span class="token comment"># VERDACCIO_PUBLIC_URL='https://somedomain.org/first_prefix';</span>
+<span class="token comment"># url_prefix: '/second_prefix'</span>
+<span class="token comment"># // url -&gt; https://somedomain.org/second_prefix/'</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#security</span>
+<span class="token comment"># security:</span>
+<span class="token comment">#   api:</span>
+<span class="token comment">#     legacy: true</span>
+<span class="token comment">#     jwt:</span>
+<span class="token comment">#       sign:</span>
+<span class="token comment">#         expiresIn: 29d</span>
+<span class="token comment">#       verify:</span>
+<span class="token comment">#         someProp: [value]</span>
+<span class="token comment">#    web:</span>
+<span class="token comment">#      sign:</span>
+<span class="token comment">#        expiresIn: 1h # 1 hour by default</span>
+<span class="token comment">#      verify:</span>
+<span class="token comment">#         someProp: [value]</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#user-rate-limit</span>
+<span class="token comment"># userRateLimit:</span>
+<span class="token comment">#   windowMs: 50000</span>
+<span class="token comment">#   max: 1000</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#max-body-size</span>
+<span class="token comment"># max_body_size: 10mb</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#listen-port</span>
+<span class="token comment"># listen:</span>
+<span class="token comment"># - localhost:4873            # default value</span>
+<span class="token comment"># - http://localhost:4873     # same thing</span>
+<span class="token comment"># - 0.0.0.0:4873              # listen on all addresses (INADDR_ANY)</span>
+<span class="token comment"># - https://example.org:4873  # if you want to use https</span>
+<span class="token comment"># - &quot;[::1]:4873&quot;                # ipv6</span>
+<span class="token comment"># - unix:/tmp/verdaccio.sock    # unix socket</span>
+
+<span class="token comment"># The HTTPS configuration is useful if you do not consider use a HTTP Proxy</span>
+<span class="token comment"># https://verdaccio.org/docs/configuration#https</span>
+<span class="token comment"># https:</span>
+<span class="token comment">#   key: ./path/verdaccio-key.pem</span>
+<span class="token comment">#   cert: ./path/verdaccio-cert.pem</span>
+<span class="token comment">#   ca: ./path/verdaccio-csr.pem</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#proxy</span>
+<span class="token comment"># http_proxy: http://something.local/</span>
+<span class="token comment"># https_proxy: https://something.local/</span>
+
+<span class="token comment"># https://verdaccio.org/docs/configuration#notifications</span>
+<span class="token comment"># notify:</span>
+<span class="token comment">#   method: POST</span>
+<span class="token comment">#   headers: [{ &quot;Content-Type&quot;: &quot;application/json&quot; }]</span>
+<span class="token comment">#   endpoint: https://usagge.hipchat.com/v2/room/3729485/notification?auth_token=mySecretToken</span>
+<span class="token comment">#   content: '{&quot;color&quot;:&quot;green&quot;,&quot;message&quot;:&quot;New package published: * {{ name }}*&quot;,&quot;notify&quot;:true,&quot;message_format&quot;:&quot;text&quot;}'</span>
+
+<span class="token key atrule">middlewares</span><span class="token punctuation">:</span>
+  <span class="token key atrule">audit</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token comment"># https://verdaccio.org/docs/logger</span>
+<span class="token comment"># log settings</span>
+<span class="token key atrule">log</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> stdout<span class="token punctuation">,</span> <span class="token key atrule">format</span><span class="token punctuation">:</span> pretty<span class="token punctuation">,</span> <span class="token key atrule">level</span><span class="token punctuation">:</span> http <span class="token punctuation">}</span>
+<span class="token comment">#experiments:</span>
+<span class="token comment">#  # support for npm token command</span>
+<span class="token comment">#  token: false</span>
+<span class="token comment">#  # disable writing body size to logs, read more on ticket 1912</span>
+<span class="token comment">#  bytesin_off: false</span>
+<span class="token comment">#  # enable tarball URL redirect for hosting tarball with a different server, the tarball_url_redirect can be a template string</span>
+<span class="token comment">#  tarball_url_redirect: 'https://mycdn.com/verdaccio/${packageName}/${filename}'</span>
+<span class="token comment">#  # the tarball_url_redirect can be a function, takes packageName and filename and returns the url, when working with a js configuration file</span>
+<span class="token comment">#  tarball_url_redirect(packageName, filename) {</span>
+<span class="token comment">#    const signedUrl = // generate a signed url</span>
+<span class="token comment">#    return signedUrl;</span>
+<span class="token comment">#  }</span>
+
+<span class="token comment"># translate your registry, api i18n not available yet</span>
+<span class="token comment"># i18n:</span>
+<span class="token comment"># list of the available translations https://github.com/verdaccio/verdaccio/blob/master/packages/plugins/ui-theme/src/i18n/ABOUT_TRANSLATIONS.md</span>
+<span class="token comment">#   web: en-US</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br></div></div><h2 id="_6-权限控制"><a href="#_6-权限控制" class="header-anchor">#</a> 6.权限控制</h2> <p><code>verdaccio</code> 的权限控制比较简陋。</p> <p>目前的方案是，将 <code>config.yaml</code> 中的 <code>max_users</code> 设置为 <code>1</code>，只允许注册一个账号。</p> <p>其他配置使用 <code>config.yaml</code> 的默认配置即可。</p> <p>这样，发布和删除包，可以使用已注册的账号。而访问包，在内网环境下的所有人均可以。</p> <h2 id="_7-持久化"><a href="#_7-持久化" class="header-anchor">#</a> 7.持久化</h2> <p>利用 <code>pm2</code> 启动 <code>verdaccio</code> 以在后台运行：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>pm2 start verdaccio
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_8-参考文章"><a href="#_8-参考文章" class="header-anchor">#</a> 8.参考文章</h2> <ol><li><p><a href="https://juejin.cn/post/6953115364511186975" target="_blank" rel="noopener noreferrer">私有npm仓库<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://zhaomenghuan.js.org/blog/npm-private-repository-verdaccio.html" target="_blank" rel="noopener noreferrer">npm 私有仓库工具 Verdaccio 搭建<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="http://www.wynneit.cn/2021/07/12/verdaccio/" target="_blank" rel="noopener noreferrer">搭建属于自己的私有npm库<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/9/2024, 2:33:24 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.9c7d186a.js" defer></script><script src="/blog/assets/js/2.0c9875ae.js" defer></script><script src="/blog/assets/js/332.2c21b977.js" defer></script>
+  </body>
+</html>
