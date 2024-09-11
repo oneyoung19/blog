@@ -19,6 +19,16 @@ module.exports = {
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();`
+    ],
+    // Microsoft Clarity
+    ['script', {},
+      `<script type="text/javascript">
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "o1h2x0tjoo");
+      </script>`
     ]
   ],
   base: '/blog/', // 这是部署到github相关的配置。 静态资源配置的时候直接用绝对路径。如果不是根目录'/'访问的话，需要设置前缀。
