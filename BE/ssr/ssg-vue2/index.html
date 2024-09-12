@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SSG Vue2 | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+    <script>(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "o1h2x0tjoo");</script>
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-6MCGJRJCR5"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6MCGJRJCR5');</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.3d584b6a.css" as="style"><link rel="preload" href="/blog/assets/js/app.bf0184d0.js" as="script"><link rel="preload" href="/blog/assets/js/2.80e16ae8.js" as="script"><link rel="preload" href="/blog/assets/js/31.a8e82771.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.517e4533.js"><link rel="prefetch" href="/blog/assets/js/100.a4bb8558.js"><link rel="prefetch" href="/blog/assets/js/101.5bc55553.js"><link rel="prefetch" href="/blog/assets/js/102.3dca5112.js"><link rel="prefetch" href="/blog/assets/js/103.ef1c8eca.js"><link rel="prefetch" href="/blog/assets/js/104.4ad9c3bd.js"><link rel="prefetch" href="/blog/assets/js/105.eb167b10.js"><link rel="prefetch" href="/blog/assets/js/106.9fa3b140.js"><link rel="prefetch" href="/blog/assets/js/107.31cb870b.js"><link rel="prefetch" href="/blog/assets/js/108.03bb9f80.js"><link rel="prefetch" href="/blog/assets/js/109.c12b4222.js"><link rel="prefetch" href="/blog/assets/js/11.9408cc63.js"><link rel="prefetch" href="/blog/assets/js/110.17fad168.js"><link rel="prefetch" href="/blog/assets/js/111.4a97cbd1.js"><link rel="prefetch" href="/blog/assets/js/112.dc1e68c3.js"><link rel="prefetch" href="/blog/assets/js/113.f807b944.js"><link rel="prefetch" href="/blog/assets/js/114.4d5ba49d.js"><link rel="prefetch" href="/blog/assets/js/115.2169b089.js"><link rel="prefetch" href="/blog/assets/js/116.6ccee333.js"><link rel="prefetch" href="/blog/assets/js/117.0b9086fe.js"><link rel="prefetch" href="/blog/assets/js/118.5e0c2354.js"><link rel="prefetch" href="/blog/assets/js/119.66a9bb11.js"><link rel="prefetch" href="/blog/assets/js/12.7afe7247.js"><link rel="prefetch" href="/blog/assets/js/120.ffa3b4fc.js"><link rel="prefetch" href="/blog/assets/js/121.afcf7483.js"><link rel="prefetch" href="/blog/assets/js/122.9aaf92f8.js"><link rel="prefetch" href="/blog/assets/js/123.fafa6792.js"><link rel="prefetch" href="/blog/assets/js/124.ed29db30.js"><link rel="prefetch" href="/blog/assets/js/125.b1e1bec1.js"><link rel="prefetch" href="/blog/assets/js/126.5dfb2b74.js"><link rel="prefetch" href="/blog/assets/js/127.76b6f257.js"><link rel="prefetch" href="/blog/assets/js/128.f4c4f766.js"><link rel="prefetch" href="/blog/assets/js/129.e922a79d.js"><link rel="prefetch" href="/blog/assets/js/13.61a22ebd.js"><link rel="prefetch" href="/blog/assets/js/130.fb68ec93.js"><link rel="prefetch" href="/blog/assets/js/131.b16fe9d3.js"><link rel="prefetch" href="/blog/assets/js/132.3e5fc853.js"><link rel="prefetch" href="/blog/assets/js/133.1aca3f3a.js"><link rel="prefetch" href="/blog/assets/js/134.abb1c18b.js"><link rel="prefetch" href="/blog/assets/js/135.112c3ba3.js"><link rel="prefetch" href="/blog/assets/js/136.72753201.js"><link rel="prefetch" href="/blog/assets/js/137.21bca3ee.js"><link rel="prefetch" href="/blog/assets/js/138.150f54b2.js"><link rel="prefetch" href="/blog/assets/js/139.1effafc9.js"><link rel="prefetch" href="/blog/assets/js/14.f69e895d.js"><link rel="prefetch" href="/blog/assets/js/140.db0a3044.js"><link rel="prefetch" href="/blog/assets/js/141.e4a4ead3.js"><link rel="prefetch" href="/blog/assets/js/142.baa742d7.js"><link rel="prefetch" href="/blog/assets/js/143.e43a7f13.js"><link rel="prefetch" href="/blog/assets/js/144.a9488e09.js"><link rel="prefetch" href="/blog/assets/js/145.f0557379.js"><link rel="prefetch" href="/blog/assets/js/146.62cfb80d.js"><link rel="prefetch" href="/blog/assets/js/147.40b84fb9.js"><link rel="prefetch" href="/blog/assets/js/148.54029b00.js"><link rel="prefetch" href="/blog/assets/js/149.4ba3768c.js"><link rel="prefetch" href="/blog/assets/js/15.7735a296.js"><link rel="prefetch" href="/blog/assets/js/150.b92cb1b9.js"><link rel="prefetch" href="/blog/assets/js/151.29dfb3d0.js"><link rel="prefetch" href="/blog/assets/js/152.dde6323c.js"><link rel="prefetch" href="/blog/assets/js/153.2308a63d.js"><link rel="prefetch" href="/blog/assets/js/154.b3149e36.js"><link rel="prefetch" href="/blog/assets/js/155.17de12ef.js"><link rel="prefetch" href="/blog/assets/js/156.0cc78587.js"><link rel="prefetch" href="/blog/assets/js/157.1f371e89.js"><link rel="prefetch" href="/blog/assets/js/158.43e281ef.js"><link rel="prefetch" href="/blog/assets/js/159.81c15a13.js"><link rel="prefetch" href="/blog/assets/js/16.e19ede16.js"><link rel="prefetch" href="/blog/assets/js/160.cdd30c9a.js"><link rel="prefetch" href="/blog/assets/js/161.2457373a.js"><link rel="prefetch" href="/blog/assets/js/162.394a743d.js"><link rel="prefetch" href="/blog/assets/js/163.ff3eac60.js"><link rel="prefetch" href="/blog/assets/js/164.a343593d.js"><link rel="prefetch" href="/blog/assets/js/165.2bfa8359.js"><link rel="prefetch" href="/blog/assets/js/166.464c3161.js"><link rel="prefetch" href="/blog/assets/js/167.b10b0935.js"><link rel="prefetch" href="/blog/assets/js/168.073d333a.js"><link rel="prefetch" href="/blog/assets/js/169.7f651cb6.js"><link rel="prefetch" href="/blog/assets/js/17.736327a1.js"><link rel="prefetch" href="/blog/assets/js/170.a12a8ee9.js"><link rel="prefetch" href="/blog/assets/js/171.ddd87e14.js"><link rel="prefetch" href="/blog/assets/js/172.b7cb950f.js"><link rel="prefetch" href="/blog/assets/js/173.384db493.js"><link rel="prefetch" href="/blog/assets/js/174.31183e13.js"><link rel="prefetch" href="/blog/assets/js/175.68984f98.js"><link rel="prefetch" href="/blog/assets/js/176.8ec83152.js"><link rel="prefetch" href="/blog/assets/js/177.20c8376c.js"><link rel="prefetch" href="/blog/assets/js/178.401e7737.js"><link rel="prefetch" href="/blog/assets/js/179.feebba52.js"><link rel="prefetch" href="/blog/assets/js/18.6980ca89.js"><link rel="prefetch" href="/blog/assets/js/180.56bda84b.js"><link rel="prefetch" href="/blog/assets/js/181.79076fa9.js"><link rel="prefetch" href="/blog/assets/js/182.4d1da8c3.js"><link rel="prefetch" href="/blog/assets/js/183.6edcc65a.js"><link rel="prefetch" href="/blog/assets/js/184.55c810b7.js"><link rel="prefetch" href="/blog/assets/js/185.2ea7956d.js"><link rel="prefetch" href="/blog/assets/js/186.16ed2a60.js"><link rel="prefetch" href="/blog/assets/js/187.d35ab1cd.js"><link rel="prefetch" href="/blog/assets/js/188.28148c94.js"><link rel="prefetch" href="/blog/assets/js/189.37666d4f.js"><link rel="prefetch" href="/blog/assets/js/19.09afe9ce.js"><link rel="prefetch" href="/blog/assets/js/190.f5e27dd2.js"><link rel="prefetch" href="/blog/assets/js/191.0e01406f.js"><link rel="prefetch" href="/blog/assets/js/192.50e971a3.js"><link rel="prefetch" href="/blog/assets/js/193.42d0edba.js"><link rel="prefetch" href="/blog/assets/js/194.f9efbed0.js"><link rel="prefetch" href="/blog/assets/js/195.5e26711a.js"><link rel="prefetch" href="/blog/assets/js/196.5a3aab67.js"><link rel="prefetch" href="/blog/assets/js/197.aa43b65a.js"><link rel="prefetch" href="/blog/assets/js/198.3a073dfc.js"><link rel="prefetch" href="/blog/assets/js/199.71b63932.js"><link rel="prefetch" href="/blog/assets/js/20.993d7647.js"><link rel="prefetch" href="/blog/assets/js/200.781cf449.js"><link rel="prefetch" href="/blog/assets/js/201.65198701.js"><link rel="prefetch" href="/blog/assets/js/202.32bdda79.js"><link rel="prefetch" href="/blog/assets/js/203.3bb38d40.js"><link rel="prefetch" href="/blog/assets/js/204.d7bf22a8.js"><link rel="prefetch" href="/blog/assets/js/205.5a359756.js"><link rel="prefetch" href="/blog/assets/js/206.d959e1e5.js"><link rel="prefetch" href="/blog/assets/js/207.a18f9f72.js"><link rel="prefetch" href="/blog/assets/js/208.b4ca9318.js"><link rel="prefetch" href="/blog/assets/js/209.02f26bbd.js"><link rel="prefetch" href="/blog/assets/js/21.fd405e31.js"><link rel="prefetch" href="/blog/assets/js/210.e2fe84a6.js"><link rel="prefetch" href="/blog/assets/js/211.69f6330b.js"><link rel="prefetch" href="/blog/assets/js/212.1eea51cf.js"><link rel="prefetch" href="/blog/assets/js/213.fde9a82b.js"><link rel="prefetch" href="/blog/assets/js/214.7218933f.js"><link rel="prefetch" href="/blog/assets/js/215.8285ebed.js"><link rel="prefetch" href="/blog/assets/js/216.4c2b58e3.js"><link rel="prefetch" href="/blog/assets/js/217.74ced0b7.js"><link rel="prefetch" href="/blog/assets/js/218.789da8ab.js"><link rel="prefetch" href="/blog/assets/js/219.2d6185e5.js"><link rel="prefetch" href="/blog/assets/js/22.c2396f8d.js"><link rel="prefetch" href="/blog/assets/js/220.d44bea1f.js"><link rel="prefetch" href="/blog/assets/js/221.cbe0769f.js"><link rel="prefetch" href="/blog/assets/js/222.f00945bd.js"><link rel="prefetch" href="/blog/assets/js/223.9ac55e7b.js"><link rel="prefetch" href="/blog/assets/js/224.1ac2746b.js"><link rel="prefetch" href="/blog/assets/js/225.ad069b69.js"><link rel="prefetch" href="/blog/assets/js/226.9541ecf1.js"><link rel="prefetch" href="/blog/assets/js/227.ef810e42.js"><link rel="prefetch" href="/blog/assets/js/228.cbfe40ed.js"><link rel="prefetch" href="/blog/assets/js/229.79cc92ee.js"><link rel="prefetch" href="/blog/assets/js/23.68a17302.js"><link rel="prefetch" href="/blog/assets/js/230.8d37b113.js"><link rel="prefetch" href="/blog/assets/js/231.7c2bfddc.js"><link rel="prefetch" href="/blog/assets/js/232.d1f2a3dc.js"><link rel="prefetch" href="/blog/assets/js/233.10e97c0e.js"><link rel="prefetch" href="/blog/assets/js/234.f9575c8e.js"><link rel="prefetch" href="/blog/assets/js/235.bf94e605.js"><link rel="prefetch" href="/blog/assets/js/236.2d24d4ea.js"><link rel="prefetch" href="/blog/assets/js/237.fddf1e1e.js"><link rel="prefetch" href="/blog/assets/js/238.f4a9786b.js"><link rel="prefetch" href="/blog/assets/js/239.f89d4f29.js"><link rel="prefetch" href="/blog/assets/js/24.a09663d4.js"><link rel="prefetch" href="/blog/assets/js/240.aa3b5b42.js"><link rel="prefetch" href="/blog/assets/js/241.39dda62d.js"><link rel="prefetch" href="/blog/assets/js/242.bdfdb9af.js"><link rel="prefetch" href="/blog/assets/js/243.98d0593b.js"><link rel="prefetch" href="/blog/assets/js/244.0406241c.js"><link rel="prefetch" href="/blog/assets/js/245.520dad40.js"><link rel="prefetch" href="/blog/assets/js/246.2de56e99.js"><link rel="prefetch" href="/blog/assets/js/247.94c93d32.js"><link rel="prefetch" href="/blog/assets/js/248.b68f481d.js"><link rel="prefetch" href="/blog/assets/js/249.552062aa.js"><link rel="prefetch" href="/blog/assets/js/25.2692b378.js"><link rel="prefetch" href="/blog/assets/js/250.852c096f.js"><link rel="prefetch" href="/blog/assets/js/251.157f42a2.js"><link rel="prefetch" href="/blog/assets/js/252.3122337f.js"><link rel="prefetch" href="/blog/assets/js/253.ca8217d8.js"><link rel="prefetch" href="/blog/assets/js/254.a7ede6da.js"><link rel="prefetch" href="/blog/assets/js/255.79e13ae5.js"><link rel="prefetch" href="/blog/assets/js/256.7dedb4cf.js"><link rel="prefetch" href="/blog/assets/js/257.317e3bb3.js"><link rel="prefetch" href="/blog/assets/js/258.b499fedf.js"><link rel="prefetch" href="/blog/assets/js/259.9a6ad53e.js"><link rel="prefetch" href="/blog/assets/js/26.5c5e543b.js"><link rel="prefetch" href="/blog/assets/js/260.e05848e8.js"><link rel="prefetch" href="/blog/assets/js/261.5929f129.js"><link rel="prefetch" href="/blog/assets/js/262.fc2ecb06.js"><link rel="prefetch" href="/blog/assets/js/263.65a0d2fa.js"><link rel="prefetch" href="/blog/assets/js/264.efd655ce.js"><link rel="prefetch" href="/blog/assets/js/265.fdf6b4fe.js"><link rel="prefetch" href="/blog/assets/js/266.09f34e31.js"><link rel="prefetch" href="/blog/assets/js/267.d52aefa6.js"><link rel="prefetch" href="/blog/assets/js/268.215a624c.js"><link rel="prefetch" href="/blog/assets/js/269.942f33ce.js"><link rel="prefetch" href="/blog/assets/js/27.1e817afa.js"><link rel="prefetch" href="/blog/assets/js/270.d3d6b726.js"><link rel="prefetch" href="/blog/assets/js/271.3f68db28.js"><link rel="prefetch" href="/blog/assets/js/272.b1bfc3cf.js"><link rel="prefetch" href="/blog/assets/js/273.27bc4ca9.js"><link rel="prefetch" href="/blog/assets/js/274.0c2f0aad.js"><link rel="prefetch" href="/blog/assets/js/275.51e74320.js"><link rel="prefetch" href="/blog/assets/js/276.e639a088.js"><link rel="prefetch" href="/blog/assets/js/277.d384ad66.js"><link rel="prefetch" href="/blog/assets/js/278.df5ea723.js"><link rel="prefetch" href="/blog/assets/js/279.66a8f196.js"><link rel="prefetch" href="/blog/assets/js/28.ba712ed3.js"><link rel="prefetch" href="/blog/assets/js/280.8878e992.js"><link rel="prefetch" href="/blog/assets/js/281.daafcec4.js"><link rel="prefetch" href="/blog/assets/js/282.57821398.js"><link rel="prefetch" href="/blog/assets/js/283.ea86732d.js"><link rel="prefetch" href="/blog/assets/js/284.69eb9ae6.js"><link rel="prefetch" href="/blog/assets/js/285.5a3cf546.js"><link rel="prefetch" href="/blog/assets/js/286.89058642.js"><link rel="prefetch" href="/blog/assets/js/287.b2eeb660.js"><link rel="prefetch" href="/blog/assets/js/288.e4bb255e.js"><link rel="prefetch" href="/blog/assets/js/289.6d04c949.js"><link rel="prefetch" href="/blog/assets/js/29.28906528.js"><link rel="prefetch" href="/blog/assets/js/290.c30ec6bf.js"><link rel="prefetch" href="/blog/assets/js/291.d9cbd7c0.js"><link rel="prefetch" href="/blog/assets/js/292.b1de58ee.js"><link rel="prefetch" href="/blog/assets/js/293.8d27e207.js"><link rel="prefetch" href="/blog/assets/js/294.1fc46e4d.js"><link rel="prefetch" href="/blog/assets/js/295.af5323cb.js"><link rel="prefetch" href="/blog/assets/js/296.0a1ef8bc.js"><link rel="prefetch" href="/blog/assets/js/297.2c5a0605.js"><link rel="prefetch" href="/blog/assets/js/298.d30486fb.js"><link rel="prefetch" href="/blog/assets/js/299.ea23cb4d.js"><link rel="prefetch" href="/blog/assets/js/3.1f418c4c.js"><link rel="prefetch" href="/blog/assets/js/30.285db3ae.js"><link rel="prefetch" href="/blog/assets/js/300.5f8ca5cd.js"><link rel="prefetch" href="/blog/assets/js/301.90e70156.js"><link rel="prefetch" href="/blog/assets/js/302.4fba5024.js"><link rel="prefetch" href="/blog/assets/js/303.09382b0b.js"><link rel="prefetch" href="/blog/assets/js/304.77726cef.js"><link rel="prefetch" href="/blog/assets/js/305.2cc2f3d3.js"><link rel="prefetch" href="/blog/assets/js/306.350650a9.js"><link rel="prefetch" href="/blog/assets/js/307.366af441.js"><link rel="prefetch" href="/blog/assets/js/308.4742a8a9.js"><link rel="prefetch" href="/blog/assets/js/309.df2e2c08.js"><link rel="prefetch" href="/blog/assets/js/310.280fbec6.js"><link rel="prefetch" href="/blog/assets/js/311.003ae510.js"><link rel="prefetch" href="/blog/assets/js/312.555495ad.js"><link rel="prefetch" href="/blog/assets/js/313.3f56db41.js"><link rel="prefetch" href="/blog/assets/js/314.9c937577.js"><link rel="prefetch" href="/blog/assets/js/315.77fe1bb1.js"><link rel="prefetch" href="/blog/assets/js/316.ec6af5e1.js"><link rel="prefetch" href="/blog/assets/js/317.27fb1caf.js"><link rel="prefetch" href="/blog/assets/js/318.34ddb7f3.js"><link rel="prefetch" href="/blog/assets/js/319.6744add8.js"><link rel="prefetch" href="/blog/assets/js/32.7e993468.js"><link rel="prefetch" href="/blog/assets/js/320.b71ea323.js"><link rel="prefetch" href="/blog/assets/js/321.70f863c3.js"><link rel="prefetch" href="/blog/assets/js/322.daf102f1.js"><link rel="prefetch" href="/blog/assets/js/323.981aa375.js"><link rel="prefetch" href="/blog/assets/js/324.31376a7a.js"><link rel="prefetch" href="/blog/assets/js/325.621cb2cd.js"><link rel="prefetch" href="/blog/assets/js/326.44e0e3e9.js"><link rel="prefetch" href="/blog/assets/js/327.f78d0221.js"><link rel="prefetch" href="/blog/assets/js/328.49da0e9b.js"><link rel="prefetch" href="/blog/assets/js/329.8cfc7e5a.js"><link rel="prefetch" href="/blog/assets/js/33.c8b6f188.js"><link rel="prefetch" href="/blog/assets/js/330.6faeb698.js"><link rel="prefetch" href="/blog/assets/js/331.281df94a.js"><link rel="prefetch" href="/blog/assets/js/332.ddbc28bc.js"><link rel="prefetch" href="/blog/assets/js/333.9234f940.js"><link rel="prefetch" href="/blog/assets/js/334.ca3e3554.js"><link rel="prefetch" href="/blog/assets/js/335.0e839fcb.js"><link rel="prefetch" href="/blog/assets/js/336.7aa4f009.js"><link rel="prefetch" href="/blog/assets/js/337.1e1d48c2.js"><link rel="prefetch" href="/blog/assets/js/338.ead4487e.js"><link rel="prefetch" href="/blog/assets/js/34.55194546.js"><link rel="prefetch" href="/blog/assets/js/35.f2b1ef2d.js"><link rel="prefetch" href="/blog/assets/js/36.ea3fbfde.js"><link rel="prefetch" href="/blog/assets/js/37.39350f76.js"><link rel="prefetch" href="/blog/assets/js/38.4ed6bb5d.js"><link rel="prefetch" href="/blog/assets/js/39.904f6b7e.js"><link rel="prefetch" href="/blog/assets/js/4.4af63389.js"><link rel="prefetch" href="/blog/assets/js/40.94284f88.js"><link rel="prefetch" href="/blog/assets/js/41.344ba575.js"><link rel="prefetch" href="/blog/assets/js/42.c10e3f4c.js"><link rel="prefetch" href="/blog/assets/js/43.987bbc98.js"><link rel="prefetch" href="/blog/assets/js/44.ce19002c.js"><link rel="prefetch" href="/blog/assets/js/45.7c022ba6.js"><link rel="prefetch" href="/blog/assets/js/46.2041134f.js"><link rel="prefetch" href="/blog/assets/js/47.504e7cb1.js"><link rel="prefetch" href="/blog/assets/js/48.5bbaa0cf.js"><link rel="prefetch" href="/blog/assets/js/49.f2f9f8a3.js"><link rel="prefetch" href="/blog/assets/js/5.da8e08b7.js"><link rel="prefetch" href="/blog/assets/js/50.7efa6cfa.js"><link rel="prefetch" href="/blog/assets/js/51.6d9b47ff.js"><link rel="prefetch" href="/blog/assets/js/52.b79aa956.js"><link rel="prefetch" href="/blog/assets/js/53.9636c3e1.js"><link rel="prefetch" href="/blog/assets/js/54.07724477.js"><link rel="prefetch" href="/blog/assets/js/55.f4ffff0a.js"><link rel="prefetch" href="/blog/assets/js/56.59750a27.js"><link rel="prefetch" href="/blog/assets/js/57.fd742e01.js"><link rel="prefetch" href="/blog/assets/js/58.68115749.js"><link rel="prefetch" href="/blog/assets/js/59.df836f2c.js"><link rel="prefetch" href="/blog/assets/js/6.39f7c5a6.js"><link rel="prefetch" href="/blog/assets/js/60.79e48ea9.js"><link rel="prefetch" href="/blog/assets/js/61.719b6669.js"><link rel="prefetch" href="/blog/assets/js/62.d93e9838.js"><link rel="prefetch" href="/blog/assets/js/63.a86d3f31.js"><link rel="prefetch" href="/blog/assets/js/64.ef1f2431.js"><link rel="prefetch" href="/blog/assets/js/65.903cfb86.js"><link rel="prefetch" href="/blog/assets/js/66.7867bc9a.js"><link rel="prefetch" href="/blog/assets/js/67.fa3bed23.js"><link rel="prefetch" href="/blog/assets/js/68.d16e3110.js"><link rel="prefetch" href="/blog/assets/js/69.1db59f6b.js"><link rel="prefetch" href="/blog/assets/js/7.66957706.js"><link rel="prefetch" href="/blog/assets/js/70.50b33ffe.js"><link rel="prefetch" href="/blog/assets/js/71.cdb408d6.js"><link rel="prefetch" href="/blog/assets/js/72.73e3ac94.js"><link rel="prefetch" href="/blog/assets/js/73.6d94869d.js"><link rel="prefetch" href="/blog/assets/js/74.3fc2deb7.js"><link rel="prefetch" href="/blog/assets/js/75.9be06754.js"><link rel="prefetch" href="/blog/assets/js/76.1697989a.js"><link rel="prefetch" href="/blog/assets/js/77.9f41325e.js"><link rel="prefetch" href="/blog/assets/js/78.b90d9311.js"><link rel="prefetch" href="/blog/assets/js/79.58f7a4e8.js"><link rel="prefetch" href="/blog/assets/js/8.785f742c.js"><link rel="prefetch" href="/blog/assets/js/80.301e69ca.js"><link rel="prefetch" href="/blog/assets/js/81.28e36bc6.js"><link rel="prefetch" href="/blog/assets/js/82.dd1e9e88.js"><link rel="prefetch" href="/blog/assets/js/83.e99abdeb.js"><link rel="prefetch" href="/blog/assets/js/84.76ebae90.js"><link rel="prefetch" href="/blog/assets/js/85.3057a08c.js"><link rel="prefetch" href="/blog/assets/js/86.25bb36cb.js"><link rel="prefetch" href="/blog/assets/js/87.aa27bf77.js"><link rel="prefetch" href="/blog/assets/js/88.3d269abf.js"><link rel="prefetch" href="/blog/assets/js/89.571bd4cf.js"><link rel="prefetch" href="/blog/assets/js/9.93b818e1.js"><link rel="prefetch" href="/blog/assets/js/90.a166cb33.js"><link rel="prefetch" href="/blog/assets/js/91.41450cec.js"><link rel="prefetch" href="/blog/assets/js/92.636c3d55.js"><link rel="prefetch" href="/blog/assets/js/93.0a34a611.js"><link rel="prefetch" href="/blog/assets/js/94.5e4d4be4.js"><link rel="prefetch" href="/blog/assets/js/95.06aecd1a.js"><link rel="prefetch" href="/blog/assets/js/96.fa14dc96.js"><link rel="prefetch" href="/blog/assets/js/97.2293bf44.js"><link rel="prefetch" href="/blog/assets/js/98.7057ca3d.js"><link rel="prefetch" href="/blog/assets/js/99.c42fe247.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.3d584b6a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/express/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Koa
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/koa/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/koa/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          SSR
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssr-vue2/" class="nav-link">
+  SSR Vue2
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssg-vue2/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  SSG Vue2
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" class="nav-link">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/nuxt/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/express/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Koa
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/koa/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/koa/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          SSR
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssr-vue2/" class="nav-link">
+  SSR Vue2
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssg-vue2/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  SSG Vue2
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" class="nav-link">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/BE/ssr/ssg-vue2/" aria-current="page" class="active sidebar-link">SSG Vue2</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">9/11/2024, 12:57:04 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.bf0184d0.js" defer></script><script src="/blog/assets/js/2.80e16ae8.js" defer></script><script src="/blog/assets/js/31.a8e82771.js" defer></script>
+  </body>
+</html>
