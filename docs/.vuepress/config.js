@@ -1,43 +1,50 @@
 const nav = require('./nav')
 const sidebar = require('./sidebar')
 
+const defaultHead = [
+  ['meta', { name: 'google', content: 'notranslate' }],
+  // 增加一个自定义的 favicon(网页标签的图标)
+  ['link', { rel: 'icon', href: '/favicon.ico' }],
+  ['link', { rel: 'manifest', href: '/manifest.json' }]
+]
+
+const isPro = process.env.NODE_ENV === 'production'
+
+const productionHead = [
+  // [百度统计](https://tongji.baidu.com/) jsgoshu
+  ['script', {},
+    `var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();`
+  ],
+  // Microsoft Clarity
+  ['script', {},
+    `(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "o1h2x0tjoo");`
+  ],
+  // Google tag (gtag.js)
+  ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-6MCGJRJCR5' }],
+  ['script', {},
+    `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MCGJRJCR5');`
+  ]
+]
+
 module.exports = {
   title: 'OneYoung’s Blog',
   description: '个人技术博客',
   // 注入到当前页面的 HTML <head> 中的标签
-  head: [
-    ['meta', { name: 'google', content: 'notranslate' }],
-    // 增加一个自定义的 favicon(网页标签的图标)
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
-    // [百度统计](https://tongji.baidu.com/) jsgoshu
-    ['script', {},
-      `var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();`
-    ],
-    // Microsoft Clarity
-    ['script', {},
-      `(function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "o1h2x0tjoo");`
-    ],
-    // Google tag (gtag.js)
-    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-6MCGJRJCR5' }],
-    ['script', {}, 
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-6MCGJRJCR5');`
-    ]
-  ],
+  head: defaultHead.concat(isPro ? productionHead : []),
   base: '/blog/', // 这是部署到github相关的配置。 静态资源配置的时候直接用绝对路径。如果不是根目录'/'访问的话，需要设置前缀。
   markdown: {
     lineNumbers: true // 代码块显示行号

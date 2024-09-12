@@ -7,11 +7,18 @@ export default ({ Vue, options, router, siteData, isServer }) => {
   Vue.component('MediaRecorder', MediaRecorder)
   router.beforeEach((to, from, next) => {
     if (typeof _hmt !== "undefined") {
-      if (to.path) {
-        // 由VuePress生成的每个页面都有自己的预渲染静态HTML，提供了良好的加载性能和seo友好。然而，一旦页面被加载，Vue将接管静态内容并将其转换为完整的单页应用程序(Single-Page Application, SPA)。当用户在站点中导航时，会根据需要获取额外的页面。
-        // 所以这里针对单页面应用添加额外的百度统计
-        _hmt.push(["_trackPageview", to.fullPath])
-      }
+      // 由VuePress生成的每个页面都有自己的预渲染静态HTML，提供了良好的加载性能和seo友好。然而，一旦页面被加载，Vue将接管静态内容并将其转换为完整的单页应用程序(Single-Page Application, SPA)。当用户在站点中导航时，会根据需要获取额外的页面。
+      // 所以这里针对单页面应用添加额外的百度统计
+      _hmt.push(["_trackPageview", to.fullPath])
+    }
+    if (to.path === '/' && window.clarity) {
+      window.addEventListener('load', () => {
+        const mainTitle = document.querySelector('#main-title')
+        mainTitle.addEventListener('click', function () {
+          window.clarity('event', 'click-main-title')
+          console.log('click-main-title')
+        })
+      })
     }
     next()
   })
