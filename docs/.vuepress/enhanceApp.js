@@ -11,14 +11,16 @@ export default ({ Vue, options, router, siteData, isServer }) => {
       // 所以这里针对单页面应用添加额外的百度统计
       _hmt.push(["_trackPageview", to.fullPath])
     }
-    if (to.path === '/' && window.clarity) {
-      window.addEventListener('load', () => {
-        const mainTitle = document.querySelector('#main-title')
-        mainTitle.addEventListener('click', function () {
-          window.clarity('event', 'click-main-title')
-          console.log('click-main-title')
+    if (!isServer) {
+      if (to.path === '/' && window.clarity) {
+        window.addEventListener('load', () => {
+          const mainTitle = document.querySelector('#main-title')
+          mainTitle.addEventListener('click', function () {
+            window.clarity('event', 'click-main-title')
+            console.log('click-main-title')
+          })
         })
-      })
+      }
     }
     next()
   })
