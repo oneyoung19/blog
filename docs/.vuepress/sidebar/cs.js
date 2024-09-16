@@ -34,6 +34,12 @@ module.exports = {
     '/cs/https/tls&ssl.md',
     '/cs/https/setup.md'
   ],
+  '/cs/advance/design/': [
+    '/cs/advance/design/'
+  ],
+  '/cs/advance/algorithm': [
+    '/cs/advance/algorithm'
+  ],
   '/cs/im/sse/': [
     '/cs/im/sse/',
     '/cs/im/sse/1.client.md',

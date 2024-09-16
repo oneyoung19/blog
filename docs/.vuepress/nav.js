@@ -199,6 +199,19 @@ module.exports = [
         ]
       },
       {
+        text: '高级',
+        items: [
+          {
+            text: '设计模式',
+            link: '/cs/advance/design/'
+          },
+          {
+            text: '算法',
+            link: '/cs/advance/algorithm/'
+          }
+        ]
+      },
+      {
         text: 'IM',
         items: [
           {
