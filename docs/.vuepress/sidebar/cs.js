@@ -37,8 +37,8 @@ module.exports = {
   '/cs/advance/design/': [
     '/cs/advance/design/'
   ],
-  '/cs/advance/algorithm': [
-    '/cs/advance/algorithm'
+  '/cs/advance/algorithm/': [
+    '/cs/advance/algorithm/'
   ],
   '/cs/im/sse/': [
     '/cs/im/sse/',
