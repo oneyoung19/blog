@@ -125,5 +125,8 @@ module.exports = {
     '/engineer/vite/6.SSR.md',
     '/engineer/vite/7.INTEGRATION.md',
     '/engineer/vite/8.HMR.md'
+  ],
+  '/engineer/misc/obfuscator/': [
+    '/engineer/misc/obfuscator/'
   ]
 }

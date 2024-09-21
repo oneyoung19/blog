@@ -339,6 +339,15 @@ module.exports = [
             link: '/engineer/vite/'
           }
         ]
+      },
+      {
+        text: 'Misc',
+        items: [
+          {
+            text: 'Debugger & Obfuscator',
+            link: '/engineer/misc/obfuscator/'
+          }
+        ]
       }
     ]
   },
