@@ -203,7 +203,7 @@ module.exports = [
         items: [
           {
             text: '设计模式',
-            link: '/cs/advance/design/'
+            link: '/cs/advance/design-pattern/'
           },
           {
             text: '算法',
