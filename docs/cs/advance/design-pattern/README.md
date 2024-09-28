@@ -31,104 +31,104 @@ title: 设计模式
 
 ### 1-1-1.工厂模式
 
-[工厂模式](../1.creation-pattern/1-1.factory.js)
+[工厂模式](./1.creation-pattern/1-1.factory.md)
 
 ### 1-1-2.抽象工厂模式
 
-[抽象工厂模式](../1.creation-pattern/1-2.abstract-factory.js)
+[抽象工厂模式](./1.creation-pattern/1-2.abstract-factory.md)
 
 ### 1-1-3.单例模式
 
-[单例模式](../1.creation-pattern/1-3.singleton.js)
+[单例模式](./1.creation-pattern/1-3.singleton.md)
 
 ### 1-1-4.构造器模式
 
-[构造器模式](../1.creation-pattern/1-4.constructor.js)
+[构造器模式](./1.creation-pattern/1-4.constructor.md)
 
 ### 1-1-5.原型模式
 
-[原型模式](../1.creation-pattern/1-5.prototype.js)
+[原型模式](./1.creation-pattern/1-5.prototype.md)
 
 ## 1-2.结构型模式
 
 ### 1-2-1.适配器模式
 
-[适配器模式](../2.structural-pattern/2-1.adapter.js)
+[适配器模式](./2.structural-pattern/2-1.adapter.md)
 
 ### 1-2-2.装饰器模式
 
-[装饰器模式之构造函数](../2.structural-pattern/2-2-1.decorator-constructor.js)
+[装饰器模式之构造函数](./2.structural-pattern/2-2-1.decorator-constructor.md)
 
-[装饰器模式之类](../2.structural-pattern/2-2-2.decorator-class.js)
+[装饰器模式之类](./2.structural-pattern/2-2-2.decorator-class.md)
 
 ### 1-2-3.代理模式
 
-[对象委托代理](../2.structural-pattern/2-3-1.proxy-delegate.js)
+[对象委托代理](./2.structural-pattern/2-3-1.proxy-delegate.md)
 
-[Proxy](../2.structural-pattern/2-3-3.proxy-es6.js)
+[Proxy](./2.structural-pattern/2-3-3.proxy-es6.md)
 
 ### 1-2-4.外观模式
 
-[外观模式](../2.structural-pattern/2-4.appearance.js)
+[外观模式](./2.structural-pattern/2-4.appearance.md)
 
 ### 1-2-5.桥接模式
 
-[桥接模式](../2.structural-pattern/2-5.bridging.js)
+[桥接模式](./2.structural-pattern/2-5.bridging.md)
 
 ### 1-2-6.组合模式
 
-[组合模式](../2.structural-pattern/2-6.composite.js)
+[组合模式](./2.structural-pattern/2-6.composite.md)
 
 ### 1-2-7.享元模式
 
-[享元模式](../2.structural-pattern/2-7.flyweight.js)
+[享元模式](./2.structural-pattern/2-7.flyweight.md)
 
 ## 1-3.行为型模式
 
 ### 1-3-1.观察者模式
 
-[观察者模式](../3.behavioral-pattern/3-1-1.observer.js)
+[观察者模式](./3.behavioral-pattern/3-1-1.observer.md)
 
-[订阅-发布模式](../3.behavioral-pattern/3-1-2.observer-publish-subscribe.js)
+[订阅-发布模式](./3.behavioral-pattern/3-1-2.observer-publish-subscribe.md)
 
 ### 1-3-2.迭代器模式
 
-[迭代器模式](../3.behavioral-pattern/3-2-1.iterator.js)
+[迭代器模式](./3.behavioral-pattern/3-2-1.iterator.md)
 
-[ES6中的迭代器](../3.behavioral-pattern/3-2-2.iterator-es6.js)
+[ES6中的迭代器](./3.behavioral-pattern/3-2-2.iterator-es6.md)
 
 ### 1-3-3.策略模式
 
-[策略模式](../3.behavioral-pattern/3-3.strategy.js)
+[策略模式](./3.behavioral-pattern/3-3.strategy.md)
 
 ### 1-3-4.模板方法模式
 
-[模板方法模式](../3.behavioral-pattern/3-4.template-method.js)
+[模板方法模式](./3.behavioral-pattern/3-4.template-method.md)
 
 ### 1-3-5.职责链模式
 
-[职责链模式](../3.behavioral-pattern/3-5.responsibility-chain.js)
+[职责链模式](./3.behavioral-pattern/3-5.responsibility-chain.md)
 
 ### 1-3-6.命令模式
 
-[命令模式](../3.behavioral-pattern/3-6.command.js)
+[命令模式](./3.behavioral-pattern/3-6.command.md)
 
 ### 1-3-7.备忘录模式
 
-[备忘录模式](../3.behavioral-pattern/3-7.memento.js)
+[备忘录模式](./3.behavioral-pattern/3-7.memento.md)
 
 ### 1-3-8.状态模式
 
-[状态模式](../3.behavioral-pattern/3-8.state.js)
+[状态模式](./3.behavioral-pattern/3-8.state.md)
 
 ### 1-3-9.访问者模式
 
-[访问者模式](../3.behavioral-pattern/3-9.visitor.js)
+[访问者模式](./3.behavioral-pattern/3-9.visitor.md)
 
 ### 1-3-10.中介者模式
 
-[中介者模式](../3.behavioral-pattern/3-10.mediator.js)
+[中介者模式](./3.behavioral-pattern/3-10.mediator.md)
 
 ### 1-3-11.解释器模式
 
-[解释器模式](../3.behavioral-pattern/3-11.interpreter.js)
+[解释器模式](./3.behavioral-pattern/3-11.interpreter.md)
