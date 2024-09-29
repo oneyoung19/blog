@@ -67,6 +67,17 @@ module.exports = {
     '/cs/advance/design-pattern/3.behavioral-pattern/3-10.mediator.md',
     '/cs/advance/design-pattern/3.behavioral-pattern/3-11.interpreter.md'
   ],
+  '/cs/advance/data-structures/': [
+    '/cs/advance/data-structures/',
+    '/cs/advance/data-structures/1.array.md',
+    '/cs/advance/data-structures/2.linked-list.md',
+    '/cs/advance/data-structures/3.stack.md',
+    '/cs/advance/data-structures/4.queue.md',
+    '/cs/advance/data-structures/5.hash-table.md',
+    '/cs/advance/data-structures/6.tree.md',
+    '/cs/advance/data-structures/7.heap.md',
+    '/cs/advance/data-structures/8.graph.md',
+  ],
   '/cs/advance/algorithm/': [
     '/cs/advance/algorithm/'
   ],

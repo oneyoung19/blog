@@ -206,6 +206,10 @@ module.exports = [
             link: '/cs/advance/design-pattern/'
           },
           {
+            text: '数据结构',
+            link: '/cs/advance/data-structures/'
+          },
+          {
             text: '算法',
             link: '/cs/advance/algorithm/'
           }
