@@ -10,6 +10,18 @@ title: 数据类型
 4. `Set`（集合）
 5. `Sorted Set` (有序集合)
 
+## KEYS
+
+可以使用 `KEYS` 命令，来查看 `Redis` 中的所有键：
+
+```bash
+KEYS *
+
+KEYS user*
+
+KEYS *orld
+```
+
 ## String
 
 `String` 是 `redis` 最基本的类型

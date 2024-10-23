@@ -24,6 +24,7 @@ module.exports = {
   '/DB/redis/': [
     '/DB/redis/',
     '/DB/redis/install.md',
+    '/DB/redis/auth.md',
     '/DB/redis/config.md',
     '/DB/redis/datatype.md'
   ],
