@@ -71,15 +71,15 @@ module.exports = [
         ]
       },
       {
-        text: 'Vue',
+        text: 'Vue2',
         items: [
           {
             text: '基础使用',
-            link: '/frame/vue/base/1.start.md'
+            link: '/frame/vue2/base/1.start.md'
           },
           {
             text: '源码解析',
-            link: '/frame/vue/source-code/1.start.md'
+            link: '/frame/vue2/source-code/1.start.md'
           }
         ]
       },

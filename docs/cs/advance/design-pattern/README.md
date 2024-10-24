@@ -4,6 +4,7 @@ title: 设计模式
 
 - [JavaScript设计模式es6（23种)](https://juejin.cn/post/6844904032826294286)
 - [10分钟掌握JavaScript设计模式](https://juejin.cn/post/7052148234097000462)
+- [learn-cs](https://github.com/oneyoung19/learn-cs)
 
 ## 设计模式原则
 

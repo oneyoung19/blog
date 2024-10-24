@@ -19,8 +19,8 @@ module.exports = {
     '/frame/axios/source-code/5.adapter.md',
     '/frame/axios/source-code/6.cancel.md'
   ],
-  '/frame/vue/base': [
-    '/frame/vue/base/1.start.md'
+  '/frame/vue2/base': [
+    '/frame/vue2/base/1.start.md'
   ],
   '/frame/vue/source-code': [
     '/frame/vue/source-code/1.start.md'
