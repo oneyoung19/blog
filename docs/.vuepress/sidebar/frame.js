@@ -20,10 +20,25 @@ module.exports = {
     '/frame/axios/source-code/6.cancel.md'
   ],
   '/frame/vue2/base': [
-    '/frame/vue2/base/1.start.md'
+    '/frame/vue2/base/1.start.md',
+    '/frame/vue2/base/2.instance.md',
+    '/frame/vue2/base/3.life-circle.md',
+    '/frame/vue2/base/4.directives.md',
+    '/frame/vue2/base/5.modifiers.md',
+    '/frame/vue2/base/6.filters.md',
+    '/frame/vue2/base/7.computed.md',
+    '/frame/vue2/base/8.watch.md',
+    '/frame/vue2/base/9.component.md',
+    '/frame/vue2/base/10.render.md',
+    '/frame/vue2/base/11.mixins.md',
+    '/frame/vue2/base/12.keep-alive.md',
+    '/frame/vue2/base/13.animation.md',
+    '/frame/vue2/base/14.boundary.md',
+    '/frame/vue2/base/15.plugin.md',
+    '/frame/vue2/base/16.extend.md'
   ],
-  '/frame/vue/source-code': [
-    '/frame/vue/source-code/1.start.md'
+  '/frame/vue2/source-code': [
+    '/frame/vue2/source-code/1.start.md'
   ],
   '/frame/nuxt/base': [
     '/frame/nuxt/base/1.start.md'
