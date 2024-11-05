@@ -24,7 +24,9 @@ module.exports = {
   ],
   '/engineer/pkg-manager/pnpm/': [
     '/engineer/pkg-manager/pnpm/1.start.md',
-    '/engineer/pkg-manager/pnpm/2.motivation.md'
+    '/engineer/pkg-manager/pnpm/2.motivation.md',
+    '/engineer/pkg-manager/pnpm/3.monorepo.md',
+    '/engineer/pkg-manager/pnpm/4.publish.md'
   ],
   '/engineer/mono-repo/workspace/': [
     '/engineer/mono-repo/workspace/1.start.md',
