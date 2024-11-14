@@ -8,6 +8,26 @@ title: Compiler
 
 除此以外，`template` 模板还支持**属性绑定**、**事件绑定**、**指令**等等。
 
+## 核心代码
+
+```js
+export const createCompiler = createCompilerCreator(function baseCompile(
+  template: string,
+  options: CompilerOptions
+): CompiledResult {
+  const ast = parse(template.trim(), options)
+  if (options.optimize !== false) {
+    optimize(ast, options)
+  }
+  const code = generate(ast, options)
+  return {
+    ast,
+    render: code.render,
+    staticRenderFns: code.staticRenderFns
+  }
+})
+```
+
 ## 编译流程
 
 事实上，**`template` 并非 `HTML`，它其实是 `render` 函数的变种，`Vue` 以一种可见的方式呈现在我们面前**。

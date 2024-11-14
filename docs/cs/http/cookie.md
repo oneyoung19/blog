@@ -408,7 +408,9 @@ document.cookie = 'age=19; Domain=site.com; Path=/; SameSite=Lax'
 
 ![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/main/img/20221031214530.png)
 
-其中，可以看出 `Hm_lpvt_85612832da94810be7e7f25c9d1ecd84` 和 `Hm_lvt_85612832da94810be7e7f25c9d1ecd84` 和`HMACCOUNT_BFESS` 都是第三方 `cookie`。
+其中，可以看出 `Hm_lpvt_85612832da94810be7e7f25c9d1ecd84` 和 `Hm_lvt_85612832da94810be7e7f25c9d1ecd84` 是第一方 `cookie`。
+
+`HMACCOUNT_BFESS` 则是第三方 `cookie`。
 
 在百度统计的源码中，前两者 `cookie` 是直接使用 `document.cookie` 来设置的：
 
