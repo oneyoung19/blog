@@ -237,6 +237,8 @@ document.cookie = 'user=John; Secure'
 
 ### 2-7.SameSite
 
+顾名思义，`SameSite` 设置**同站**限制。
+
 该选项 `SameSite` 可设置为：
 
 1. `Strict`
@@ -260,21 +262,53 @@ please add the “SameSite=None“ attribute to it.
 To know more about the “SameSite“ attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
 ```
 
+#### eTLD
+
+开始说明 `SameSite` 的可设置属性之前，我们额外标注下**同站规则**。**该规则主要依赖于 `eTLD+1`**。
+
+`eTLD` 是 `effective Top Level Domain` (有效顶级域名) 的简写。
+
+1. `TLD` (`Top Level Domain`)：
+  - `.com`, `.org`, `.net`, .`edu` 等基础顶级域名
+  - `.cn`, `.uk`, `.jp` 等国家顶级域名
+2. `eTLD` (`effective Top Level Domain`)：
+  - 某些情况下，我们需要考虑比普通 `TLD` 更长的后缀作为"有效"的顶级域名
+  - 例如：`.co.uk`, `.com.cn`, `.github.io` 都是 `eTLD`
+  - 这种概念的引入是为了更准确地判断域名的所有权边界
+3. `eTLD+1`：
+  - 指 `eTLD` 加上它前面的一个部分
+  - 例如：
+    - `example.com` 中的整个域名（因为 `.com` 是 `eTLD`）
+    - `example.co.uk` 中的整个域名（因为 `.co.uk` 是 `eTLD`）
+    - `example.github.io` 中的整个域名（因为 `.github.io` 是 `eTLD`）
+
 #### 2-7-1.Strict
 
 设置为 `Strict` 时，**跨站场景下**将不携带 `Cookie`。
 
 缺点是过于暴力，某些场景下影响用户体验。譬如 `SSO` 单点登录的业务场景：
 
-假设 `auth.site.com` 是用于登录的服务域名，`pay.site.com` 是付款业务，`receive.site.com` 是收款业务。
+假设 `auth.com` 是用于登录的服务域名，`pay.com` 是付款业务，`receive.com` 是收款业务。
 
-此时在 `auth.site.com` 生成的有用户信息的 `Cookie`，必须能在用户访问 `pay.site.com` 和 `receive.site.com` 时自动携带，而设置成 `Strict` 则不能满足业务需要。
+此时在 `auth.com` 生成的有用户信息的 `Cookie`，必须能在用户访问 `pay.com` 和 `receive.com` 时自动携带，而设置成 `Strict` 则不能满足业务需要。
+
+除非设置成同站域名，譬如 `auth.site.com`、`pay.site.com` 以及 `receive.site.com`。
 
 #### 2-7-2.None
 
+**低版本浏览器默认设置值**。
+
 设置为 `None` 时，无论是否跨站，都携带 `Cookie`。
 
+:::tip
+设置该项时，必须同时设置 `Secure` 属性。即：
+
+`SameSite=None; Secure`
+:::
+
 #### 2-7-2.Lax
+
+**高版本浏览器默认设置值**。
 
 设置为 `Lax` 时，将是**宽松模式**。
 
@@ -286,7 +320,24 @@ To know more about the “SameSite“ attribute, read https://developer.mozilla.
 
 1. `HTTP` 方法是安全的。在[RFC7231规范](https://www.rfc-editor.org/rfc/rfc7231#section-4.2.1)中，`GET`、`HEAD`、`OPTIONS`、`TRACE`，这几种方法都是读取数据，而不是更改数据。
    
-2. 该操作执行顶级导航（更改浏览器地址栏中的 `URL`），防止利用伪造 `form` 表单而发起请求的 `XSRF`。
+2. 该操作执行**顶级导航**（更改浏览器地址栏中的 `URL`），防止利用伪造 `form` 表单而发起请求的 `XSRF`。
+
+"顶级导航"（`Top-level Navigation`）指的是会改变浏览器地址栏 `URL` 的导航行为。譬如：
+
+- 直接点击链接：`<a href="https://bank.com/account">查看账户</a>`。
+- `window.location` 跳转：
+  ```js
+  window.location.href = 'https://bank.com/account'
+  window.location.replace('https://bank.com/account')
+  location.assign('https://bank.com/account')
+  ```
+- 表单 `GET` 提交：
+  ```html
+  <form action="https://bank.com/search" method="GET">
+    <input type="text" name="q">
+    <button type="submit">搜索</button>
+  </form>
+  ```
 
 ### 2-8.SameParty :hourglass_flowing_sand:
 
@@ -372,7 +423,33 @@ To know more about the “SameSite“ attribute, read https://developer.mozilla.
 
 `Cookie` 可以分为第一方 `Cookie` 与第三方 `Cookie`。
 
-### 3-1. 第一方 `Cookie`
+### 3-1.Cookies选项卡
+
+首先说明一下，如何从 `Cookies` 选项卡来区分 `Cookies`。
+
+以[google.com](https://www.google.com/)为例，打开之后，会发现 `Cookies` 选项卡下存在 `3` 个顶级域：
+
+- `https://www.google.com`
+- `https://accounts.ggogle.com`
+- `https://ogs.google.com`
+
+![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20241119164157.png)
+
+其中 `https://www.google.com` 是我们访问的当前页面。而**其它顶级域其实是通过 `iframe` 嵌入的**：
+
+![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20241119164316.png)
+
+**虽然每个域下产生的 `cookie` 会分别设置在各自的域下，但当我们讨论第一方和第三方 `cookie` 的概念时，都是针对的是当前访问页面。（即在本例中，都是针对 `https://www.google.com` 来说）**。
+
+:::tip
+在 `Safari` 浏览器的较新版本中，**默认开启“禁止跨站跟踪”选项**。
+
+这会导致，在 `Safari` 浏览器中，依赖第三方 `cookie` 的网站会出现功能问题。
+
+![](https://raw.githubusercontent.com/oneyoung19/vuepress-blog-img/Not-Count-Contribution/img/20241119170208.png)
+:::
+
+### 3-2. 第一方 `Cookie`
 
 第一方 `Cookie` 指代的是 **当前访问路径与 `Domain` 选项属于同一域下**。
 
@@ -386,7 +463,7 @@ document.cookie = 'age=19; Domain=site.com; Path=/; SameSite=Lax'
 
 如果我们直接访问 `auth.site.com`，那么上述这两种 `Cookie` 都属于第一方 `Cookie`。
 
-### 3-2. 第三方 `Cookie`
+### 3-3. 第三方 `Cookie`
 
 第三方 `Cookie` 指代的是 **当前访问路径与 `Domain` 选项不属于同一域下**。
 
