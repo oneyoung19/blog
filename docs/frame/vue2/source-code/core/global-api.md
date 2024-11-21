@@ -1,5 +1,5 @@
 ---
-title: global-api
+title: 全局API
 ---
 
 `Vue` 全局 `API` 初始化：
@@ -213,65 +213,7 @@ function extend(
 
 ### 2.3 Vue.util.mergeOptions
 
-`mergeOptions` 方法（**`Vue` 选项合并机制的核心**）：
-
-TODO: 需要详细分析，涉及到 `mixins` 和 `Vue.extend` 的合并机制。
-
-```js
-/**
- * Merge two option objects into a new one.
- * Core utility used in both instantiation and inheritance.
- */
-function mergeOptions(
-  parent: Record<string, any>,
-  child: Record<string, any>,
-  vm?: Component | null
-): ComponentOptions {
-  if (__DEV__) {
-    checkComponents(child)
-  }
-
-  if (isFunction(child)) {
-    // @ts-expect-error
-    child = child.options
-  }
-
-  normalizeProps(child, vm)
-  normalizeInject(child, vm)
-  normalizeDirectives(child)
-
-  // Apply extends and mixins on the child options,
-  // but only if it is a raw options object that isn't
-  // the result of another mergeOptions call.
-  // Only merged options has the _base property.
-  if (!child._base) {
-    if (child.extends) {
-      parent = mergeOptions(parent, child.extends, vm)
-    }
-    if (child.mixins) {
-      for (let i = 0, l = child.mixins.length; i < l; i++) {
-        parent = mergeOptions(parent, child.mixins[i], vm)
-      }
-    }
-  }
-
-  const options: ComponentOptions = {} as any
-  let key
-  for (key in parent) {
-    mergeField(key)
-  }
-  for (key in child) {
-    if (!hasOwn(parent, key)) {
-      mergeField(key)
-    }
-  }
-  function mergeField(key: any) {
-    const strat = strats[key] || defaultStrat
-    options[key] = strat(parent[key], child[key], vm, key)
-  }
-  return options
-}
-```
+[mergeOptions](./merge-options.md)
 
 ### 2.4 Vue.util.defineReactive
 
