@@ -37,14 +37,16 @@ module.exports = {
     '/frame/vue2/base/15.plugin.md',
     '/frame/vue2/base/16.extend.md'
   ],
-  '/frame/vue2/source-code': [
-    '/frame/vue2/source-code/1.start.md'
+  '/frame/vue2/source-code/compiler/': [
+    '/frame/vue2/source-code/compiler/',
+    '/frame/vue2/source-code/compiler/1.parse.md',
+    '/frame/vue2/source-code/compiler/2.optimize.md',
+    '/frame/vue2/source-code/compiler/3.codegen.md',
+    '/frame/vue2/source-code/compiler/4.to-function.md',
+    '/frame/vue2/source-code/compiler/create-compiler.md',
   ],
   '/frame/nuxt/base': [
     '/frame/nuxt/base/1.start.md'
-  ],
-  '/frame/nuxt/source-code': [
-    '/frame/nuxt/source-code/1.start.md'
   ],
   '/frame/express/base': [
     '/frame/express/base/1.start.md'

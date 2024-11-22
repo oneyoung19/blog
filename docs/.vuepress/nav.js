@@ -78,8 +78,8 @@ module.exports = [
             link: '/frame/vue2/base/1.start.md'
           },
           {
-            text: '源码解析',
-            link: '/frame/vue2/source-code/1.start.md'
+            text: 'compiler',
+            link: '/frame/vue2/source-code/compiler/'
           }
         ]
       },
@@ -89,10 +89,6 @@ module.exports = [
           {
             text: '基础使用',
             link: '/frame/nuxt/base/1.start.md'
-          },
-          {
-            text: '源码解析',
-            link: '/frame/nuxt/source-code/1.start.md'
           }
         ]
       },
