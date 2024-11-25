@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>渲染工具函数 | OneYoung’s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b5edcf6b1a12076f348b1de5dd83a662";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();</script>
+    <script>(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "o1h2x0tjoo");</script>
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-6MCGJRJCR5"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6MCGJRJCR5');</script>
+    <meta name="description" content="个人技术博客">
+    <meta name="google" content="notranslate">
+    <link rel="preload" href="/blog/assets/css/0.styles.69d5aac6.css" as="style"><link rel="preload" href="/blog/assets/js/app.2994391c.js" as="script"><link rel="preload" href="/blog/assets/js/2.80e16ae8.js" as="script"><link rel="preload" href="/blog/assets/js/374.ca8a4517.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.1b41069e.js"><link rel="prefetch" href="/blog/assets/js/100.4a538827.js"><link rel="prefetch" href="/blog/assets/js/101.7175e01c.js"><link rel="prefetch" href="/blog/assets/js/102.9e4508be.js"><link rel="prefetch" href="/blog/assets/js/103.5ad511ff.js"><link rel="prefetch" href="/blog/assets/js/104.415280f8.js"><link rel="prefetch" href="/blog/assets/js/105.996cd71a.js"><link rel="prefetch" href="/blog/assets/js/106.15385ef6.js"><link rel="prefetch" href="/blog/assets/js/107.54d40d59.js"><link rel="prefetch" href="/blog/assets/js/108.873242a5.js"><link rel="prefetch" href="/blog/assets/js/109.03d858aa.js"><link rel="prefetch" href="/blog/assets/js/11.77bc3673.js"><link rel="prefetch" href="/blog/assets/js/110.ee286ab5.js"><link rel="prefetch" href="/blog/assets/js/111.1c2699b9.js"><link rel="prefetch" href="/blog/assets/js/112.0410d06d.js"><link rel="prefetch" href="/blog/assets/js/113.a653bee6.js"><link rel="prefetch" href="/blog/assets/js/114.055b8f9e.js"><link rel="prefetch" href="/blog/assets/js/115.d9111d08.js"><link rel="prefetch" href="/blog/assets/js/116.7e542073.js"><link rel="prefetch" href="/blog/assets/js/117.6c17f4ba.js"><link rel="prefetch" href="/blog/assets/js/118.d17ff72d.js"><link rel="prefetch" href="/blog/assets/js/119.375d5d5d.js"><link rel="prefetch" href="/blog/assets/js/12.feea54ef.js"><link rel="prefetch" href="/blog/assets/js/120.1d389e56.js"><link rel="prefetch" href="/blog/assets/js/121.336956cf.js"><link rel="prefetch" href="/blog/assets/js/122.6bafb5e2.js"><link rel="prefetch" href="/blog/assets/js/123.bbd8affb.js"><link rel="prefetch" href="/blog/assets/js/124.a2e89c9c.js"><link rel="prefetch" href="/blog/assets/js/125.1c11690a.js"><link rel="prefetch" href="/blog/assets/js/126.4cd05988.js"><link rel="prefetch" href="/blog/assets/js/127.d37e99ff.js"><link rel="prefetch" href="/blog/assets/js/128.13a71846.js"><link rel="prefetch" href="/blog/assets/js/129.1373bdd9.js"><link rel="prefetch" href="/blog/assets/js/13.61a22ebd.js"><link rel="prefetch" href="/blog/assets/js/130.ec9b8825.js"><link rel="prefetch" href="/blog/assets/js/131.8ab4c565.js"><link rel="prefetch" href="/blog/assets/js/132.d5a7264e.js"><link rel="prefetch" href="/blog/assets/js/133.961bc273.js"><link rel="prefetch" href="/blog/assets/js/134.24b6a4e8.js"><link rel="prefetch" href="/blog/assets/js/135.ddd882ce.js"><link rel="prefetch" href="/blog/assets/js/136.a099c382.js"><link rel="prefetch" href="/blog/assets/js/137.d79dc3da.js"><link rel="prefetch" href="/blog/assets/js/138.672f7a5d.js"><link rel="prefetch" href="/blog/assets/js/139.63518c89.js"><link rel="prefetch" href="/blog/assets/js/14.fdbbfba8.js"><link rel="prefetch" href="/blog/assets/js/140.fd36b4cd.js"><link rel="prefetch" href="/blog/assets/js/141.266f09f7.js"><link rel="prefetch" href="/blog/assets/js/142.3283cd00.js"><link rel="prefetch" href="/blog/assets/js/143.12b78e42.js"><link rel="prefetch" href="/blog/assets/js/144.1520e739.js"><link rel="prefetch" href="/blog/assets/js/145.030f0007.js"><link rel="prefetch" href="/blog/assets/js/146.458f81a8.js"><link rel="prefetch" href="/blog/assets/js/147.a4ee40e6.js"><link rel="prefetch" href="/blog/assets/js/148.8149b59f.js"><link rel="prefetch" href="/blog/assets/js/149.ec7f4b1b.js"><link rel="prefetch" href="/blog/assets/js/15.bfdd9890.js"><link rel="prefetch" href="/blog/assets/js/150.754df19a.js"><link rel="prefetch" href="/blog/assets/js/151.e79c0288.js"><link rel="prefetch" href="/blog/assets/js/152.b68c1ff0.js"><link rel="prefetch" href="/blog/assets/js/153.15461ab1.js"><link rel="prefetch" href="/blog/assets/js/154.b841d4c2.js"><link rel="prefetch" href="/blog/assets/js/155.055b7532.js"><link rel="prefetch" href="/blog/assets/js/156.70859331.js"><link rel="prefetch" href="/blog/assets/js/157.572a583e.js"><link rel="prefetch" href="/blog/assets/js/158.59ff775a.js"><link rel="prefetch" href="/blog/assets/js/159.18ffb663.js"><link rel="prefetch" href="/blog/assets/js/16.94dd4a41.js"><link rel="prefetch" href="/blog/assets/js/160.9d3f230c.js"><link rel="prefetch" href="/blog/assets/js/161.2deb04d9.js"><link rel="prefetch" href="/blog/assets/js/162.ac8bbca3.js"><link rel="prefetch" href="/blog/assets/js/163.8512e009.js"><link rel="prefetch" href="/blog/assets/js/164.f159492b.js"><link rel="prefetch" href="/blog/assets/js/165.4925417e.js"><link rel="prefetch" href="/blog/assets/js/166.9709d38b.js"><link rel="prefetch" href="/blog/assets/js/167.3d3941c1.js"><link rel="prefetch" href="/blog/assets/js/168.4373bcf8.js"><link rel="prefetch" href="/blog/assets/js/169.c50144e5.js"><link rel="prefetch" href="/blog/assets/js/17.736327a1.js"><link rel="prefetch" href="/blog/assets/js/170.bd822a8a.js"><link rel="prefetch" href="/blog/assets/js/171.4ec8b8d5.js"><link rel="prefetch" href="/blog/assets/js/172.10a1a0d4.js"><link rel="prefetch" href="/blog/assets/js/173.b26ad090.js"><link rel="prefetch" href="/blog/assets/js/174.11e0e4ad.js"><link rel="prefetch" href="/blog/assets/js/175.14b03051.js"><link rel="prefetch" href="/blog/assets/js/176.0d5d0713.js"><link rel="prefetch" href="/blog/assets/js/177.4772c3e7.js"><link rel="prefetch" href="/blog/assets/js/178.322b171a.js"><link rel="prefetch" href="/blog/assets/js/179.1ddfbbe1.js"><link rel="prefetch" href="/blog/assets/js/18.88c980d1.js"><link rel="prefetch" href="/blog/assets/js/180.a3d6debb.js"><link rel="prefetch" href="/blog/assets/js/181.7df4ecc7.js"><link rel="prefetch" href="/blog/assets/js/182.4abe0df7.js"><link rel="prefetch" href="/blog/assets/js/183.d562d3e3.js"><link rel="prefetch" href="/blog/assets/js/184.cfd5d644.js"><link rel="prefetch" href="/blog/assets/js/185.d2dafbb5.js"><link rel="prefetch" href="/blog/assets/js/186.e687679f.js"><link rel="prefetch" href="/blog/assets/js/187.ed071aa7.js"><link rel="prefetch" href="/blog/assets/js/188.6b3c0240.js"><link rel="prefetch" href="/blog/assets/js/189.8758883a.js"><link rel="prefetch" href="/blog/assets/js/19.09afe9ce.js"><link rel="prefetch" href="/blog/assets/js/190.8bee056a.js"><link rel="prefetch" href="/blog/assets/js/191.3cd32407.js"><link rel="prefetch" href="/blog/assets/js/192.0eadc5d0.js"><link rel="prefetch" href="/blog/assets/js/193.be0f2d94.js"><link rel="prefetch" href="/blog/assets/js/194.cca35377.js"><link rel="prefetch" href="/blog/assets/js/195.c199aed2.js"><link rel="prefetch" href="/blog/assets/js/196.ea7b592f.js"><link rel="prefetch" href="/blog/assets/js/197.6c11394b.js"><link rel="prefetch" href="/blog/assets/js/198.18e7c2dc.js"><link rel="prefetch" href="/blog/assets/js/199.e462e73d.js"><link rel="prefetch" href="/blog/assets/js/20.983ff961.js"><link rel="prefetch" href="/blog/assets/js/200.3a117b00.js"><link rel="prefetch" href="/blog/assets/js/201.9dbec404.js"><link rel="prefetch" href="/blog/assets/js/202.94fe444d.js"><link rel="prefetch" href="/blog/assets/js/203.07989a05.js"><link rel="prefetch" href="/blog/assets/js/204.ae12994d.js"><link rel="prefetch" href="/blog/assets/js/205.558ceea5.js"><link rel="prefetch" href="/blog/assets/js/206.21edb30d.js"><link rel="prefetch" href="/blog/assets/js/207.813bae09.js"><link rel="prefetch" href="/blog/assets/js/208.b6f98ccc.js"><link rel="prefetch" href="/blog/assets/js/209.1cbaadfe.js"><link rel="prefetch" href="/blog/assets/js/21.c5e63e7b.js"><link rel="prefetch" href="/blog/assets/js/210.27e08818.js"><link rel="prefetch" href="/blog/assets/js/211.0c971155.js"><link rel="prefetch" href="/blog/assets/js/212.e7da3cb8.js"><link rel="prefetch" href="/blog/assets/js/213.e423b73f.js"><link rel="prefetch" href="/blog/assets/js/214.24a85c53.js"><link rel="prefetch" href="/blog/assets/js/215.2bdd6007.js"><link rel="prefetch" href="/blog/assets/js/216.48ba705f.js"><link rel="prefetch" href="/blog/assets/js/217.0d778a66.js"><link rel="prefetch" href="/blog/assets/js/218.0d693a24.js"><link rel="prefetch" href="/blog/assets/js/219.d9294764.js"><link rel="prefetch" href="/blog/assets/js/22.72cf7765.js"><link rel="prefetch" href="/blog/assets/js/220.1df0610f.js"><link rel="prefetch" href="/blog/assets/js/221.aaaa25d1.js"><link rel="prefetch" href="/blog/assets/js/222.fb1851fc.js"><link rel="prefetch" href="/blog/assets/js/223.a4c3f23d.js"><link rel="prefetch" href="/blog/assets/js/224.8330dd0c.js"><link rel="prefetch" href="/blog/assets/js/225.1ba3a464.js"><link rel="prefetch" href="/blog/assets/js/226.1ad6af2d.js"><link rel="prefetch" href="/blog/assets/js/227.aa9ee79d.js"><link rel="prefetch" href="/blog/assets/js/228.97835c52.js"><link rel="prefetch" href="/blog/assets/js/229.d7f30669.js"><link rel="prefetch" href="/blog/assets/js/23.68a17302.js"><link rel="prefetch" href="/blog/assets/js/230.9d6b0ea3.js"><link rel="prefetch" href="/blog/assets/js/231.07de3b64.js"><link rel="prefetch" href="/blog/assets/js/232.daff51e7.js"><link rel="prefetch" href="/blog/assets/js/233.75c64ea0.js"><link rel="prefetch" href="/blog/assets/js/234.04cead00.js"><link rel="prefetch" href="/blog/assets/js/235.8c560072.js"><link rel="prefetch" href="/blog/assets/js/236.af36d0f6.js"><link rel="prefetch" href="/blog/assets/js/237.de97d75d.js"><link rel="prefetch" href="/blog/assets/js/238.1cb06127.js"><link rel="prefetch" href="/blog/assets/js/239.d062aa0d.js"><link rel="prefetch" href="/blog/assets/js/24.30a1e566.js"><link rel="prefetch" href="/blog/assets/js/240.df517101.js"><link rel="prefetch" href="/blog/assets/js/241.7e73cb4d.js"><link rel="prefetch" href="/blog/assets/js/242.99243fcd.js"><link rel="prefetch" href="/blog/assets/js/243.a045d9dc.js"><link rel="prefetch" href="/blog/assets/js/244.dc5f3cd2.js"><link rel="prefetch" href="/blog/assets/js/245.6a7d4ed5.js"><link rel="prefetch" href="/blog/assets/js/246.5d8fccf9.js"><link rel="prefetch" href="/blog/assets/js/247.e8b97d30.js"><link rel="prefetch" href="/blog/assets/js/248.074a209d.js"><link rel="prefetch" href="/blog/assets/js/249.fd645c11.js"><link rel="prefetch" href="/blog/assets/js/25.f8145188.js"><link rel="prefetch" href="/blog/assets/js/250.818be805.js"><link rel="prefetch" href="/blog/assets/js/251.ba37c996.js"><link rel="prefetch" href="/blog/assets/js/252.6eb33de4.js"><link rel="prefetch" href="/blog/assets/js/253.7e954832.js"><link rel="prefetch" href="/blog/assets/js/254.97bdf196.js"><link rel="prefetch" href="/blog/assets/js/255.2e640739.js"><link rel="prefetch" href="/blog/assets/js/256.449dca20.js"><link rel="prefetch" href="/blog/assets/js/257.68f4c9bf.js"><link rel="prefetch" href="/blog/assets/js/258.f06b8366.js"><link rel="prefetch" href="/blog/assets/js/259.ba6f08fc.js"><link rel="prefetch" href="/blog/assets/js/26.21368277.js"><link rel="prefetch" href="/blog/assets/js/260.7d140470.js"><link rel="prefetch" href="/blog/assets/js/261.26b8149e.js"><link rel="prefetch" href="/blog/assets/js/262.24eb5e65.js"><link rel="prefetch" href="/blog/assets/js/263.e70b835b.js"><link rel="prefetch" href="/blog/assets/js/264.cedf4693.js"><link rel="prefetch" href="/blog/assets/js/265.ca32be5e.js"><link rel="prefetch" href="/blog/assets/js/266.715d7183.js"><link rel="prefetch" href="/blog/assets/js/267.1aa09d2d.js"><link rel="prefetch" href="/blog/assets/js/268.188e4e90.js"><link rel="prefetch" href="/blog/assets/js/269.29dc18ef.js"><link rel="prefetch" href="/blog/assets/js/27.3bd1ccdc.js"><link rel="prefetch" href="/blog/assets/js/270.aa4c11e4.js"><link rel="prefetch" href="/blog/assets/js/271.fac84924.js"><link rel="prefetch" href="/blog/assets/js/272.ae2b61e8.js"><link rel="prefetch" href="/blog/assets/js/273.695ec445.js"><link rel="prefetch" href="/blog/assets/js/274.aa4d61f1.js"><link rel="prefetch" href="/blog/assets/js/275.24ff61ba.js"><link rel="prefetch" href="/blog/assets/js/276.e184cc76.js"><link rel="prefetch" href="/blog/assets/js/277.356d7872.js"><link rel="prefetch" href="/blog/assets/js/278.95a5be17.js"><link rel="prefetch" href="/blog/assets/js/279.a600e634.js"><link rel="prefetch" href="/blog/assets/js/28.3a268644.js"><link rel="prefetch" href="/blog/assets/js/280.fa1a081f.js"><link rel="prefetch" href="/blog/assets/js/281.c7495088.js"><link rel="prefetch" href="/blog/assets/js/282.5f9c49d5.js"><link rel="prefetch" href="/blog/assets/js/283.79033a77.js"><link rel="prefetch" href="/blog/assets/js/284.69ba3304.js"><link rel="prefetch" href="/blog/assets/js/285.83ca71ed.js"><link rel="prefetch" href="/blog/assets/js/286.c59a198e.js"><link rel="prefetch" href="/blog/assets/js/287.7e88c1b8.js"><link rel="prefetch" href="/blog/assets/js/288.d343c4b5.js"><link rel="prefetch" href="/blog/assets/js/289.b3a55e22.js"><link rel="prefetch" href="/blog/assets/js/29.40cc5e61.js"><link rel="prefetch" href="/blog/assets/js/290.5c96c026.js"><link rel="prefetch" href="/blog/assets/js/291.2806bc7c.js"><link rel="prefetch" href="/blog/assets/js/292.fd3c238f.js"><link rel="prefetch" href="/blog/assets/js/293.a5fcf111.js"><link rel="prefetch" href="/blog/assets/js/294.65511c5a.js"><link rel="prefetch" href="/blog/assets/js/295.9470c27e.js"><link rel="prefetch" href="/blog/assets/js/296.80384e6d.js"><link rel="prefetch" href="/blog/assets/js/297.bb43b385.js"><link rel="prefetch" href="/blog/assets/js/298.714961eb.js"><link rel="prefetch" href="/blog/assets/js/299.d7315d85.js"><link rel="prefetch" href="/blog/assets/js/3.b4e8ae19.js"><link rel="prefetch" href="/blog/assets/js/30.285db3ae.js"><link rel="prefetch" href="/blog/assets/js/300.6c1c24f3.js"><link rel="prefetch" href="/blog/assets/js/301.faa4e5d1.js"><link rel="prefetch" href="/blog/assets/js/302.13ebc5de.js"><link rel="prefetch" href="/blog/assets/js/303.f7b64703.js"><link rel="prefetch" href="/blog/assets/js/304.5bc50bb7.js"><link rel="prefetch" href="/blog/assets/js/305.25cfad7b.js"><link rel="prefetch" href="/blog/assets/js/306.d10a770f.js"><link rel="prefetch" href="/blog/assets/js/307.e8b3aa63.js"><link rel="prefetch" href="/blog/assets/js/308.64a779c0.js"><link rel="prefetch" href="/blog/assets/js/309.38f23be7.js"><link rel="prefetch" href="/blog/assets/js/31.50cd3a58.js"><link rel="prefetch" href="/blog/assets/js/310.eef90995.js"><link rel="prefetch" href="/blog/assets/js/311.ebb60926.js"><link rel="prefetch" href="/blog/assets/js/312.f4a03004.js"><link rel="prefetch" href="/blog/assets/js/313.ffe19fbe.js"><link rel="prefetch" href="/blog/assets/js/314.f9cddb45.js"><link rel="prefetch" href="/blog/assets/js/315.967ebad7.js"><link rel="prefetch" href="/blog/assets/js/316.4b23a7e1.js"><link rel="prefetch" href="/blog/assets/js/317.cecb9f81.js"><link rel="prefetch" href="/blog/assets/js/318.a1e1f873.js"><link rel="prefetch" href="/blog/assets/js/319.7c89ba1b.js"><link rel="prefetch" href="/blog/assets/js/32.f083c271.js"><link rel="prefetch" href="/blog/assets/js/320.1c1b82a6.js"><link rel="prefetch" href="/blog/assets/js/321.75a94ea4.js"><link rel="prefetch" href="/blog/assets/js/322.0c0b70a3.js"><link rel="prefetch" href="/blog/assets/js/323.632f62cf.js"><link rel="prefetch" href="/blog/assets/js/324.60e745fc.js"><link rel="prefetch" href="/blog/assets/js/325.5dc4a28d.js"><link rel="prefetch" href="/blog/assets/js/326.cd9e584b.js"><link rel="prefetch" href="/blog/assets/js/327.86648714.js"><link rel="prefetch" href="/blog/assets/js/328.f7cbf80a.js"><link rel="prefetch" href="/blog/assets/js/329.165f197c.js"><link rel="prefetch" href="/blog/assets/js/33.89343ff6.js"><link rel="prefetch" href="/blog/assets/js/330.3299bac1.js"><link rel="prefetch" href="/blog/assets/js/331.fe19f801.js"><link rel="prefetch" href="/blog/assets/js/332.f6db50b6.js"><link rel="prefetch" href="/blog/assets/js/333.8f8bdfdf.js"><link rel="prefetch" href="/blog/assets/js/334.a5972507.js"><link rel="prefetch" href="/blog/assets/js/335.21c58273.js"><link rel="prefetch" href="/blog/assets/js/336.ac2e6879.js"><link rel="prefetch" href="/blog/assets/js/337.6506b8a8.js"><link rel="prefetch" href="/blog/assets/js/338.2051bc7e.js"><link rel="prefetch" href="/blog/assets/js/339.a4f6296a.js"><link rel="prefetch" href="/blog/assets/js/34.0254f163.js"><link rel="prefetch" href="/blog/assets/js/340.8a6f7ca3.js"><link rel="prefetch" href="/blog/assets/js/341.92a85356.js"><link rel="prefetch" href="/blog/assets/js/342.aa467d12.js"><link rel="prefetch" href="/blog/assets/js/343.855f6592.js"><link rel="prefetch" href="/blog/assets/js/344.53b7f9a2.js"><link rel="prefetch" href="/blog/assets/js/345.002f3e4f.js"><link rel="prefetch" href="/blog/assets/js/346.3eb24a49.js"><link rel="prefetch" href="/blog/assets/js/347.fdd07160.js"><link rel="prefetch" href="/blog/assets/js/348.e27c3e60.js"><link rel="prefetch" href="/blog/assets/js/349.42431ace.js"><link rel="prefetch" href="/blog/assets/js/35.65a20d94.js"><link rel="prefetch" href="/blog/assets/js/350.9f518a84.js"><link rel="prefetch" href="/blog/assets/js/351.eceb606b.js"><link rel="prefetch" href="/blog/assets/js/352.f020487e.js"><link rel="prefetch" href="/blog/assets/js/353.b13e610e.js"><link rel="prefetch" href="/blog/assets/js/354.296cade5.js"><link rel="prefetch" href="/blog/assets/js/355.f2f2ffa3.js"><link rel="prefetch" href="/blog/assets/js/356.dec94d40.js"><link rel="prefetch" href="/blog/assets/js/357.02ab5752.js"><link rel="prefetch" href="/blog/assets/js/358.bf714af3.js"><link rel="prefetch" href="/blog/assets/js/359.12625f02.js"><link rel="prefetch" href="/blog/assets/js/36.b6c6e378.js"><link rel="prefetch" href="/blog/assets/js/360.a074bcc3.js"><link rel="prefetch" href="/blog/assets/js/361.35bb44d4.js"><link rel="prefetch" href="/blog/assets/js/362.3c6076c8.js"><link rel="prefetch" href="/blog/assets/js/363.2c24d7aa.js"><link rel="prefetch" href="/blog/assets/js/364.9dbca592.js"><link rel="prefetch" href="/blog/assets/js/365.079e393c.js"><link rel="prefetch" href="/blog/assets/js/366.838a3360.js"><link rel="prefetch" href="/blog/assets/js/367.43fbab51.js"><link rel="prefetch" href="/blog/assets/js/368.ae1c4cd9.js"><link rel="prefetch" href="/blog/assets/js/369.e6d5b171.js"><link rel="prefetch" href="/blog/assets/js/37.4c7e15d4.js"><link rel="prefetch" href="/blog/assets/js/370.8cc28d6a.js"><link rel="prefetch" href="/blog/assets/js/371.fe9dcd7f.js"><link rel="prefetch" href="/blog/assets/js/372.6b22b8f7.js"><link rel="prefetch" href="/blog/assets/js/373.405686bc.js"><link rel="prefetch" href="/blog/assets/js/375.cac9df36.js"><link rel="prefetch" href="/blog/assets/js/376.81b4f2e5.js"><link rel="prefetch" href="/blog/assets/js/377.b3eb950e.js"><link rel="prefetch" href="/blog/assets/js/378.c4dacd06.js"><link rel="prefetch" href="/blog/assets/js/379.f2132832.js"><link rel="prefetch" href="/blog/assets/js/38.dfceffac.js"><link rel="prefetch" href="/blog/assets/js/380.4ab641b7.js"><link rel="prefetch" href="/blog/assets/js/381.e9f4efe9.js"><link rel="prefetch" href="/blog/assets/js/382.c16e71de.js"><link rel="prefetch" href="/blog/assets/js/383.f21b8e2c.js"><link rel="prefetch" href="/blog/assets/js/384.775b9757.js"><link rel="prefetch" href="/blog/assets/js/385.08d05650.js"><link rel="prefetch" href="/blog/assets/js/386.2ca7b9f0.js"><link rel="prefetch" href="/blog/assets/js/387.e3425603.js"><link rel="prefetch" href="/blog/assets/js/388.31b37085.js"><link rel="prefetch" href="/blog/assets/js/389.1fd75863.js"><link rel="prefetch" href="/blog/assets/js/39.904f6b7e.js"><link rel="prefetch" href="/blog/assets/js/4.5267bc3a.js"><link rel="prefetch" href="/blog/assets/js/40.94284f88.js"><link rel="prefetch" href="/blog/assets/js/41.344ba575.js"><link rel="prefetch" href="/blog/assets/js/42.e8c5e3d2.js"><link rel="prefetch" href="/blog/assets/js/43.987bbc98.js"><link rel="prefetch" href="/blog/assets/js/44.b1722a04.js"><link rel="prefetch" href="/blog/assets/js/45.698808bf.js"><link rel="prefetch" href="/blog/assets/js/46.c4c017a0.js"><link rel="prefetch" href="/blog/assets/js/47.720d6944.js"><link rel="prefetch" href="/blog/assets/js/48.3661896d.js"><link rel="prefetch" href="/blog/assets/js/49.c51c4317.js"><link rel="prefetch" href="/blog/assets/js/5.efabe212.js"><link rel="prefetch" href="/blog/assets/js/50.e31d7f9a.js"><link rel="prefetch" href="/blog/assets/js/51.341f4553.js"><link rel="prefetch" href="/blog/assets/js/52.37ed25fd.js"><link rel="prefetch" href="/blog/assets/js/53.4428b776.js"><link rel="prefetch" href="/blog/assets/js/54.67e2f7a4.js"><link rel="prefetch" href="/blog/assets/js/55.da6486c2.js"><link rel="prefetch" href="/blog/assets/js/56.ddb2053e.js"><link rel="prefetch" href="/blog/assets/js/57.f69d733e.js"><link rel="prefetch" href="/blog/assets/js/58.0be84c76.js"><link rel="prefetch" href="/blog/assets/js/59.3d38352c.js"><link rel="prefetch" href="/blog/assets/js/6.9e7ddf3e.js"><link rel="prefetch" href="/blog/assets/js/60.32f4e251.js"><link rel="prefetch" href="/blog/assets/js/61.00fd5544.js"><link rel="prefetch" href="/blog/assets/js/62.9363fb38.js"><link rel="prefetch" href="/blog/assets/js/63.a164a4e7.js"><link rel="prefetch" href="/blog/assets/js/64.585c006c.js"><link rel="prefetch" href="/blog/assets/js/65.7c1f4203.js"><link rel="prefetch" href="/blog/assets/js/66.778d728e.js"><link rel="prefetch" href="/blog/assets/js/67.99ac618a.js"><link rel="prefetch" href="/blog/assets/js/68.863b3cb3.js"><link rel="prefetch" href="/blog/assets/js/69.a8267b97.js"><link rel="prefetch" href="/blog/assets/js/7.8c9db17d.js"><link rel="prefetch" href="/blog/assets/js/70.1fd4cdb3.js"><link rel="prefetch" href="/blog/assets/js/71.0bae83c7.js"><link rel="prefetch" href="/blog/assets/js/72.3c59c97f.js"><link rel="prefetch" href="/blog/assets/js/73.fd3eaaf8.js"><link rel="prefetch" href="/blog/assets/js/74.d45296ef.js"><link rel="prefetch" href="/blog/assets/js/75.bf84631f.js"><link rel="prefetch" href="/blog/assets/js/76.c85f3c80.js"><link rel="prefetch" href="/blog/assets/js/77.81aa8e2e.js"><link rel="prefetch" href="/blog/assets/js/78.a80d98a4.js"><link rel="prefetch" href="/blog/assets/js/79.38d0973c.js"><link rel="prefetch" href="/blog/assets/js/8.8e2af1af.js"><link rel="prefetch" href="/blog/assets/js/80.149bbc01.js"><link rel="prefetch" href="/blog/assets/js/81.e8f9668b.js"><link rel="prefetch" href="/blog/assets/js/82.6f8c68ba.js"><link rel="prefetch" href="/blog/assets/js/83.d48bc255.js"><link rel="prefetch" href="/blog/assets/js/84.eb7a156f.js"><link rel="prefetch" href="/blog/assets/js/85.d581b626.js"><link rel="prefetch" href="/blog/assets/js/86.bf82005a.js"><link rel="prefetch" href="/blog/assets/js/87.f6c340c5.js"><link rel="prefetch" href="/blog/assets/js/88.396f298a.js"><link rel="prefetch" href="/blog/assets/js/89.fd58c3ea.js"><link rel="prefetch" href="/blog/assets/js/9.93b818e1.js"><link rel="prefetch" href="/blog/assets/js/90.12ee3e24.js"><link rel="prefetch" href="/blog/assets/js/91.85a0f049.js"><link rel="prefetch" href="/blog/assets/js/92.9a4e240d.js"><link rel="prefetch" href="/blog/assets/js/93.34bbd5ef.js"><link rel="prefetch" href="/blog/assets/js/94.948bd7f2.js"><link rel="prefetch" href="/blog/assets/js/95.013b35ad.js"><link rel="prefetch" href="/blog/assets/js/96.4a2b3383.js"><link rel="prefetch" href="/blog/assets/js/97.3d2b0d42.js"><link rel="prefetch" href="/blog/assets/js/98.e5f7e1bf.js"><link rel="prefetch" href="/blog/assets/js/99.6f2a3bc0.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.69d5aac6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">OneYoung’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue2
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue2/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue2/source-code/compiler/" class="nav-link">
+  compiler
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/express/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Koa
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/koa/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/koa/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          高级
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/advance/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/advance/data-structures/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/advance/algorithm/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Misc
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/misc/obfuscator/" class="nav-link">
+  Debugger &amp; Obfuscator
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          SSR
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssr-vue2/" class="nav-link">
+  SSR Vue2
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssg-vue2/" class="nav-link">
+  SSG Vue2
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" class="nav-link">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Basic
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html/" class="nav-link">
+  HTML
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Feature
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/html5/" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/css3/1.start.html" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/worker/1.WebWorker.html" class="nav-link">
+  Worker
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/PWA/" class="nav-link">
+  PWA
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/rendering/1.start.html" class="nav-link">
+  Rendering
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/javascript/BOM/1.start.html" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/DOM/1.start.html" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/javascript/ECMAScript/1.start.html" class="nav-link">
+  ECMAScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JS进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/FE/js-advance/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/blog/FE/js-advance/module/1.start.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架及库" class="dropdown-title"><span class="title">框架及库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Axios
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/axios/base/1.install.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/axios/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue2
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/vue2/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/vue2/source-code/compiler/" class="nav-link">
+  compiler
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuxt
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/nuxt/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Express
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/express/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/express/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Koa
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/koa/base/1.start.html" class="nav-link">
+  基础使用
+</a></li><li class="dropdown-subitem"><a href="/blog/frame/koa/source-code/1.start.html" class="nav-link">
+  源码解析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CryptoJs
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/frame/crypto-js/base/1.start.html" class="nav-link">
+  基础使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机科学" class="dropdown-title"><span class="title">计算机科学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/string/1.unicode.html" class="nav-link">
+  String
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/digit/1.start.html" class="nav-link">
+  Digit
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cs/binary-file/1.start.html" class="nav-link">
+  二进制数据与文件
+</a></li><li class="dropdown-item"><h4>
+          HTTP
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/http/communication.html" class="nav-link">
+  通信过程
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/url.html" class="nav-link">
+  URL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/formdata.html" class="nav-link">
+  FormData
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/xhr-fetch.html" class="nav-link">
+  XHR/Fetch
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cors.html" class="nav-link">
+  CORS
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/cookie.html" class="nav-link">
+  Cookie
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/security.html" class="nav-link">
+  网络安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/upload.html" class="nav-link">
+  文件上传
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/http/download.html" class="nav-link">
+  文件下载
+</a></li></ul></li><li class="dropdown-item"><h4>
+          HTTPS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/https/encryption.html" class="nav-link">
+  数据安全
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/tls&amp;ssl.html" class="nav-link">
+  TLS与SSL
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/https/setup.html" class="nav-link">
+  项目配置SSL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          高级
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/advance/design-pattern/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/advance/data-structures/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/advance/algorithm/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/cs/im/sse/" class="nav-link">
+  SSE
+</a></li><li class="dropdown-subitem"><a href="/blog/cs/im/websocket/" class="nav-link">
+  Websocket
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="跨平台" class="dropdown-title"><span class="title">跨平台</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cross/h5/" class="nav-link">
+  H5
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cross/weChat-public/1.authorization.html" class="nav-link">
+  微信公众号
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/engineer/git/1.start.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/engineer/ts/1.start.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          Package Manager
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/npm/1.start.html" class="nav-link">
+  NPM
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/yarn/1.start.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/pkg-manager/pnpm/1.start.html" class="nav-link">
+  PNPM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          MonoRepo
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/workspace/1.start.html" class="nav-link">
+  Workspace
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/mono-repo/lerna/1.start.html" class="nav-link">
+  Lerna
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Assist
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/babel/1.start.html" class="nav-link">
+  Babel
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/postcss/1.start.html" class="nav-link">
+  Postcss
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/eslint/1.start.html" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/prettier/1.start.html" class="nav-link">
+  Prettier
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/husky/" class="nav-link">
+  Husky
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/commitlint/" class="nav-link">
+  CommitLint
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/conventional-changelog/" class="nav-link">
+  Conventional Changelog
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/standard-version/" class="nav-link">
+  Standard Version
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Bundler
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/gulp/1.start.html" class="nav-link">
+  Gulp
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/rollup/1.introduction.html" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/webpack/1.start.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/engineer/vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Misc
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/engineer/misc/obfuscator/" class="nav-link">
+  Debugger &amp; Obfuscator
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/BE/standard/" class="nav-link">
+  Standard
+</a></li><li class="dropdown-item"><h4>
+          认证与授权
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/authentication/jwt/" class="nav-link">
+  JWT
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/oauth2/" class="nav-link">
+  OAuth2.0
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/authentication/2fa/" class="nav-link">
+  2FA
+</a></li></ul></li><li class="dropdown-item"><h4>
+          SSR
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssr-vue2/" class="nav-link">
+  SSR Vue2
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/ssr/ssg-vue2/" class="nav-link">
+  SSG Vue2
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/BE/node/awesome/" class="nav-link">
+  Awesome
+</a></li><li class="dropdown-subitem"><a href="/blog/BE/node/docs/" class="nav-link">
+  Docs
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/DB/sql/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/DB/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署" class="dropdown-title"><span class="title">部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/deploy/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/shell/1.start.html" class="nav-link">
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/CI-CD/1.start.html" class="nav-link">
+  CI/CD
+</a></li><li class="dropdown-item"><!----> <a href="/blog/deploy/jenkins/1.start.html" class="nav-link">
+  Jenkins
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/github/" class="nav-link">
+  GitHub
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/charles/" class="nav-link">
+  Charles
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/verdaccio/" class="nav-link">
+  Verdaccio
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/remote-ssh/" class="nav-link">
+  Remote-SSH
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/localtunnel/" class="nav-link">
+  Localtunnel
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/AI/" class="nav-link">
+  AI工具
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/oneyoung19" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>在 <code>Vue</code> 中会注入以下渲染工具函数：</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token keyword">function</span> <span class="token function">installRenderHelpers</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  target<span class="token punctuation">.</span>_o <span class="token operator">=</span> markOnce
+  target<span class="token punctuation">.</span>_n <span class="token operator">=</span> toNumber
+  target<span class="token punctuation">.</span>_s <span class="token operator">=</span> toString
+  target<span class="token punctuation">.</span>_l <span class="token operator">=</span> renderList
+  target<span class="token punctuation">.</span>_t <span class="token operator">=</span> renderSlot
+  target<span class="token punctuation">.</span>_q <span class="token operator">=</span> looseEqual
+  target<span class="token punctuation">.</span>_i <span class="token operator">=</span> looseIndexOf
+  target<span class="token punctuation">.</span>_m <span class="token operator">=</span> renderStatic
+  target<span class="token punctuation">.</span>_f <span class="token operator">=</span> resolveFilter
+  target<span class="token punctuation">.</span>_k <span class="token operator">=</span> checkKeyCodes
+  target<span class="token punctuation">.</span>_b <span class="token operator">=</span> bindObjectProps
+  target<span class="token punctuation">.</span>_v <span class="token operator">=</span> createTextVNode
+  target<span class="token punctuation">.</span>_e <span class="token operator">=</span> createEmptyVNode
+  target<span class="token punctuation">.</span>_u <span class="token operator">=</span> resolveScopedSlots
+  target<span class="token punctuation">.</span>_g <span class="token operator">=</span> bindObjectListeners
+  target<span class="token punctuation">.</span>_d <span class="token operator">=</span> bindDynamicKeys
+  target<span class="token punctuation">.</span>_p <span class="token operator">=</span> prependModifier
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="_1-markonce"><a href="#_1-markonce" class="header-anchor">#</a> 1.markOnce</h2> <p><code>markOnce</code> 即 <code>_o</code>。</p> <p><strong>该函数只会包裹处理 <code>v-for</code> 循环中的 <code>v-once</code> 节点</strong>。</p> <p>譬如有如下 <code>template</code>：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item in list<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-once</span><span class="token punctuation">&gt;</span></span>{{ once }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-once</span><span class="token punctuation">&gt;</span></span>{{ once2 }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>其中的 <code>once2</code> 节点会直接当做 <code>static</code> 节点，用 <code>_m</code> 包裹，而 <code>v-for</code> 中的 <code>once</code> 节点则是用 <code>_o</code> 包裹。</p> <p>我们将上述 <code>template</code> 解析为 <code>render</code> 字符串的话，会得到如下结果：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;render&quot;</span><span class="token operator">:</span> <span class="token string">&quot;with(this){return _c('div',[_l((list),function(item){return _c('div',{key:item},[_o(_c('div',[_v(_s(once))]),0,item)],1)}),_v(\&quot; \&quot;),_m(0)],2)}&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;staticRenderFns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;with(this){return _c('div',[_v(_s(once2))])}&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>当我们知道上述结论之后，那么 <code>markOnce</code> 的作用就是对 <code>v-for</code> 循环中的 <code>v-once</code> 节点做额外标记：</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Runtime helper for v-once.
+ * Effectively it means marking the node as static with a unique key.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">markOnce</span><span class="token punctuation">(</span>
+  <span class="token parameter">tree<span class="token operator">:</span> VNode <span class="token operator">|</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  index<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  key<span class="token operator">:</span> <span class="token builtin">string</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">markStatic</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">__once__</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> tree
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">markStatic</span><span class="token punctuation">(</span><span class="token parameter">tree<span class="token operator">:</span> VNode <span class="token operator">|</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> isOnce<span class="token operator">:</span> <span class="token builtin">boolean</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isArray</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> tree<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>tree<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> tree<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">markStaticNode</span><span class="token punctuation">(</span>tree<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> isOnce<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">markStaticNode</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> key<span class="token punctuation">,</span> isOnce<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">markStaticNode</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span> key<span class="token punctuation">,</span> isOnce</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  node<span class="token punctuation">.</span>isStatic <span class="token operator">=</span> <span class="token boolean">true</span>
+  node<span class="token punctuation">.</span>key <span class="token operator">=</span> key
+  node<span class="token punctuation">.</span>isOnce <span class="token operator">=</span> isOnce
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="_2-tonumber"><a href="#_2-tonumber" class="header-anchor">#</a> 2.toNumber</h2> <p><code>toNumber</code> 即 <code>_n</code>。</p> <p><strong>该函数用来做数字类型转化</strong>。</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Convert an input value to a number for persistence.
+ * If the conversion fails, return original string.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">toNumber</span><span class="token punctuation">(</span><span class="token parameter">val<span class="token operator">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> n <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token function">isNaN</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">?</span> val <span class="token operator">:</span> n
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_3-tostring"><a href="#_3-tostring" class="header-anchor">#</a> 3.toString</h2> <p><code>toString</code> 即 <code>_s</code>。</p> <p><strong>该函数用来做字符串类型转化</strong>。</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Convert a value to a string that is actually rendered.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token parameter">val<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> val <span class="token operator">==</span> <span class="token keyword">null</span>
+    <span class="token operator">?</span> <span class="token string">''</span>
+    <span class="token operator">:</span> <span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token function">isPlainObject</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> val<span class="token punctuation">.</span>toString <span class="token operator">===</span> _toString<span class="token punctuation">)</span>
+    <span class="token operator">?</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>val<span class="token punctuation">,</span> replacer<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token operator">:</span> <span class="token function">String</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">replacer</span><span class="token punctuation">(</span><span class="token parameter">_key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> val<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
+  <span class="token comment">// avoid circular deps from v3</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">&amp;&amp;</span> val<span class="token punctuation">.</span>__v_isRef<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> val<span class="token punctuation">.</span>value
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> val
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="_4-renderlist"><a href="#_4-renderlist" class="header-anchor">#</a> 4.renderList</h2> <p><code>renderList</code> 即 <code>_l</code>。</p> <p><strong>该函数用来渲染列表</strong>。</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Runtime helper for rendering v-for lists.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">renderList</span><span class="token punctuation">(</span>
+  val<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">val<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> keyOrIndex<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span><span class="token punctuation">,</span> index<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> VNode
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> ret<span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    i<span class="token punctuation">,</span>
+    l<span class="token punctuation">,</span>
+    keys<span class="token punctuation">,</span>
+    key
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isArray</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> val <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ret <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>val<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> l <span class="token operator">=</span> val<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> l<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ret<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span>val<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> val <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ret <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> val<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ret<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isObject</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hasSymbol <span class="token operator">&amp;&amp;</span> val<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ret <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token keyword">const</span> iterator<span class="token operator">:</span> Iterator<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span> <span class="token operator">=</span> val<span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>iterator<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token keyword">let</span> result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ret<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">render</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>value<span class="token punctuation">,</span> ret<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        result <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+      ret <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>keys<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> l <span class="token operator">=</span> keys<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> l<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        key <span class="token operator">=</span> keys<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        ret<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span>val<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isDef</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ret <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  <span class="token punctuation">;</span><span class="token punctuation">(</span>ret <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">.</span>_isVList <span class="token operator">=</span> <span class="token boolean">true</span>
+  <span class="token keyword">return</span> ret
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><h2 id="_5-renderslot"><a href="#_5-renderslot" class="header-anchor">#</a> 5.renderSlot</h2> <p><code>renderSlot</code> 即 <code>_t</code>。</p> <p><strong>该函数用来渲染 <code>&lt;slot&gt;</code> 插槽</strong>。</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Runtime helper for rendering &lt;slot&gt;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">renderSlot</span><span class="token punctuation">(</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  fallbackRender<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> Record<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  bindObject<span class="token operator">:</span> object <span class="token operator">|</span> <span class="token keyword">null</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> scopedSlotFn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$scopedSlots<span class="token punctuation">[</span>name<span class="token punctuation">]</span>
+  <span class="token keyword">let</span> nodes
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>scopedSlotFn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// scoped slot</span>
+    props <span class="token operator">=</span> props <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>bindObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>__DEV__ <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span>bindObject<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'slot v-bind without argument expects an Object'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      props <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> bindObject<span class="token punctuation">)</span><span class="token punctuation">,</span> props<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    nodes <span class="token operator">=</span>
+      <span class="token function">scopedSlotFn</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">||</span>
+      <span class="token punctuation">(</span><span class="token function">isFunction</span><span class="token punctuation">(</span>fallbackRender<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token function">fallbackRender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> fallbackRender<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    nodes <span class="token operator">=</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$slots<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">||</span>
+      <span class="token punctuation">(</span><span class="token function">isFunction</span><span class="token punctuation">(</span>fallbackRender<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token function">fallbackRender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> fallbackRender<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> target <span class="token operator">=</span> props <span class="token operator">&amp;&amp;</span> props<span class="token punctuation">.</span>slot
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$createElement</span><span class="token punctuation">(</span><span class="token string">'template'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> slot<span class="token operator">:</span> target <span class="token punctuation">}</span><span class="token punctuation">,</span> nodes<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> nodes
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="_6-looseequal"><a href="#_6-looseequal" class="header-anchor">#</a> 6.looseEqual</h2> <p><code>looseEqual</code> 即 <code>_q</code>。</p> <p><strong>该函数用来宽松的比较两个值是否相等</strong>。</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Check if two values are loosely equal - that is,
+ * if they are plain objects, do they have the same shape?
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">looseEqual</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">===</span> b<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
+  <span class="token keyword">const</span> isObjectA <span class="token operator">=</span> <span class="token function">isObject</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> isObjectB <span class="token operator">=</span> <span class="token function">isObject</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>isObjectA <span class="token operator">&amp;&amp;</span> isObjectB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> isArrayA <span class="token operator">=</span> <span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+      <span class="token keyword">const</span> isArrayB <span class="token operator">=</span> <span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isArrayA <span class="token operator">&amp;&amp;</span> isArrayB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+          a<span class="token punctuation">.</span>length <span class="token operator">===</span> b<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span>
+          a<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">e<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> i<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">looseEqual</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token keyword">instanceof</span> <span class="token class-name">Date</span> <span class="token operator">&amp;&amp;</span> b <span class="token keyword">instanceof</span> <span class="token class-name">Date</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> b<span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isArrayA <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isArrayB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> keysA <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+        <span class="token keyword">const</span> keysB <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+          keysA<span class="token punctuation">.</span>length <span class="token operator">===</span> keysB<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span>
+          keysA<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">looseEqual</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> b<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">/* istanbul ignore next */</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">/* istanbul ignore next */</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isObjectA <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isObjectB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">String</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token function">String</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><h2 id="_7-looseindexof"><a href="#_7-looseindexof" class="header-anchor">#</a> 7.looseIndexOf</h2> <p><code>looseIndexOf</code> 即 <code>_i</code>。</p> <p><strong>该函数用来宽松的获取索引</strong>。</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Return the first index at which a loosely equal value can be
+ * found in the array (if value is a plain object, the array must
+ * contain an object of the same shape), or -1 if it is not present.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">looseIndexOf</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span><span class="token builtin">unknown</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> val<span class="token operator">:</span> <span class="token builtin">unknown</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">looseEqual</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> i
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="_8-renderstatic"><a href="#_8-renderstatic" class="header-anchor">#</a> 8.renderStatic</h2> <p><code>renderStatic</code> 即 <code>_m</code>。</p> <p><strong>该函数用来渲染 <code>static</code> 静态节点</strong>。</p> <ol><li>缓存静态树：</li></ol> <ul><li>函数维护了一个 <code>_staticTrees</code> 数组来缓存已经渲染过的静态树</li> <li>通过 <code>index</code> 参数来索引不同的静态树</li></ul> <ol start="2"><li>优化性能：</li></ol> <ul><li>如果某个静态树已经被渲染过（即在缓存中存在），并且不是在 <code>v-for</code> 循环中使用（<code>isInFor</code> 为 <code>false</code>），就直接返回缓存的树，避免重复渲染</li> <li>这种缓存机制可以显著提高性能，因为静态内容不需要重新创建 <code>VNode</code></li></ul> <ol start="3"><li>渲染新树：</li></ol> <ul><li>如果缓存中没有，或者是在 <code>v-for</code> 中使用，就会重新渲染一个新的树</li> <li>使用 <code>staticRenderFns</code> 来生成新的 <code>VNode</code> 树</li> <li>生成后会用 <code>markStatic</code> 标记这个树为静态内容</li></ul> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">/**
+ * Runtime helper for rendering static trees.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">renderStatic</span><span class="token punctuation">(</span>
+  <span class="token parameter">index<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  isInFor<span class="token operator">:</span> <span class="token builtin">boolean</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> VNode <span class="token operator">|</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span>VNode<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> cached <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_staticTrees <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_staticTrees <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> tree <span class="token operator">=</span> cached<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+  <span class="token comment">// if has already-rendered static tree and not inside v-for,</span>
+  <span class="token comment">// we can reuse the same tree.</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>tree <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isInFor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> tree
+  <span class="token punctuation">}</span>
+  <span class="token comment">// otherwise, render a fresh tree.</span>
+  tree <span class="token operator">=</span> cached<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>staticRenderFns<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_renderProxy<span class="token punctuation">,</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>_c<span class="token punctuation">,</span>
+    <span class="token keyword">this</span> <span class="token comment">// for render fns generated for functional component templates</span>
+  <span class="token punctuation">)</span>
+  <span class="token function">markStatic</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">__static__</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> tree
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="_9-resolvefilter"><a href="#_9-resolvefilter" class="header-anchor">#</a> 9.resolveFilter</h2> <h2 id="_10-checkkeycodes"><a href="#_10-checkkeycodes" class="header-anchor">#</a> 10.checkKeyCodes</h2> <h2 id="_11-bindobjectprops"><a href="#_11-bindobjectprops" class="header-anchor">#</a> 11.bindObjectProps</h2> <h2 id="_12-createtextvnode"><a href="#_12-createtextvnode" class="header-anchor">#</a> 12.createTextVNode</h2> <h2 id="_13-createemptyvnode"><a href="#_13-createemptyvnode" class="header-anchor">#</a> 13.createEmptyVNode</h2> <h2 id="_14-resolvescopedslots"><a href="#_14-resolvescopedslots" class="header-anchor">#</a> 14.resolveScopedSlots</h2> <h2 id="_15-bindobjectlisteners"><a href="#_15-bindobjectlisteners" class="header-anchor">#</a> 15.bindObjectListeners</h2> <h2 id="_16-binddynamickeys"><a href="#_16-binddynamickeys" class="header-anchor">#</a> 16.bindDynamicKeys</h2> <h2 id="_17-prependmodifier"><a href="#_17-prependmodifier" class="header-anchor">#</a> 17.prependModifier</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/25/2024, 8:32:25 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.2994391c.js" defer></script><script src="/blog/assets/js/2.80e16ae8.js" defer></script><script src="/blog/assets/js/374.ca8a4517.js" defer></script>
+  </body>
+</html>
