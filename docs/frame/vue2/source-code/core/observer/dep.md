@@ -188,3 +188,74 @@ export function popTarget() {
   Dep.target = targetStack[targetStack.length - 1]
 }
 ```
+
+设计 `pushTarget` 和 `popTarget` 主要是为了处理**嵌套的 watcher** 场景。
+
+```javascript
+const vm = {
+  computed: {
+    // 计算属性 A
+    computedA() {
+      // 这里访问了计算属性 B
+      return this.computedB + ' A'
+    },
+    // 计算属性 B
+    computedB() {
+      return this.message + ' B'
+    }
+  },
+  data: {
+    message: 'Hello'
+  }
+}
+```
+
+如果直接操作 `Dep.target`，会导致 `watcher` 被覆盖。
+
+```ts
+class Watcher {
+  get() {
+    Dep.target = this       // 直接设置
+    // 执行 getter
+    const value = this.getter.call(vm, vm)
+    Dep.target = null       // 直接清除
+    return value
+  }
+}
+
+// 问题展示
+computedA 的 watcher 执行：
+Dep.target = watcherA
+↓
+执行 computedA 的 getter
+↓
+访问 computedB，触发 computedB 的 watcher
+↓
+Dep.target = watcherB          // ⚠️ watcherA 被覆盖了！
+↓
+执行完 computedB
+↓
+Dep.target = null              // ⚠️ watcherA 永远无法恢复！
+```
+
+使用 `pushTarget` 和 `popTarget` 的话：
+
+```ts
+// 现在的执行流程
+computedA 的 watcher 执行：
+pushTarget(watcherA)           // targetStack = [watcherA]
+↓
+执行 computedA 的 getter
+↓
+访问 computedB，触发 computedB 的 watcher
+↓
+pushTarget(watcherB)           // targetStack = [watcherA, watcherB]
+↓
+执行完 computedB
+↓
+popTarget()                    // targetStack = [watcherA]，恢复 watcherA
+↓
+继续执行 computedA
+↓
+popTarget()                    // targetStack = []
+```
