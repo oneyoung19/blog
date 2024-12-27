@@ -1,6 +1,6 @@
 在梳理具体的响应式之前，可以从官网上的这张图一窥整体逻辑：
 
-![reactive](./images/reactive.png)
+![reactive](./image/reactive.png)
 
 从上图中，抛却 `UI` 部分，我们可以将响应式核心逻辑拆分为以下几个部分：
 
