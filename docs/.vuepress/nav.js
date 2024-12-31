@@ -80,6 +80,26 @@ module.exports = [
           {
             text: 'compiler',
             link: '/frame/vue2/source-code/compiler/'
+          },
+          {
+            text: 'core/global-api',
+            link: '/frame/vue2/source-code/core/global-api/'
+          },
+          {
+            text: 'core/instance',
+            link: '/frame/vue2/source-code/core/instance/'
+          },
+          {
+            text: 'core/observer',
+            link: '/frame/vue2/source-code/core/observer/'
+          },
+          {
+            text: 'core/vdom',
+            link: '/frame/vue2/source-code/core/vdom/'
+          },
+          {
+            text: 'v3/reactivity',
+            link: '/frame/vue2/v3/reactivity/'
           }
         ]
       },

@@ -45,6 +45,33 @@ module.exports = {
     '/frame/vue2/source-code/compiler/4.to-function.md',
     '/frame/vue2/source-code/compiler/create-compiler.md',
   ],
+  '/frame/vue2/source-code/core/global-api/': [
+    '/frame/vue2/source-code/core/global-api/',
+    '/frame/vue2/source-code/core/global-api/merge-options.md'
+  ],
+  '/frame/vue2/source-code/core/instance/': [
+    '/frame/vue2/source-code/core/instance/events.md',
+    '/frame/vue2/source-code/core/instance/inject.md',
+    '/frame/vue2/source-code/core/instance/render-helpers.md'
+  ],
+  '/frame/vue2/source-code/core/observer/': [
+    '/frame/vue2/source-code/core/observer/1-1.observer.md',
+    '/frame/vue2/source-code/core/observer/1-2.array.md',
+    '/frame/vue2/source-code/core/observer/2-1.dep.md',
+    '/frame/vue2/source-code/core/observer/3-1.watcher.md',
+    '/frame/vue2/source-code/core/observer/3-2.traverse.md',
+    '/frame/vue2/source-code/core/observer/3-3.scheduler.md'
+  ],
+  '/frame/vue2/source-code/core/vdom/': [
+    '/frame/vue2/source-code/core/vdom/1.vnode.md',
+    '/frame/vue2/source-code/core/vdom/2.create-component.md',
+    '/frame/vue2/source-code/core/vdom/3.create-element.md',
+    '/frame/vue2/source-code/core/vdom/4.create-functional-component.md',
+    '/frame/vue2/source-code/core/vdom/5.patch.md'
+  ],
+  '/frame/vue2/source-code/core/v3/reactivity/': [
+    '/frame/vue2/source-code/core/v3/reactivity/ref&reactive.md',
+  ],
   '/frame/nuxt/base': [
     '/frame/nuxt/base/1.start.md'
   ],
