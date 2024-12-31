@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "vitepress init",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "Andy Yang",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
