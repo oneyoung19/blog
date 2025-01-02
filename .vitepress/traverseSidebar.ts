@@ -3,11 +3,10 @@ import fs from 'node:fs'
 
 const paths = await globby(['docs/**/*.md'])
 
-console.log(paths)
-
 export default function getSidebar() {
   const targetPaths = paths.map(path => {
-    return path.split('/').slice(1, -1).join('/')
-  })
+    const pathArray = path.split('/').slice(1, 3)
+    return pathArray.join('/')
+  }).filter(item => item && !item.includes('index.md'))
   return [...new Set(targetPaths)]
 }

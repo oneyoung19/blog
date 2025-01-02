@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import navbar from './navbar'
-// import sidebar from './sidebar'
 import { withSidebar } from 'vitepress-sidebar'
 import getSidebar from './traverseSidebar'
 
@@ -11,7 +10,6 @@ const vitepressConfig = {
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: navbar,
-    // sidebar: sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/oneyoung19' }
     ]
@@ -20,14 +18,16 @@ const vitepressConfig = {
   cleanUrls: true
 }
 
-const sidebarList = getSidebar('docs', 1)
-console.log(sidebarList)
+const sidebarList = getSidebar()
 const sidebarConfig = sidebarList.map(path => {
   return {
     documentRootPath: 'docs',
     scanStartPath: path,
     resolvePath: `/${path}/`,
-    useTitleFromFrontmatter: true
+    // useFolderLinkFromIndexFile: true,
+    useFolderTitleFromIndexFile: true,
+    useTitleFromFrontmatter: true,
+    includeFolderIndexFile: true, // 侧边栏显示index.md
   }
 })
 
