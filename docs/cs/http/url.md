@@ -64,7 +64,7 @@ console.log(new URL(url, base))
 
 可以看出，该属性是 `URLSearchParams` 的实例。
 
-关于该属性的详细内容，可见[下章](./#2-urlsearchparams)。
+关于该属性的详细内容，可见[下章](#2-urlsearchparams)。
 
 ### 1-3.静态方法
 
