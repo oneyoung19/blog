@@ -1,1 +1,0 @@
-import{_ as t,c as e,o}from"./chunks/framework.DAWq-o5U.js";const _=JSON.parse('{"title":"GitHub","description":"","frontmatter":{"title":"GitHub"},"headers":[],"relativePath":"tool/github/index.md","filePath":"tool/github/index.md"}'),a={name:"tool/github/index.md"};function i(n,r,s,c,d,l){return o(),e("div")}const m=t(a,[["render",i]]);export{_ as __pageData,m as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.CSFWJ8Rg.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"FE/javascript/DOM/index.md","filePath":"FE/javascript/DOM/index.md"}'),r={name:"FE/javascript/DOM/index.md"};function n(s,c,i,o,d,p){return t(),a("div")}const f=e(r,[["render",n]]);export{m as __pageData,f as default};

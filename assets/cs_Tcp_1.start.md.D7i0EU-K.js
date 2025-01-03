@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a}from"./chunks/framework.CSFWJ8Rg.js";const m=JSON.parse('{"title":"TCP/IP","description":"","frontmatter":{"title":"TCP/IP"},"headers":[],"relativePath":"cs/Tcp/1.start.md","filePath":"cs/Tcp/1.start.md"}'),s={name:"cs/Tcp/1.start.md"};function r(c,o,n,p,_,i){return e(),a("div")}const f=t(s,[["render",r]]);export{m as __pageData,f as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as t}from"./chunks/framework.CSFWJ8Rg.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"deploy/docker/swarm.md","filePath":"deploy/docker/swarm.md"}'),a={name:"deploy/docker/swarm.md"};function o(s,c,d,n,p,m){return r(),t("div")}const l=e(a,[["render",o]]);export{i as __pageData,l as default};

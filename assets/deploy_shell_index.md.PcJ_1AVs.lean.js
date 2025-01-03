@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.CSFWJ8Rg.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"deploy/shell/index.md","filePath":"deploy/shell/index.md"}'),o={name:"deploy/shell/index.md"};function n(s,r,d,l,c,i){return t(),a("div")}const m=e(o,[["render",n]]);export{_ as __pageData,m as default};
