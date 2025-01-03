@@ -8,14 +8,36 @@ import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 // https://vitepress.dev/reference/site-config
 const vitepressConfig = {
   base: '/blog/',
-  title: "Blog",
-  description: "oneyoung19's blog",
+  title: "One Young's Blog",
+  description: "One Young's personal tech blog, focusing on Web Frontend development, JavaScript, and related technologies",
+  head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
+    logo: '/avatar.jpeg',
+    siteTitle: 'One Young',
     // https://vitepress.dev/reference/default-theme-config
     nav: navbar,
+    // sidebar
     socialLinks: [
       { icon: 'github', link: 'https://github.com/oneyoung19' }
-    ]
+    ],
+    footer: {
+      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/oneyoung19">Andy Yang</a>'
+    },
+    editLink: {
+      pattern: 'https://github.com/oneyoung19/blog/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    },
+    search: {
+      provider: 'local'
+    }
   },
   srcDir: 'docs',
   cleanUrls: true,
