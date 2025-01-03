@@ -1,0 +1,1 @@
+import{_ as e,c as n,o as t}from"./chunks/framework.B0cMFUTE.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/babel/index.md","filePath":"engineer/babel/index.md"}'),a={name:"engineer/babel/index.md"};function r(i,o,s,c,d,p){return t(),n("div")}const m=e(a,[["render",r]]);export{l as __pageData,m as default};
