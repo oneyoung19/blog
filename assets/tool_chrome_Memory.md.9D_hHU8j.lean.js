@@ -1,1 +1,0 @@
-import{_ as e,o,c as t}from"./chunks/framework.CSFWJ8Rg.js";const _=JSON.parse('{"title":"Memory","description":"","frontmatter":{"title":"Memory"},"headers":[],"relativePath":"tool/chrome/Memory.md","filePath":"tool/chrome/Memory.md"}'),r={name:"tool/chrome/Memory.md"};function a(c,m,s,n,i,l){return o(),t("div")}const d=e(r,[["render",a]]);export{_ as __pageData,d as default};
