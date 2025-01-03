@@ -479,6 +479,10 @@ export default [
     text: '工具',
     items: [
       {
+        text: 'Vitepress',
+        link: '/tool/vitepress/'
+      },
+      {
         text: 'GitHub',
         link: '/tool/github/'
       },
