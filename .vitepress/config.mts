@@ -20,18 +20,6 @@ const vitepressConfig = {
     config: (md) => {
       // Avoids rendering <script> and <style> tags and extract them into to markdown-it env.sfcBlocks.
       // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-sfc
-      // md.renderer.rules.html_block
-      // md.use((md, options) => {
-      //   md.renderer.rules.html_block = (tokens, idx, options, env, self) => {
-      //     const { script, style } = env.sfcBlocks
-      //     if (script) {
-      //       console.log(script)
-      //     }
-      //     return self.renderToken(tokens, idx, options)
-      //   }
-      // }, {
-      //   html: true
-      // })
     }
   }
 }

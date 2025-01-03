@@ -378,25 +378,6 @@ function fetchByPost (body, headers) {
   })
 }
 ```
-<script>
-  export default {
-    mounted () {
-      window.fetchByPost = function (body, headers) {
-        // 此处只测试验证请求头信息，不关注响应，所以定一个随意的url。有可能出现跨域等报错
-        const url = 'http://127.0.0.1:3000/save'
-        fetch(url, {
-          method: 'POST',
-          headers,
-          body
-        }).then(response => {
-          console.log(response)
-        }).catch(err => {
-          console.error(err)
-        })
-      }
-    }
-  }
-</script>
 
 #### 1. 普通字符串
 
@@ -411,12 +392,6 @@ fetchByPost('Hello world')
 :::
 
 <button id="btn-string">普通字符串</button>
-<script>
-	var btn= document.querySelector('#btn-string')
-	btn.addEventListener('click', function () {
-		fetchByPost('Hello world')
-	})
-</script>
 
 #### 2. `JSON` 字符串
 
@@ -430,12 +405,6 @@ fetchByPost(JSON.stringify({ text: 'Hello world' }))
 :::
 
 <button id="btn-json">JSON字符串</button>
-<script>
-	var btn= document.querySelector('#btn-json')
-	btn.addEventListener('click', function () {
-		fetchByPost(JSON.stringify({ text: 'Hello world' }))
-	})
-</script>
 
 为了保证服务端，能够根据 `Content-Type` 正确解析我们的请求，所以往往需要手动设置请求头 `Content-Type: application/json`。
 
@@ -446,14 +415,6 @@ fetchByPost(JSON.stringify({ text: 'Hello world' }), {
 ```
 
 <button id="btn-json-header">发送JSON请求头</button>
-<script>
-	var btn= document.querySelector('#btn-json-header')
-	btn.addEventListener('click', function () {
-		fetchByPost(JSON.stringify({ text: 'Hello world' }), {
-			'Content-Type': 'application/json'
-		})
-	})
-</script>
 
 #### 3. `URLSearchParams`
    
@@ -487,22 +448,6 @@ fetchByPost(urlSearchParams.toString(), {
 
 <button id="btn-params-demo-one">示例一</button>
 <button id="btn-params-demo-two">示例二</button>
-<script>
-	var btnOne = document.querySelector('#btn-params-demo-one')
-	var btnTwo = document.querySelector('#btn-params-demo-two')
-	var urlSearchParams = new URLSearchParams()
-	urlSearchParams.set('name', 'Jack')
-	urlSearchParams.set('name', 'Tom')
-	urlSearchParams.append('name', 'Jerry')
-	btnOne.addEventListener('click', function () {
-		fetchByPost(urlSearchParams)
-	})
-	btnTwo.addEventListener('click', function () {
-		fetchByPost(urlSearchParams.toString(), {
-			'Content-Type': 'application/x-www-form-urlencoded'
-		})
-	})
-</script>
 
 :::tip
 在 [axios](https://github.com/axios/axios#using-applicationx-www-form-urlencoded-format) 中，关于`application/x-www-form-urlencoded` 编码有两种推荐处理形式：
@@ -535,15 +480,6 @@ fetchByPost(formData)
 ```
 
 <button id="btn-formdata">FormData</button>
-<script>
-	var btn = document.querySelector('#btn-formdata')
-	var formData = new FormData()
-	formData.append('name', 'Jerry')
-	formData.append('myFile', 'file')
-	btn.addEventListener('click', function () {
-		fetchByPost(formData)
-	})
-</script>
 
 #### 5. `Blob/BufferSource`
 
@@ -563,15 +499,6 @@ fetchByPost(blob)
 ```
 
 <button id="btn-blob">Blob</button>
-<script>
-	var btn = document.querySelector('#btn-blob')
-	var blob = new Blob(['hello world'], {
-		type: 'image/png'
-	})
-	btn.addEventListener('click', function () {
-		fetchByPost(blob)
-	})
-</script>
 
 ### 3-3.请求头
 
@@ -984,3 +911,71 @@ myFetch({
 
 abortController.abort()
 ```
+
+<script>
+export default {
+  mounted () {
+    window.fetchByPost = function (body, headers) {
+      // 此处只测试验证请求头信息，不关注响应，所以定一个随意的url。有可能出现跨域等报错
+      const url = 'http://127.0.0.1:3000/save'
+      fetch(url, {
+        method: 'POST',
+        headers,
+        body
+      }).then(response => {
+        console.log(response)
+      }).catch(err => {
+        console.error(err)
+      })
+    }
+
+    var btn= document.querySelector('#btn-string')
+    btn.addEventListener('click', function () {
+      fetchByPost('Hello world')
+    })
+
+    var btn= document.querySelector('#btn-json')
+    btn.addEventListener('click', function () {
+      fetchByPost(JSON.stringify({ text: 'Hello world' }))
+    })
+
+    var btn= document.querySelector('#btn-json-header')
+    btn.addEventListener('click', function () {
+      fetchByPost(JSON.stringify({ text: 'Hello world' }), {
+        'Content-Type': 'application/json'
+      })
+    })
+
+    var btnOne = document.querySelector('#btn-params-demo-one')
+    var btnTwo = document.querySelector('#btn-params-demo-two')
+    var urlSearchParams = new URLSearchParams()
+    urlSearchParams.set('name', 'Jack')
+    urlSearchParams.set('name', 'Tom')
+    urlSearchParams.append('name', 'Jerry')
+    btnOne.addEventListener('click', function () {
+      fetchByPost(urlSearchParams)
+    })
+    btnTwo.addEventListener('click', function () {
+      fetchByPost(urlSearchParams.toString(), {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    })
+
+    var btn = document.querySelector('#btn-formdata')
+    var formData = new FormData()
+    formData.append('name', 'Jerry')
+    formData.append('myFile', 'file')
+    btn.addEventListener('click', function () {
+      fetchByPost(formData)
+    })
+
+    var btn = document.querySelector('#btn-blob')
+    var blob = new Blob(['hello world'], {
+      type: 'image/png'
+    })
+    btn.addEventListener('click', function () {
+      fetchByPost(blob)
+    })
+  }
+}
+</script>
