@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DAWq-o5U.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"FE/javascript/DOM/index.md","filePath":"FE/javascript/DOM/index.md"}'),r={name:"FE/javascript/DOM/index.md"};function n(s,c,i,o,d,p){return a(),t("div")}const f=e(r,[["render",n]]);export{m as __pageData,f as default};

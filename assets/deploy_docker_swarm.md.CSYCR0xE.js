@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t}from"./chunks/framework.DAWq-o5U.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"deploy/docker/swarm.md","filePath":"deploy/docker/swarm.md"}'),a={name:"deploy/docker/swarm.md"};function o(s,c,d,n,p,m){return t(),r("div")}const l=e(a,[["render",o]]);export{i as __pageData,l as default};
