@@ -5,6 +5,7 @@ import getSidebar from './traverseSidebar'
 
 // https://vitepress.dev/reference/site-config
 const vitepressConfig = {
+  base: '/blog/',
   title: "Blog",
   description: "oneyoung19's blog",
   themeConfig: {
