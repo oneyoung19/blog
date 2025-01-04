@@ -6,6 +6,9 @@ hero:
   name: "Blog"
   text: "oneyoung19's blog"
   tagline: 记录技术，分享成长
+  #image:
+  #  src: /brain.webp
+  #  alt: VitePress
   actions:
     - theme: brand
       text: 开始阅读 →
