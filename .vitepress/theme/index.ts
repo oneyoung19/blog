@@ -1,6 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
@@ -9,7 +10,8 @@ import 'element-plus/dist/index.css'
 
 import mediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
-import { useRoute } from 'vitepress'
+
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 
 import 'virtual:group-icons.css'
 
@@ -35,6 +37,26 @@ export default {
     watch(
       () => route.path,
       () => nextTick(() => initZoom())
+    )
+
+    const { frontmatter } = useData()
+    // https://github.com/T-miracle/vitepress-plugin-comment-with-giscus
+    giscusTalk(
+      {
+        repo: 'oneyoung19/blog', //仓库
+        repoId: 'R_kgDOMG4rmg', //仓库ID
+        category: 'Announcements', // 讨论分类
+        categoryId: 'DIC_kwDOMG4rms4CltwA', //讨论分类ID
+        mapping: 'pathname',
+        inputPosition: 'bottom',
+        lang: 'zh-CN',
+      },
+      {
+        frontmatter,
+        route
+      },
+      // 开发环境下默认关闭 可以在frontmatter中设置comment来自定义文档控制
+      import.meta.env.DEV ? false : true
     )
   }
 } satisfies Theme
