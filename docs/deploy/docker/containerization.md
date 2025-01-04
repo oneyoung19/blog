@@ -509,7 +509,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 此处，对应端口 `9527`，可以在 `vue-demo` 下的 `nginx` 目录新建一个 `vue-port-9527.conf`：
 
-```conf
+```nginx
 server {
     listen       9527;
     listen  [::]:9527;

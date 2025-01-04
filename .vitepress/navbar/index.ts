@@ -48,7 +48,7 @@ export default [
       {
         text: 'JS进阶',
         items: [
-          { text: 'ES6', link: '/FE/js-advance/es6/' },
+          { text: 'ES6', link: '/FE/js-advance/es6/0.start.md' },
           { text: 'Module', link: '/FE/js-advance/module/1.start.md' }
         ]
       }

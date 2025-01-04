@@ -51,6 +51,7 @@ const vitepressConfig = {
   }
 }
 
+// https://github.com/jooy2/vitepress-sidebar
 const sidebarList = getSidebar()
 const sidebarConfig = sidebarList.map(path => {
   return {
@@ -60,6 +61,10 @@ const sidebarConfig = sidebarList.map(path => {
     // useFolderLinkFromIndexFile: true,
     useFolderTitleFromIndexFile: true,
     useTitleFromFrontmatter: true,
+    // sortMenusByName: true,
+    manualSortFileNameByPriority: ['index.md'],
+    // sortMenusOrderNumericallyFromTitle: true
+    sortMenusOrderNumericallyFromLink: true,
     includeFolderIndexFile: true, // 侧边栏显示index.md
   }
 })
