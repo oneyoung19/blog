@@ -11,6 +11,17 @@ const vitepressConfig = {
   title: "One Young's Blog",
   description: "One Young's personal tech blog, focusing on Web Frontend development, JavaScript, and related technologies",
   head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
+  // locales: {
+  //   root: {
+  //     label: '简体中文',
+  //     lang: 'zh-hans'
+  //   },
+  //   en: {
+  //     label: 'English',
+  //     lang: 'en',
+  //     link: '/en/'
+  //   }
+  // },
   themeConfig: {
     logo: '/avatar.jpeg',
     siteTitle: 'One Young',

@@ -1,5 +1,6 @@
 ---
 title: Remote-SSH
+layout: home
 ---
 
 `Remote SSH` 比较直白的翻译，就是**远程登录**。
