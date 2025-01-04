@@ -11,6 +11,8 @@ import mediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
 
+import 'virtual:group-icons.css'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {

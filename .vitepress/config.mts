@@ -4,6 +4,7 @@ import { withSidebar } from 'vitepress-sidebar'
 import getSidebar from './traverseSidebar'
 
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
 const vitepressConfig = {
@@ -56,9 +57,16 @@ const vitepressConfig = {
     config: (md) => {
       // https://github.com/zh-lx/vitepress-demo-plugin
       md.use(vitepressDemoPlugin)
+      // https://github.com/yuyinws/vitepress-plugin-group-icons
+      md.use(groupIconMdPlugin)
       // Avoids rendering <script> and <style> tags and extract them into to markdown-it env.sfcBlocks.
       // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-sfc
     }
+  },
+  vite: {
+    plugins: [
+      groupIconVitePlugin() //代码组图标
+    ]
   }
 }
 
