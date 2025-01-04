@@ -5,6 +5,7 @@ import getSidebar from './traverseSidebar'
 
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import vitepressProtectPlugin from "vitepress-protect-plugin"
 
 // https://vitepress.dev/reference/site-config
 const vitepressConfig = {
@@ -65,7 +66,12 @@ const vitepressConfig = {
   },
   vite: {
     plugins: [
-      groupIconVitePlugin() //代码组图标
+      groupIconVitePlugin(), //代码组图标
+      vitepressProtectPlugin({
+        disableF12: process.env.NODE_ENV === 'production', // 禁用F12开发者模式
+        disableCopy: false, // 禁用文本复制
+        disableSelect: false, // 禁用文本选择
+      })
     ]
   }
 }
