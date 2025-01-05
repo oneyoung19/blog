@@ -1,3 +1,6 @@
+.VPImage.logo {
+  border-radius: 50%;
+}
 /* 修复medium-zoom的z-index问题 */
 .medium-zoom-overlay {
   background: 'var(--vp-c-bg)';
