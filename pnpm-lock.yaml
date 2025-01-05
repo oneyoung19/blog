@@ -11,6 +11,9 @@ importers:
       antd:
         specifier: ^5.22.7
         version: 5.22.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      canvas-confetti:
+        specifier: ^1.9.3
+        version: 1.9.3
       element-plus:
         specifier: ^2.9.1
         version: 2.9.1(vue@3.5.13)
@@ -23,13 +26,13 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13
       xgplayer:
         specifier: ^3.0.20
         version: 3.0.20(core-js@3.39.0)
     devDependencies:
-      '@types/vue':
-        specifier: ^2.0.0
-        version: 2.0.0
       globby:
         specifier: ^14.0.2
         version: 14.0.2
@@ -626,10 +629,6 @@ packages:
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
 
-  '@types/vue@2.0.0':
-    resolution: {integrity: sha512-WDElkBv/o4lVwu6wYHB06AXs4Xo2fwDjJUpvPRc1QQdzkUSiGFjrYuSCy8raxLE5FObgKq8ND7R5gSZTFLK60w==}
-    deprecated: This is a stub types definition for vuejs (https://github.com/vuejs/vue). vuejs provides its own type definitions, so you don't need @types/vue installed!
-
   '@types/web-bluetooth@0.0.16':
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
 
@@ -792,6 +791,9 @@ packages:
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
+
+  canvas-confetti@1.9.3:
+    resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2248,12 +2250,6 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
-  '@types/vue@2.0.0':
-    dependencies:
-      vue: 3.5.13
-    transitivePeerDependencies:
-      - typescript
-
   '@types/web-bluetooth@0.0.16': {}
 
   '@types/web-bluetooth@0.0.20': {}
@@ -2490,6 +2486,8 @@ snapshots:
   braces@3.0.3:
     dependencies:
       fill-range: 7.1.1
+
+  canvas-confetti@1.9.3: {}
 
   ccount@2.0.1: {}
 

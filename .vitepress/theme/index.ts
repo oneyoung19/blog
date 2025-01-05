@@ -8,6 +8,7 @@ import './style/index.css'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import Xgplayer from "./components/Xgplayer.vue"
+import Confetti from "./components/Confetti.vue"
 
 import mediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
@@ -26,6 +27,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.use(ElementPlus)
     app.component('Xgplayer', Xgplayer)
+    app.component('Confetti', Confetti)
   },
   setup() {
     const route = useRoute()

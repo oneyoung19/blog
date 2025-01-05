@@ -39,9 +39,7 @@ onMounted(() => {
     start: {
       isShowPause: true //暂停显示播放按钮
     }
-
   })
-
 })
 
 </script>

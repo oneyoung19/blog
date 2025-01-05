@@ -176,3 +176,5 @@ Hello World
 <Xgplayer url="https://www.runoob.com/try/demo_source/movie.mp4" poster="https://www.runoob.com/try/demo_source/movie.jpg" />
 
 <Xgplayer url="https://www.runoob.com/try/demo_source/movie.mp4" poster="https://www.runoob.com/try/demo_source/movie.jpg" />
+
+<Confetti :popup="true" />

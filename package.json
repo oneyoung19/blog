@@ -15,7 +15,6 @@
   "author": "Andy Yang",
   "license": "ISC",
   "devDependencies": {
-    "@types/vue": "^2.0.0",
     "globby": "^14.0.2",
     "vitepress": "^1.5.0",
     "vitepress-demo-plugin": "^1.2.3",
@@ -26,10 +25,12 @@
   },
   "dependencies": {
     "antd": "^5.22.7",
+    "canvas-confetti": "^1.9.3",
     "element-plus": "^2.9.1",
     "medium-zoom": "^1.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "vue": "^3.5.13",
     "xgplayer": "^3.0.20"
   }
 }
