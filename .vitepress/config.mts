@@ -55,6 +55,10 @@ const vitepressConfig = {
   srcDir: 'docs',
   cleanUrls: true,
   markdown: {
+    image: {
+      // 开启图片懒加载
+      lazyLoading: true
+    },
     config: (md) => {
       // https://github.com/zh-lx/vitepress-demo-plugin
       md.use(vitepressDemoPlugin)

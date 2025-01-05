@@ -1,0 +1,8 @@
+/* 修复medium-zoom的z-index问题 */
+.medium-zoom-overlay {
+  background: 'var(--vp-c-bg)';
+  z-index: 1000 !important;
+}
+.medium-zoom-image.medium-zoom-image--opened {
+  z-index: 1000 !important;
+}
