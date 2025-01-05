@@ -11,6 +11,7 @@ import 'element-plus/dist/index.css'
 import Xgplayer from "./components/Xgplayer.vue"
 import Confetti from "./components/Confetti.vue"
 import HomeUnderline from "./components/HomeUnderline.vue"
+import SwitchDarkLayout from "./components/SwitchDarkLayout.vue"
 
 import mediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
@@ -21,16 +22,18 @@ import 'virtual:group-icons.css'
 
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
+  // Layout: () => {
+  //   return h(DefaultTheme.Layout, null, {
+  //     // https://vitepress.dev/guide/extending-default-theme#layout-slots
+  //   })
+  // },
+  Layout: SwitchDarkLayout,
   enhanceApp({ app, router, siteData }) {
     app.use(ElementPlus)
     app.component('Xgplayer', Xgplayer)
     app.component('Confetti', Confetti)
     app.component('HomeUnderline', HomeUnderline)
+    // app.component('SwitchDarkLayout', SwitchDarkLayout)
   },
   setup() {
     const route = useRoute()
