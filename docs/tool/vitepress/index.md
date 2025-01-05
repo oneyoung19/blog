@@ -172,3 +172,7 @@ Hello World
   <img src="https://img.shields.io/badge/-GitHub%20Pages-222?logo=GitHub-Pages&logoColor=FFF" alt="GitHub Pages" style="display: inline-block;" />&nbsp;
   <img src="https://img.shields.io/badge/-Adobe%20Photoshop-A9A9A9?logo=Adobe-Photoshop&logoColor=31A8FF" alt="Adobe Photoshop" style="display: inline-block;" />&nbsp;
 </p>
+
+<Xgplayer url="https://www.runoob.com/try/demo_source/movie.mp4" poster="https://www.runoob.com/try/demo_source/movie.jpg" />
+
+<Xgplayer url="https://www.runoob.com/try/demo_source/movie.mp4" poster="https://www.runoob.com/try/demo_source/movie.jpg" />
