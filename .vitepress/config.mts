@@ -12,7 +12,10 @@ const vitepressConfig = {
   base: '/blog/',
   title: "OneYoung's Blog",
   description: "OneYoung's personal tech blog, focusing on Web Frontend development, JavaScript, and related technologies",
-  head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
+  head: [
+    // ['link', { rel: 'icon', href: '/blog/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/blog/avatar.jpeg' }]
+  ],
   // locales: {
   //   root: {
   //     label: '简体中文',

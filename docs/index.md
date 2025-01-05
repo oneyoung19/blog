@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读 →
-      link: /FE/js-advance/es6/zero
+      link: /FE/js-advance/es6/0.start
     - theme: alt
       text: 关于我
       link: /FE/

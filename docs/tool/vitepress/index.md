@@ -1,8 +1,12 @@
 ---
-title: GitHub
+title: Vitepress
+layout: home
 ---
 
+# Some snippets for vitepress!
+
 [vitepress-doc](https://github.com/Yiov/vitepress-doc)
+
 [vitepress.yiov.top](https://vitepress.yiov.top/)
 
 <demo react="vitepress-demo-plugin.tsx" stackblitz="true" codesandbox="true" />
