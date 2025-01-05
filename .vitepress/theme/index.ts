@@ -7,8 +7,10 @@ import './style/index.css'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+
 import Xgplayer from "./components/Xgplayer.vue"
 import Confetti from "./components/Confetti.vue"
+import HomeUnderline from "./components/HomeUnderline.vue"
 
 import mediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
@@ -28,6 +30,7 @@ export default {
     app.use(ElementPlus)
     app.component('Xgplayer', Xgplayer)
     app.component('Confetti', Confetti)
+    app.component('HomeUnderline', HomeUnderline)
   },
   setup() {
     const route = useRoute()
