@@ -7,7 +7,7 @@ hero:
   text: "Learn, Build, Share, Repeat"
   tagline: 探索技术，记录成长
   image:
-    src: /static/image/brian.webp
+    src: /static/image/brian.png
     alt: VitePress
   actions:
     - theme: brand
