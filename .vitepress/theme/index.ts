@@ -43,6 +43,14 @@ export default {
     }
     onMounted(() => {
       initZoom()
+      
+      // 特定浏览器去除渐变效果
+      const userAgent = window.navigator.userAgent.toLowerCase()
+      if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
+        window.document.documentElement.classList.add('browser-safari')
+      } else if (userAgent.includes('firefox')) {
+        window.document.documentElement.classList.add('browser-firefox')
+      }
     })
     watch(
       () => route.path,

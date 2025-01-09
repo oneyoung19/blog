@@ -441,6 +441,15 @@
 /* Safari has a very bad performance on gradient and filter */
 .browser-safari,
 .browser-firefox {
-  --vp-home-hero-image-background-image: transparent;
-  --vp-home-hero-image-filter: '';
+  /* --vp-home-hero-image-background-image: transparent; */
+  /* --vp-home-hero-image-filter: ''; */
+  
+}
+.browser-safari,.browser-firefox .image-bg {
+  /* -webkit-backface-visibility: hidden; */
+  /* -moz-backface-visibility: hidden; */
+  /* -webkit-transform: translate3d(0, 0, 0); */
+  /* -moz-transform: translate3d(0, 0, 0); */
+  transform: translateZ(0);
+  /* will-change: transform; */
 }
