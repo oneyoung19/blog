@@ -39,6 +39,28 @@ title: Husky
 node "node_modules/yorkie/bin/install.js"
 ```
 
+另外 `yorkie@2.0.0` 与 `pnpm` 存在兼容性问题，因为在 `yorkie` 的[源码](https://github.com/yyx990803/yorkie/blob/master/src/install.js#L69)中有如下设置：
+
+```js
+const isInSubNodeModule = (depDir.match(/node_modules/g) || []).length > 1
+if (isInSubNodeModule) {
+	return console.log(
+		"trying to install from sub 'node_module' directory,",
+		'skipping Git hooks installation'
+	)
+}
+```
+
+而当使用 `pnpm` 安装 `yorkie` 时，实际的 `depDir` 目录会是 `/Users/xxx/projects/test-yorike/node_modules/.pnpm/yorkie@2.0.0/node_modules/yorkie`（因为 `pnpm` 使用了文件短链接的缘故）。
+
+这样就会导致上述逻辑拦截，从而跳过 `Git Hooks` 的安装。
+
+解决办法是使用[yorkie-pnpm](https://www.npmjs.com/package/yorkie-pnpm)。
+
+实际上，`yorkie-pnpm` 是 `yorkie` 的 `fork` 项目，专门用于解决 `yorkie` 与 `pnpm` 的兼容性问题。
+
+可见此处具体的[PR](https://github.com/yyx990803/yorkie/pull/8)。
+
 ### 1-2.husky
 
 较新版本的[husky](https://typicode.github.io/husky/) 已经[不推荐 `autoinstall`](https://blog.typicode.com/husky-git-hooks-autoinstall/)。
