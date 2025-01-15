@@ -146,6 +146,10 @@ export default [
             link: '/frame/crypto-js/base/1.start.md'
           }
         ]
+      },
+      {
+        text: 'Snippets',
+        link: '/frame/snippets/'
       }
     ]
   },
