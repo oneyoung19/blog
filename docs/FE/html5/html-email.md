@@ -162,7 +162,7 @@ title: HTML Email总结
   }
 </style>
     
-<style module>
+<style scoped>
   _media screen and (max-width:620px) {
     #outer_container {
       border-radius: 0 !important;
@@ -200,7 +200,7 @@ title: HTML Email总结
     }
   }
 </style>
-<style module>
+<style scoped>
   .a {
     outline: 0;
     font-size: 16px;
