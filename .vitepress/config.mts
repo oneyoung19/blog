@@ -97,6 +97,7 @@ const sidebarConfig = sidebarList.map(path => {
     manualSortFileNameByPriority: ['index.md'],
     // sortMenusOrderNumericallyFromTitle: true
     sortMenusOrderNumericallyFromLink: true,
+    // TODO: 侧边栏策略 需要优化
     includeFolderIndexFile: true, // 侧边栏显示index.md
   }
 })
