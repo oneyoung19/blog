@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读 →
-      link: /FE/js-advance/es6/0.start
+      link: /directory/2-1/2-1-1/
     - theme: alt
-      text: 关于我
-      link: /FE/
+      text: 工具
+      link: /tool/vitepress/
 
 features:
   - icon: 📚
