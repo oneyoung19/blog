@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "OneYoung"
-  text: "Learn, Build, Share, Repeat"
-  tagline: 探索技术，记录成长
+  name: "Starter VitePress"
+  text: "Build online docs by yourself"
+  tagline: 快速创建在线文档
   image:
     src: /static/image/brian.png
     alt: VitePress
@@ -18,15 +18,18 @@ hero:
       link: /tool/vitepress/
 
 features:
-  - icon: 📚
-    title: 技术沉淀
-    details: 系统化整理前端知识，深入原理，追求技术本质
-  - icon: 🛠️
-    title: 全栈视角
-    details: 涵盖前端、后端、部署、效率工具等多个技术领域
-  - icon: 📧
-    title: 联系方式
-    details: 期待与您交流，邮箱：jsgoshu@gmail.com
+  - icon: 📦
+    title: 开箱即用
+    details: 预配置了常用插件和主题,无需复杂配置即可快速搭建文档站点
+  - icon: 🚀
+    title: 快速轻量
+    details: 基于 VitePress 构建,构建迅速,产物轻量,访问速度快
+  - icon: 🎯
+    title: SEO 优化
+    details: 针对搜索引擎优化,支持自动生成 sitemap,添加 meta 标签等
+  - icon: 🌙
+    title: 暗黑模式支持
+    details: 内置优雅的暗黑主题切换动画,提供舒适的阅读体验
 
 ---
 

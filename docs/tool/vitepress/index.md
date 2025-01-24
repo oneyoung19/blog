@@ -177,8 +177,6 @@ Hello World
   <img src="https://img.shields.io/badge/-Adobe%20Photoshop-A9A9A9?logo=Adobe-Photoshop&logoColor=31A8FF" alt="Adobe Photoshop" style="display: inline-block;" />&nbsp;
 </p>
 
-<Xgplayer url="https://www.runoob.com/try/demo_source/movie.mp4" poster="https://www.runoob.com/try/demo_source/movie.jpg" />
-
-<Xgplayer url="https://www.runoob.com/try/demo_source/movie.mp4" poster="https://www.runoob.com/try/demo_source/movie.jpg" />
+<Xgplayer url="//lf3-static.bytednsdoc.com/obj/eden-cn/nupenuvpxnuvo/xgplayer_doc/xgplayer-demo-720p.mp4" poster="//lf3-static.bytednsdoc.com/obj/eden-cn/nupenuvpxnuvo/xgplayer_doc/poster.jpg" />
 
 <Confetti :popup="true" />

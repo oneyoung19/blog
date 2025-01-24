@@ -61,20 +61,26 @@ export default {
     // https://github.com/T-miracle/vitepress-plugin-comment-with-giscus
     giscusTalk(
       {
-        repo: 'oneyoung19/blog', //仓库
-        repoId: 'R_kgDOMG4rmg', //仓库ID
-        category: 'Announcements', // 讨论分类
-        categoryId: 'DIC_kwDOMG4rms4CltwA', //讨论分类ID
-        mapping: 'pathname',
-        inputPosition: 'bottom',
-        lang: 'zh-CN',
+        repo: "YoungCollect/starter-vitepress",
+        repoId: "R_kgDONu3gXQ",
+        category: "Announcements",
+        categoryId: "DIC_kwDONu3gXc4CmTaY",
+        mapping: "pathname",
+        strict: "0",
+        reactionsEnabled: "1",
+        emitMetadata: "0",
+        inputPosition: "bottom",
+        theme: "preferred_color_scheme",
+        lang: "zh-CN",
+        loading: "lazy",
+        // homePageShowComment: true // 该属性是为了确认设置layout为home时，页面是否显示评论，但vitepress-plugin-comment-with-giscus@1.1.15版本与vitepress@1.5.0版本不兼容
       },
       {
         frontmatter,
         route
       },
       // 开发环境下默认关闭 可以在frontmatter中设置comment来自定义文档控制
-      import.meta.env.DEV ? false : true
+      // import.meta.env.DEV ? false : true
     )
   }
 } satisfies Theme
