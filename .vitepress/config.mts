@@ -90,15 +90,21 @@ const sidebarConfig = sidebarList.map(path => {
     documentRootPath: 'docs',
     scanStartPath: path,
     resolvePath: `/${path}/`,
-    // useFolderLinkFromIndexFile: true,
     useFolderTitleFromIndexFile: true,
     useTitleFromFrontmatter: true,
     // sortMenusByName: true,
     manualSortFileNameByPriority: ['index.md'],
     // sortMenusOrderNumericallyFromTitle: true
     sortMenusOrderNumericallyFromLink: true,
-    // TODO: 侧边栏策略 需要优化
-    includeFolderIndexFile: true, // 侧边栏显示index.md
+    /*
+      侧边栏策略：
+      1. 侧边栏不显示index.md
+      2. 目录名以index.md为准
+      3. 侧边栏目录名支持index.md链接
+    */
+    useFolderLinkFromIndexFile: true,
+    // includeRootIndexFile: true
+    // includeFolderIndexFile: true, // 侧边栏显示index.md
   }
 })
 
