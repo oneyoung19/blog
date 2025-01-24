@@ -9,12 +9,11 @@ import vitepressProtectPlugin from "vitepress-protect-plugin"
 
 // https://vitepress.dev/reference/site-config
 const vitepressConfig = {
-  base: '/blog/',
+  base: '/starter-vitepress/',
   title: "OneYoung's Blog",
   description: "OneYoung's personal tech blog, focusing on Web Frontend development, JavaScript, and related technologies",
   head: [
-    // ['link', { rel: 'icon', href: '/blog/favicon.ico' }]
-    ['link', { rel: 'icon', href: '/blog/avatar.jpeg' }]
+    ['link', { rel: 'icon', href: '/starter-vitepress/avatar.jpeg' }]
   ],
   // locales: {
   //   root: {
@@ -37,11 +36,11 @@ const vitepressConfig = {
       { icon: 'github', link: 'https://github.com/oneyoung19' }
     ],
     footer: {
-      message: 'Released under the <a href="https://github.com/oneyoung19/blog/blob/main/LICENSE">MIT License</a>.',
+      message: 'Released under the <a href="https://github.com/oneyoung19/starter-vitepress/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2019-present <a href="https://github.com/oneyoung19">OneYoung</a>'
     },
     editLink: {
-      pattern: 'https://github.com/oneyoung19/blog/edit/main/docs/:path',
+      pattern: 'https://github.com/oneyoung19/starter-vitepress/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
     lastUpdated: {
