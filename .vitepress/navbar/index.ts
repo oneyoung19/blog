@@ -422,6 +422,15 @@ export default [
             link: '/BE/node/docs/'
           }
         ]
+      },
+      {
+        text: 'Python',
+        items: [
+          {
+            text: 'Docs',
+            link: '/BE/python/docs/'
+          }
+        ]
       }
     ]
   },
