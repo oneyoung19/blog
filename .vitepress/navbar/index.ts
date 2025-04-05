@@ -431,6 +431,15 @@ export default [
             link: '/BE/python/docs/'
           }
         ]
+      },
+      {
+        text: 'Go',
+        items: [
+          {
+            text: 'Docs',
+            link: '/BE/go/docs/'
+          }
+        ]
       }
     ]
   },
