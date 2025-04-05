@@ -432,15 +432,16 @@ export default [
           }
         ]
       },
-      {
-        text: 'Go',
-        items: [
-          {
-            text: 'Docs',
-            link: '/BE/go/docs/'
-          }
-        ]
-      }
+      // Go的系列文档 写的不够好 譬如没有包含module管理相关内容 而且基础的数据类型划分也不够清晰 暂时下线
+      // {
+      //   text: 'Go',
+      //   items: [
+      //     {
+      //       text: 'Docs',
+      //       link: '/BE/go/docs/'
+      //     }
+      //   ]
+      // }
     ]
   },
   {
