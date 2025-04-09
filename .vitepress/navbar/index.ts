@@ -424,6 +424,15 @@ export default [
         ]
       },
       {
+        text: 'Java',
+        items: [
+          {
+            text: 'Docs',
+            link: '/BE/java/docs/'
+          }
+        ]
+      },
+      {
         text: 'Python',
         items: [
           {
