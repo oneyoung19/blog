@@ -429,6 +429,14 @@ export default [
           {
             text: 'Docs',
             link: '/BE/java/docs/'
+          },
+          {
+            text: 'Tomcat',
+            link: '/BE/java/tomcat/'
+          },
+          {
+            text: 'Spring',
+            link: '/BE/java/spring/'
           }
         ]
       },
