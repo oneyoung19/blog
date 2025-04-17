@@ -109,6 +109,10 @@ export default [
           {
             text: '基础使用',
             link: '/frame/nuxt/base/1.start.md'
+          },
+          {
+            text: '源码解析',
+            link: '/frame/nuxt/source-code/1.start.md'
           }
         ]
       },
@@ -489,6 +493,10 @@ export default [
   {
     text: '部署',
     items: [
+      {
+        text: 'PM2',
+        link: '/deploy/pm2/'
+      },
       {
         text: 'Linux',
         link: '/deploy/linux/'
