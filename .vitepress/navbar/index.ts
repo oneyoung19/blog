@@ -507,11 +507,11 @@ export default [
       },
       {
         text: 'CI/CD',
-        link: '/deploy/CI-CD/1.start.md'
+        link: '/deploy/CI-CD/'
       },
       {
         text: 'Jenkins',
-        link: '/deploy/jenkins/1.start.md'
+        link: '/deploy/jenkins/'
       }
     ]
   },
