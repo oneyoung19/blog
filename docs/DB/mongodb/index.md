@@ -14,20 +14,6 @@ title: 前言
 
 中文文档：[https://www.yiibai.com/mongodb](https://www.yiibai.com/mongodb)
 
-## 安装
-
-以 [社区版](https://www.mongodb.com/try/download/community) 为例，
-
-在 `macos` 上安装 `MongoDB` 的步骤如下：
-
-```bash
-brew install mongodb-atlas
-
-atlas setup
-```
-
-你也可以通过在上面的链接中下载安装包的方式进行安装。
-
 ## 术语对照
 
 | SQL术语       | MongoDB术语   | 解释/说明                                   |
