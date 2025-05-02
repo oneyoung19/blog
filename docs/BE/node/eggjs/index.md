@@ -27,36 +27,3 @@ title: EggJs 学习指南
 完整结构可查看[egg目录结构](https://www.eggjs.org/zh-CN/basics/structure)。
 :::
 
-### 3. 安装和使用
-
-要创建一个新的 `Egg.js` 项目，可以使用以下命令：
-
-:::code-group
-
-```shell [pnpm]
-pnpm create egg --type=simple --registry=http://r.cnpmjs.org
-```
-
-```shell [npm]
-npm init egg --type=simple
-```
-
-:::
-
-- `simple` 简单应用程序骨架
-- `empty` 空的应用程序骨架
-- `plugin` 插件骨架
-- `framework` 框架骨架
-
-然后进入项目目录，安装依赖：
-
-```bash
-cd your-project-name
-pnpm install
-```
-
-启动应用：
-
-```bash
-pnpm run dev
-```
