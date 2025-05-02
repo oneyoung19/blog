@@ -15,7 +15,7 @@ hero:
       link: /FE/js-advance/es6/0.start
     - theme: alt
       text: 关于我
-      link: /FE/
+      link: /mine/
 
 features:
   - icon: 📚
