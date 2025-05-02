@@ -5,7 +5,8 @@ const paths = await globby(['docs/**/*.md'])
 
 export default function getSidebar() {
   const targetPaths = paths.map(path => {
-    const pathArray = path.split('/').slice(1, 3)
+    const pathList = path.split('/')
+    const pathArray = pathList.slice(1, pathList.length - 1)
     return pathArray.join('/')
   }).filter(item => item && !item.includes('index.md'))
   return [...new Set(targetPaths)]
