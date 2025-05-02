@@ -424,6 +424,14 @@ export default [
           {
             text: 'Docs',
             link: '/BE/node/docs/'
+          },
+          {
+            text: 'Topics',
+            link: '/BE/node/topics/'
+          },
+          {
+            text: 'Eggjs',
+            link: '/BE/node/eggjs/'
           }
         ]
       },
