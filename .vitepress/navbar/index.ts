@@ -432,6 +432,10 @@ export default [
           {
             text: 'Eggjs',
             link: '/BE/node/eggjs/'
+          },
+          {
+            text: 'Nestjs',
+            link: '/BE/node/nestjs/'
           }
         ]
       },
