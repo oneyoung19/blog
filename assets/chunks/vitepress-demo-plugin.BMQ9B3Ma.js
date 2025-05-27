@@ -1,1 +1,0 @@
-import{d as n,C as s,c as a,o as p,G as r,w as l,a as c}from"./framework.Ctc7-3V1.js";const _=n({__name:"vitepress-demo-plugin",setup(i){const e=()=>{window.open("https://github.com/")};return(m,t)=>{const o=s("ElButton");return p(),a("div",null,[r(o,{type:"primary",onClick:e},{default:l(()=>t[0]||(t[0]=[c("Go to GitHub")])),_:1,__:[0]})])}}});export{_ as default};
