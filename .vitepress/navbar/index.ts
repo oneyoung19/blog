@@ -571,5 +571,9 @@ export default [
         link: '/tool/AI/'
       }
     ]
+  },
+  {
+    text: 'All in AI',
+    link: '/AI/1.stage'
   }
 ]
