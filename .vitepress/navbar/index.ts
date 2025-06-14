@@ -104,6 +104,19 @@ export default [
         ]
       },
       {
+        text: 'React19',
+        items: [
+          {
+            text: '基础使用',
+            link: '/frame/react19/base/1.start.md'
+          }
+          // {
+          //   text: '源码解析',
+          //   link: '/frame/react19/source-code/1.start.md'
+          // }
+        ]
+      },
+      {
         text: 'Nuxt',
         items: [
           {
