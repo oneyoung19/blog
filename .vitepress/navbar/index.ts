@@ -343,6 +343,10 @@ export default [
             text: 'Standard Version',
             link: '/engineer/standard-version/'
           },
+          {
+            text: 'Tailwind CSS',
+            link: '/engineer/tailwindcss/'
+          }
         ]
       },
       {
