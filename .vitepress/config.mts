@@ -53,6 +53,10 @@ const vitepressConfig = {
     },
     search: {
       provider: 'local'
+    },
+    outline: {
+      label: '页面导航',
+      level: [2, 3] // https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/composables/outline.ts#L63-L64
     }
   },
   srcDir: 'docs',
