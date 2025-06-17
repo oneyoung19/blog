@@ -584,6 +584,10 @@ export default [
         link: '/tool/localtunnel/'
       },
       {
+        text: 'WebExtension',
+        link: '/tool/web-extension/1.devlopment.md'
+      },
+      {
         text: 'AI工具',
         link: '/tool/AI/'
       }
