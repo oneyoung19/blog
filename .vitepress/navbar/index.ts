@@ -118,16 +118,23 @@ export default [
       },
       {
         text: 'Nuxt',
-        items: [
-          {
-            text: '基础使用',
-            link: '/frame/nuxt/base/1.start.md'
-          },
-          {
-            text: '源码解析',
-            link: '/frame/nuxt/source-code/1.start.md'
-          }
-        ]
+        link: '/frame/nuxt/base/1.start.md'
+        // items: [
+        //   {
+        //     text: '基础使用',
+        //     link: '/frame/nuxt/base/1.start.md'
+        //   }
+        // ]
+      },
+      {
+        text: 'Next',
+        link: '/frame/next/base/1.start.md'
+        // items: [
+        //   {
+        //     text: '基础使用',
+        //     link: '/frame/nuxt/base/1.start.md'
+        //   }
+        // ]
       },
       {
         text: 'Express',
