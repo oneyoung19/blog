@@ -1,0 +1,1 @@
+import{d as n,C as s,o as a,c as p,E as r,w as l,a as c}from"./framework.BnowZdcM.js";const d=n({__name:"vitepress-demo-plugin",setup(i){const e=()=>{window.open("https://github.com/")};return(m,t)=>{const o=s("ElButton");return a(),p("div",null,[r(o,{type:"primary",onClick:e},{default:l(()=>[...t[0]||(t[0]=[c("Go to GitHub",-1)])]),_:1})])}}});export{d as default};
