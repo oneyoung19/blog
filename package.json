@@ -7,7 +7,7 @@
   "scripts": {
     "init": "vitepress init",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "vitepress dev",
+    "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
